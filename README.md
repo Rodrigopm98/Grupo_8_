@@ -2,7 +2,7 @@
 # Grupo_8_
 # Venta de artículos deportivos
 
-## Oferta productostos
+## Oferta productos
 
 ## Público.
 
