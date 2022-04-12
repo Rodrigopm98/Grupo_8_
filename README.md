@@ -1,11 +1,12 @@
 
 # Grupo_8_
-# Venta de artículos deportivos
+# Venta de artículos deportivos 
 
-## Oferta productos
+## Oferta productos :hotel:
 
-## Público.
+## Público :loudspeaker:
 
-## Integrantes.
+## Integrantes :smiley:
+
 
 ## Sitios de referencias
