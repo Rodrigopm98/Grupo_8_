@@ -1,2 +1,11 @@
+
 # Grupo_8_
-Venta artículos deportivos
+# Venta de artículos deportivos
+
+## Oferta productostos
+
+## Público.
+
+## Integrantes.
+
+## Sitios de referencias
