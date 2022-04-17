@@ -9,6 +9,7 @@ Fanáticos de los deportes. Nostálgicos y personas que quieran disfrutar de la 
 ## Integrantes :smiley:
 * **Rodrigo Peralta Montero**: tengo 23 años, soy estudiante de abogacia:books: pero siempre me apasionó todo lo que tenga que ver con la tecnología :computer:
 * **Luciana Belén Hamade**: Tengo 28 años, soy Licenciada en Turismo y estudiante de Periodismo Digital. Fanática de River y curiosa por naturaleza.
+* **Leandro Novoa**: tengo 30 años, Trabajo en una empresa constructora en el area contable :construction:. Enamorado de Platense :squid: , todo lo referido con la tecnologia y los videos juegos :video_game: 
 ## Sitios de referencia
 * https://www.nicodeportes.com/ Presentación de cada sección y la estructuración del sitio.
 * https://www.dafiti.com.ar/ Estructuración del sitio, su estética. Posibilidad de optar por versión para celulares y escritorio.
