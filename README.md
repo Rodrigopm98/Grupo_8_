@@ -13,4 +13,6 @@ Fanáticos de los deportes. Nostálgicos y personas que quieran disfrutar de la 
 ## Sitios de referencia
 * https://www.nicodeportes.com/ Presentación de cada sección y la estructuración del sitio.
 * https://www.dafiti.com.ar/ Estructuración del sitio, su estética. Posibilidad de optar por versión para celulares y escritorio.
-* https://www.tiendariver.com/ Estética, estructuración del sitio. Presentación de la home page. Secciones.
+* https://www.tiendariver.com/ Estética, estructuración del sitio. Presentación de la Homepage. Secciones.
+* https://ar.puma.com/ Homepage, presentación. Fácil navegación. 
+* https://www.solodeportes.com.ar/ Es muy completa. Barra de secciones en la homepage. Es de fáci navegación. Incluye el botón de arrepentimiento. Presentación de los productos comercializados. 
