@@ -3,7 +3,7 @@
 # Gloriosos Club
 
 ## Oferta productos :hotel:
-
+Camisetas de fútbol, retro y actuales. Indumentaria deportiva (conjuntos para entrenar). Camisetas de basquet. 
 ## Público :loudspeaker:
 Fanáticos de los deportes. Nostálgicos y personas que quieran disfrutar de la práctica de los deportes y del aire libre. 
 ## Integrantes :smiley:
