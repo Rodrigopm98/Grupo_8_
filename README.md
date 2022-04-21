@@ -1,6 +1,6 @@
 
 # Grupo_8_
-# Venta de artículos deportivos 
+# Gloriosos Club
 
 ## Oferta productos :hotel:
 
