@@ -1,6 +1,7 @@
 
-# Grupo_8_
-# Gloriosos Club
+# Grupo_8
+# Gloriosos Club 
+<center><img src="./public/images/logo.jpeg" width="100" height="100"/></center>
 
 ## Oferta productos :hotel:
 Camisetas de fútbol :soccer: , retro y actuales. Indumentaria deportiva (conjuntos para entrenar). Camisetas de basquet :basketball:. 
