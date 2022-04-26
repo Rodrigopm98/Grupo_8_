@@ -12,6 +12,8 @@ Fanáticos de los deportes. Nostálgicos y personas que quieran disfrutar de la 
 * **Luciana Belén Hamade**: Tengo 28 años, soy Licenciada en Turismo y estudiante de Periodismo Digital. Fanática de River y curiosa por naturaleza.
 * **Leandro Novoa**: Tengo 30 años. Trabajo en una empresa constructora en el área contable 🚧. Enamorado de Platense 🦑: y todo lo referido con la tecnología 💻
 * **Andrés Germán Paulon**: tengo 31 años, soy abogado en ejercicio en la Pcia de Bs As. Trabajo para tres Estudios, y soy el CEO de mi propio Estudio Jurídico :sunglasses: (ah, y el único empleado que tiene! :trollface:). Papá de Renzo. Fan de PlayStation y juegos de mesa en general. Actual estudiante en curso de Full Stack.
+## wireframe
+*https://marvelapp.com/prototype/6g8a8f0
 ## Sitios de referencia
 * https://www.nicodeportes.com/ Presentación de cada sección y la estructuración del sitio.
 * https://www.dafiti.com.ar/ Estructuración del sitio, su estética. Posibilidad de optar por versión para celulares y escritorio.
