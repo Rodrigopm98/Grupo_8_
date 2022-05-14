@@ -1,0 +1,23 @@
+{
+  "name": "grupo_8_gloriososclub",
+  "version": "1.0.0",
+  "description": "<center><img src=\"./public/images/logo.jpeg\" width=\"100\" height=\"100\"/></center>",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodrigopm98/Grupo_8_GloriososClub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rodrigopm98/Grupo_8_GloriososClub/issues"
+  },
+  "homepage": "https://github.com/Rodrigopm98/Grupo_8_GloriososClub#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
