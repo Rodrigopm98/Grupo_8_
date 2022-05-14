@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- enlazace con style.css y con normalize.css -->
+    <!-- enlace con style.css y con normalize.css -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/normalize.css">
+    <!-- enlace con pagina de tipo de fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- enlace con pagina de los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 
-    <title>Document</title>
+    <title>GloriososClub</title>
 </head>
+
 <body>
     <header>
-        
+        <div class="buscador-nav">
+        <section class="navbar-top">
+            <div class="menu"><i class="fas fa-bars"></i></div>
+            <img src="/images/Gloriosos_Club-removebg-preview.png" alt="GloriososClub" class="logo">
+            <form class="busqueda" action="/" method="get">
+                    <input class="input" type="text" name="busqueda" placeholder="Buscar">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            
+        </section>
+        <nav>
+            <a href="./views/register.html" class="register">Registrarse</a>
+            <a href="./views/login.html" class="login">Ingresar</a>
+            <a href="./views/productCart.html" class="carrito"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+        </div>
+        <img src="./images/banner gloriosos club.png" alt="" class="banner">
     </header>
     <main></main>
     <footer></footer>
 </body>
+
 </html>

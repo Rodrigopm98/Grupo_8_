@@ -1,0 +1,88 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+/* MODIFICADORES DEL HEADER */
+header{
+    padding: 5px;
+    background-color: black;
+    box-sizing: border-box;
+} 
+
+/* menu hamburguesa */
+.menu{
+    display: inline-block;
+    border: solid 2px white;
+    color:white;
+    text-align: center;
+    border-radius: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
+    margin-right: 2px;
+}
+.logo{
+    width: 15%;
+    margin-right: 2px;
+    
+}
+/* busqueda y lupa con display:flex */
+.busqueda{
+    display: inline-block;
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+}
+.input{
+    width: 90%;
+}
+.busqueda button{
+    padding: 1px;
+    text-align: center;
+}
+
+
+.banner{
+    display: block;
+    width: 100vw;
+    margin:0px -5px -5px -5px;
+    box-sizing: border-box;
+
+    
+    
+}
+
+/* para acomodar en la misma linea al menu, logo y busqueda (usando flex)*/
+.navbar-top{
+    display: flex;
+    align-items: center;
+    
+    width: 60%;  
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color:white;
+    margin-right: 10px;
+}
+.carrito{
+    margin-right: 0px;
+}
+/* flex para alinear la nav */
+nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40%;
+    justify-content:right;
+
+}
+
+/* use flex para dejar en la misma linea que el navbar-top */
+.buscador-nav{
+    display: flex;
+    justify-content: space-between;
+
+}
