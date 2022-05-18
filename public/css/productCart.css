@@ -27,8 +27,18 @@ body{
 }
 
 .carrito-compra{
-    width: 90%;
-    margin:auto;
+    width: 37.5%;
+    margin:left;
+    color: white;
+    padding-left: 12.5%;
+    padding-bottom: 5%;
+    display: flex;    
+    flex-direction: column;
+}
+
+.lista-deseos{
+    width: 37.5%;
+    margin:left;
     color: white;
     padding-left: 12.5%;
     padding-bottom: 5%;
@@ -55,7 +65,7 @@ body{
 
 .cantidad-input{
     text-align: center;
-    width: 10%;
+    width: 8%;
     background-color: black;
     color: white;
 }
@@ -68,34 +78,45 @@ body{
 }
 
 .botones-comprar-eliminar{
-    font-size: 20px;
     display: flex;
     justify-content: space-evenly;
 }
 
+.botones-comprar-eliminar label{
+    font-size: 20px;
+}
+
 .boton-buy{
     background-color: black;
-    border: 1px white inset;
+    color: white;
+    font-size: 30px;
+}
+
+.boton-buy i{
     transition: 500ms;
 }
 
-.boton-buy:hover{
+.boton-buy i:hover{
     background-color: white;
-    color: black;
-}
-
-.boton-trash:hover{
-    background-color: white;
-    color: black;
+    color: blue;
 }
 
 .boton-trash{
-    background-color: black;
-    border: 1px white inset;
+    background-color: white;
+    font-size: 25px;
     transition: 500ms;
 }
 
- .compra{
+.basurero{
+    color: black;
+}
+
+.boton-trash i:hover{
+    background-color: white;
+    color: red;
+}
+
+.compra{
     color: white;
     background-color: black;
     transition: 500ms;
@@ -105,18 +126,6 @@ body{
     color: black;
     background-color: white;
 }
-
-.basurero{
-    color: white;
-    background-color: black;
-
-}
-
-.basurero:hover{
-    color: black;
-    background-color: white;
-}
-
 
 .carrito-vacio{
     width: 90%;
