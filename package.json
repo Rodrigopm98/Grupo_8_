@@ -1,0 +1,24 @@
+{
+  "name": "grupo_8_",
+  "version": "1.0.0",
+  "description": "* **Rodrigo Peralta Montero**: tengo 23 años, soy estudiante de abogacia:books: pero siempre me apasionó todo lo que tenga que ver con la tecnologia :computer:",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodrigopm98/Grupo_8_.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rodrigopm98/Grupo_8_/issues"
+  },
+  "homepage": "https://github.com/Rodrigopm98/Grupo_8_#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
