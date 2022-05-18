@@ -8,14 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rodrigopm98/Grupo_8_GloriososClub.git"
+    "url": "git+https://github.com/Rodrigopm98/Grupo_8_.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rodrigopm98/Grupo_8_GloriososClub/issues"
+    "url": "https://github.com/Rodrigopm98/Grupo_8_/issues"
   },
-  "homepage": "https://github.com/Rodrigopm98/Grupo_8_GloriososClub#readme",
+  "homepage": "https://github.com/Rodrigopm98/Grupo_8_#readme",
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
