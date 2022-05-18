@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- enlace con style.css y con normalize.css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/productCart.css">
+    <!-- enlace con pagina de tipo de fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- enlace con pagina de los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <title>GloriososClub - Tienda de Indumentaria deportiva</title>
+</head>
+
+<body>
+    <header>
+        <div class="buscador-nav">
+        <section class="navbar-top">
+            <div class="menu"><i class="fas fa-bars"></i></div>
+            <img src="/images/Gloriosos_Club-removebg-preview.png" alt="GloriososClub" class="logo">
+            <form class="busqueda" action="/" method="get">
+                    <input class="input" type="text" name="busqueda" placeholder="Buscar">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            
+        </section>
+        <nav>
+            <ul>
+            <li><a href="./views/register.html" class="register">Registrarse</a></li>
+            <li><a href="./views/login.html" class="login">Ingresar</a></li>
+            <li><a href="/productCart" class="carrito"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+        </div>
+        <ul class="menu-compu1">
+            <li><a href="#hombre">Hombre</a></li>
+            <li><a href="#mujer">Mujer</a></li>
+            <li><a href="#niños">Niños</a></li>
+            <li><a href="#deportes">Deportes</a></li>
+            <li><a href="#marcas">Marcas</a></li>
+            <li><a href="#Colecciones">Colecciones</a></li>
+        </ul>
+
+
+        <img src="./images/banner gloriosos club.png" alt="" class="banner">
+    </header>
+    <main>
+        <div class="main-cont-cart">
+            <ul class="selecciones">
+                <li><a class="carrito">Carrito (0)</a> <i class="fas fa-shopping-cart"></i></li>
+                <li><a>Lista de deseos (0)</a> <i class="far fa-grin-hearts"></i></li>
+            </ul>
+        </div>
+        <div class="carrito-compra">
+            <div class="producto-elegido">Producto:<input class="producto-elegido-input" placeholder="Producto elegido" type="text" name="elegido" id="elegido"></div>
+            <div class="cantidad">Cantidad: <i class="fas fa-plus-circle masmenos"></i><input class="cantidad-input" placeholder="1" type="number" name="cantidad" id="cantidad"> <i class="fas fa-minus-circle masmenos"></i></div>
+            <div class="precio-unitario">Precio unitario:</div>
+            <div>Total:</div>
+            <div class="botones-comprar-eliminar">
+                <label><button class="boton-buy" type="button"><i class="fas fa-check-circle compra"></i></button></label>
+                <label><button class="boton-trash" type="reset"><i class="fas fa-trash-alt basurero"></i></button></label>
+        </div>
+        <div class="carrito-vacio">
+            <h2>¡Tu carrito está vacío!</h2>
+            <p>¿No sabés qué comprar? ¡Hay cientos de productos disponibles!</p>
+            <a href="#">Comenzá a llenar tu carrito ahora</a>
+        </div>
+
+    </main>
+    <footer>
+        <div class="menu-footer">
+        <section>
+            <h4>PRODUCTOS</h4>
+            <ul>
+                <li><a href="calzado">Calzado</a></li>
+                <li><a href="zapatillas">Zapatillas</a></li>
+                <li><a href="ropa">Ropa</a></li>
+                <li><a href="botines">Botines</a></li>
+                <li><a href="conjuntos">Conjuntos</a></li>
+            </ul>
+        </section>
+        <section>
+            <h4>DEPORTES</h4>
+            <ul>
+                <li><a href="#selecciones">Selecciones</a></li>
+                <li><a href="#boxeo">Boxeo</a></li>
+                <li><a href="#basquet">Básquet</a></li>
+                <li><a href="#futbol">Fútbol</a></li>
+                <li><a href="#running">Running</a></li>
+            </ul>
+        </section>
+        <section>
+            <h4>DEPORTES</h4>
+            <ul>
+                <li><a href="#selecciones">Selecciones</a></li>
+                <li><a href="#boxeo">Boxeo</a></li>
+                <li><a href="#basquet">Básquet</a></li>
+                <li><a href="#futbol">Fútbol</a></li>
+                <li><a href="#running">Running</a></li>
+            </ul>
+        </section>
+        <section class="tablets">
+            <h4>DEPORTES</h4>
+            <ul>
+                <li><a href="#selecciones">Selecciones</a></li>
+                <li><a href="#boxeo">Boxeo</a></li>
+                <li><a href="#basquet">Básquet</a></li>
+                <li><a href="#futbol">Fútbol</a></li>
+                <li><a href="#running">Running</a></li>
+            </ul>
+        </section>
+        <section class="compu">
+            <h4>DEPORTES</h4>
+            <ul>
+                <li><a href="#selecciones">Selecciones</a></li>
+                <li><a href="#boxeo">Boxeo</a></li>
+                <li><a href="#basquet">Básquet</a></li>
+                <li><a href="#futbol">Fútbol</a></li>
+                <li><a href="#running">Running</a></li>
+            </ul>
+        </section>
+        </div>
+        <div>
+            <ul class="atencion-cliente">
+                <li><a href="terminosYCondiciones">Terminos y condiciones</a></li>
+                <li><a href="privacidad">Política de Privacidad</a></li>
+                <li><a href="reclamos">Reclamos</a></li>
+                <li><a href="contacto">Contactanos</a></li>
+            </ul>
+        </div>
+
+    </footer>
+</body>
+</html>

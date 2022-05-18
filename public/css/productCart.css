@@ -1,0 +1,134 @@
+body{
+    background-color: black;
+}
+
+.main-cont-cart{
+    width: 90%;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+    background-color: black;
+}
+
+.selecciones{
+    display: flex;
+    flex-direction: wrap;
+}
+
+.selecciones li{
+    width: 50%;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    list-style-type: none;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    padding: 10px 0px;
+}
+
+.carrito-compra{
+    width: 90%;
+    margin:auto;
+    color: white;
+    padding-left: 12.5%;
+    padding-bottom: 5%;
+    display: flex;    
+    flex-direction: column;
+}
+
+.carrito-compra div{
+    width: 50%;
+    padding: 5px 0px;
+}
+
+.producto-elegido{
+    width: 50%;
+}
+
+.cantidad{
+    width: 50%;
+}
+
+.cantidad i{
+    color: white;
+}
+
+.cantidad-input{
+    text-align: center;
+    width: 10%;
+    background-color: black;
+    color: white;
+}
+
+.producto-elegido-input{
+    width: auto;
+    text-align: center;
+    background-color: black;
+    color: white
+}
+
+.botones-comprar-eliminar{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boton-buy{
+    background-color: black;
+    border: 1px white inset;
+    transition: 500ms;
+}
+
+.boton-buy:hover{
+    background-color: white;
+    color: black;
+}
+
+.boton-trash:hover{
+    background-color: white;
+    color: black;
+}
+
+.boton-trash{
+    background-color: black;
+    border: 1px white inset;
+    transition: 500ms;
+}
+
+ .compra{
+    color: white;
+    background-color: black;
+    transition: 500ms;
+}
+
+.compra:hover{
+    color: black;
+    background-color: white;
+}
+
+.basurero{
+    color: white;
+    background-color: black;
+
+}
+
+.basurero:hover{
+    color: black;
+    background-color: white;
+}
+
+
+.carrito-vacio{
+    width: 90%;
+    padding-bottom: 10%;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+/* PARA COMPU */
+@media(min-width:900px){
+    .cantidad .masmenos{
+        display: none;
+    }
+}
