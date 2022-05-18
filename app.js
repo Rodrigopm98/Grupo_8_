@@ -1,7 +1,7 @@
 const express=require("express");
 const app= express();
 
-/* carpeta public como esetatica */
+/* carpeta public como estatica */
 const path=require("path");
 const publicpath= path.resolve(__dirname, "./public");
 app.use(express.static(publicpath));
