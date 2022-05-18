@@ -33,11 +33,8 @@
   }
 
   .olvidar{
-      font-size: medium;
-      
+      font-size: medium;      
   }
-
-
 
 .banner{
     width: 100%;  
@@ -72,19 +69,19 @@ header{
     margin-right: 2px; 
     
 }
+
 .logo{
     width: 30%;
     margin-right: 2px;
     
 }
-/* busqueda y lupa con display:flex */
 .busqueda{
-    width: 90%;
+   
     box-sizing: border-box;
     display: flex;
-    
 }
 
+ 
 .busqueda button{
     display: block;
     width: 10%;
@@ -261,11 +258,14 @@ footer ul li:hover{
         font-weight: bold;
 
     }
+
     .busqueda{
-        
+        width: 80%;
         height: 20% ;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        
     }
+    
     /* MODIF DEL FOOTER */
     footer section{
         width: 15%;
@@ -274,10 +274,5 @@ footer ul li:hover{
         display: block;
     }
 
-    .busqueda{
-        width: 50%;
-        box-sizing: border-box;
-        display: flex;
-        
-    }
+
 }

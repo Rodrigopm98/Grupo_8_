@@ -33,9 +33,11 @@ header{
     box-sizing: border-box;
     display: flex;
 }
+
 .input{
     width: 90%;
 }
+
 .busqueda button{
     display: block;
     width: 10%;
@@ -46,11 +48,10 @@ header{
     box-sizing: border-box;
 
 }
+
 .busqueda button i{
    display: block;
     margin-top:-2px;
-
-
 }
 
 .contenedor-banner {
@@ -63,7 +64,6 @@ header{
     margin:0px -5px -5px -5px;
     box-sizing: border-box;
 }
-
 /* para acomodar en la misma linea al menu, logo y busqueda (usando flex)*/
 .navbar-top{
     display: flex;
