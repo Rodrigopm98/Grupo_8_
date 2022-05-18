@@ -273,4 +273,11 @@ footer ul li:hover{
     .compu{
         display: block;
     }
+
+    .busqueda{
+        width: 50%;
+        box-sizing: border-box;
+        display: flex;
+        
+    }
 }
