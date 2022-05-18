@@ -3,13 +3,14 @@
     background-color: #ebebeb;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+
   }
 
   .boton{
-      padding: 10px;
+      padding: 0px;
       font-size: large;
       font-family: 'Roboto', sans-serif;
-
+      transition: all .5s ease;
   }
   
   .input-text,
@@ -19,7 +20,24 @@
     width: 90vw;
     font-size: 18px;
     padding: 5px;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
   }
+
+  .nombre{
+      margin-bottom: 20px;  
+  }
+
+  .olvidar{
+      font-size: medium;
+      
+  }
+
+
 
 .banner{
     width: 100%;  
