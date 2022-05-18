@@ -1,7 +1,7 @@
 {
-  "name": "grupo_8_",
+  "name": "grupo_8_gloriososclub",
   "version": "1.0.0",
-  "description": "* **Rodrigo Peralta Montero**: tengo 23 años, soy estudiante de abogacia:books: pero siempre me apasionó todo lo que tenga que ver con la tecnologia :computer:",
+  "description": "<center><img src=\"./public/images/logo.jpeg\" width=\"100\" height=\"100\"/></center>",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
