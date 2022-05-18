@@ -1,3 +1,35 @@
+.form-container {
+    padding: 25px;
+    background-color: #ebebeb;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .boton{
+      padding: 10px;
+      font-size: large;
+      font-family: 'Roboto', sans-serif;
+
+  }
+  
+  .input-text,
+  .input-email,
+  .input-password,
+  .input-date {
+    width: 90vw;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+.banner{
+    width: 100%;  
+    margin-bottom: -1%;
+    display: block;
+    width: 100vw;
+    margin:0px -5px -5px -5px;
+    box-sizing: border-box;
+  }
+
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -29,13 +61,12 @@ header{
 }
 /* busqueda y lupa con display:flex */
 .busqueda{
-    width: 80%;
+    width: 90%;
     box-sizing: border-box;
     display: flex;
+    
 }
-.input{
-    width: 90%;
-}
+
 .busqueda button{
     display: block;
     width: 10%;
@@ -44,19 +75,10 @@ header{
     font-size: 2rem;
     font-size: 100%;
     box-sizing: border-box;
-
 }
 .busqueda button i{
    display: block;
     margin-top:-2px;
-
-
-}
-.banner{
-    display: block;
-    width: 100vw;
-    margin:0px -5px -5px -5px;
-    box-sizing: border-box;
 }
 
 /* para acomodar en la misma linea al menu, logo y busqueda (usando flex)*/
