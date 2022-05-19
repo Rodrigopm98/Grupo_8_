@@ -1,0 +1,94 @@
+:root{
+    --Gris: rgb(211, 211, 211);
+}
+
+main{
+    padding: 5px;
+    background-color:rgb(211, 211, 211);
+}
+
+.articulos{
+
+    margin-top:10px;
+    position:relative;
+    
+}
+.articulos img{
+    width: 100%;
+   
+    box-sizing: border-box;
+    
+    
+}
+.descripcion{
+    
+    box-sizing: border-box; 
+    margin-top: -3px; 
+    background-color: white;
+    
+}
+.precio{
+  
+    margin:0px;
+    display: inline;
+    background-color: rgb(211, 211, 211);
+    position:absolute;
+    bottom: 42px;
+
+}
+.precio:hover{
+    font-size:14px ;
+    font-weight: bold;
+}
+.nombre{
+    
+    margin: 0px;
+}
+.categoria{
+   
+    margin:0px;
+}
+.descripcion i{
+    font-size: 20px;
+    position: absolute;
+    bottom:60px ;
+   
+
+
+}
+    
+.descripcion i:hover{
+    color: blue;
+    font-size: 25px;
+
+}
+.whatsapp{
+    display: none;
+    position: fixed;
+    font-size: 50px;
+    color: green;
+    right: 10px;
+    bottom: 5px;
+}
+
+@media(min-width:400px){
+    .whatsapp{
+        display: block;
+    }
+    .articulos{
+        width: 30%;
+    }
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+@media(min-width:900px){
+    .articulos{
+        width: 23%;
+    }
+
+}
+
+
