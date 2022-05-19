@@ -2,61 +2,59 @@ body{
     background-color: black;
 }
 
-.main-cont-cart{
-    width: 90%;
+.carrito-deseos{
+    width: 95%;
     margin: auto;
     padding-top: 5%;
-    padding-bottom: 2.5%;
-    background-color: black;
-}
-
-.selecciones{
     display: flex;
-    flex-direction: wrap;
-}
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
-.selecciones li{
-    width: 50%;
-    font-size: 18px;
-    text-align: center;
-    color: white;
-    list-style-type: none;
-    border-top: solid 2px white;
-    border-bottom: solid 2px white;
-    padding: 10px 0px;
 }
 
 .carrito-compra{
-    width: 37.5%;
-    margin:left;
+    width: 60%;
+    margin: auto;
     color: white;
-    padding-left: 12.5%;
-    padding-bottom: 5%;
+    padding-bottom: 7.5%;
     display: flex;    
     flex-direction: column;
+    align-items: center;
 }
 
 .lista-deseos{
-    width: 37.5%;
-    margin:left;
+    width: 60%;
     color: white;
-    padding-left: 12.5%;
-    padding-bottom: 5%;
+    padding-bottom: 7.5%;
     display: flex;    
     flex-direction: column;
+    align-items: center;
+}
+
+.deseos{
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
 }
 
 .carrito-compra div{
     width: 50%;
     padding: 5px 0px;
+    text-align: center;
+}
+
+.carrito {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
 }
 
 .producto-elegido{
-    width: 50%;
+    width: 100%;
 }
 
 .cantidad{
-    width: 50%;
+    width:  100%;
 }
 
 .cantidad i{
@@ -70,6 +68,20 @@ body{
     color: white;
 }
 
+.precio-unitario-input{
+    width: auto;
+    text-align: center;
+    background-color: black;
+    color: white
+}
+
+.total-input{
+    width: auto;
+    text-align: center;
+    background-color: black;
+    color: white
+}
+
 .producto-elegido-input{
     width: auto;
     text-align: center;
@@ -78,8 +90,11 @@ body{
 }
 
 .botones-comprar-eliminar{
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    
 }
 
 .botones-comprar-eliminar label{
@@ -133,6 +148,32 @@ body{
     margin: auto;
     color: white;
     text-align: center;
+}
+
+/* PARA TABLETS */
+@media (min-width:400px){
+    .carrito-compra{
+        width: 50%;
+        margin: auto;
+        color: white;
+        padding-bottom: 7,5%;
+        display: flex;    
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lista-deseos{
+        width: 50%;
+        color: white;
+        padding-bottom: 7,5%;
+        display: flex;    
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-deseos p{
+        text-align: center;
+    }
 }
 
 /* PARA COMPU */
