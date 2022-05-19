@@ -3,7 +3,8 @@
     background-color: #ebebeb;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-
+    background-color: black;
+   
   }
 
   .boton{
@@ -17,7 +18,7 @@
   .input-email,
   .input-password,
   .input-date {
-    width: 90vw;
+    width: 50vw;
     font-size: 18px;
     padding: 5px;
     background-color: transparent;
@@ -26,10 +27,12 @@
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     outline: none;
+    color: white;
   }
 
   .nombre{
       margin-bottom: 20px;  
+      
   }
 
   .olvidar{
@@ -50,229 +53,5 @@ body{
     font-size: 12px;
 }
 
-/* MODIFICADORES DEL HEADER */
-header{
-    padding: 5px;
-    background-color: black;
-    box-sizing: border-box;
-} 
-
-/* menu hamburguesa */
-.menu i{
-    border: solid 2px white;
-    color:white;
-    text-align: center;
-    border-radius: 100%;
-    padding: 5px;
-    font-size: 100%;
-    box-sizing: border-box;
-    margin-right: 2px; 
-    
-}
-
-.logo{
-    width: 30%;
-    margin-right: 2px;
-    
-}
-.busqueda{
-   
-    box-sizing: border-box;
-    display: flex;
-}
-
- 
-.busqueda button{
-    display: block;
-    width: 10%;
-    padding: 0px;
-    text-align: center;
-    font-size: 2rem;
-    font-size: 100%;
-    box-sizing: border-box;
-}
-.busqueda button i{
-   display: block;
-    margin-top:-2px;
-}
-
-/* para acomodar en la misma linea al menu, logo y busqueda (usando flex)*/
-.navbar-top{
-    display: flex;
-    align-items: center;
-}
-
-nav ul{
-    display: flex;
-    list-style: none;
-}
-nav a{
-    text-decoration: none;
-    color:white;
-    margin-right: 10px;
-    
-    
-}
-nav a:hover{
-    color:blue;
-    font-weight: bolder;
-}
-.carrito{
-    margin-right: 0px;
-}
-/* flex para alinear la nav */
-nav{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.menu-compu1{
-    display: none;
-}
-/* ----------------- 
-MODIFICADORES DEL FOOTER*/
-footer{
-    color:white;
-    background-color: black;
-    padding: 5px;
-
-}
-footer section{
-    text-align: center;
-    margin-bottom: 10px;
-}
-h4{
-    margin: 0px;  
-}
-
-footer section ul{
-    padding-inline-start: 0px;
-    margin: 3px 0px 0px 0px;   
-}
-.atencion-cliente{
-    text-align: center;
-    padding-inline-start: 0px;
-    
-    
-}
 
 
-footer ul li a{
-    list-style: none;
-    text-decoration: none;
-    color:white;
-    font-size: 10px;
-}
-
-footer li{
-    list-style: none;
-    font-size: 10px;
-    
-
-}
-footer ul li:hover{
-    font-weight: bold;
-    text-decoration: underline;
-
-}
-.tablets{
-    display: none;
-}
-.compu{
-    display: none;
-}
-/* PARA TABLETS */
-@media (min-width:400px){
-    /* MODIFICADORES HEADER */
-    .navbar-top{
-        width: 60%; 
-    }
-    nav{
-        justify-content:right;
-        width: 40%;
-
-    }
-
-    .buscador-nav{
-        display: flex;
-        justify-content: space-between;
-    
-    }
-    /* MODIFICADORES FOOTER */
-    .tablets{
-        display: block;
-    }
-    footer section{
-        width:23%;
-
-    }
-    .menu-footer{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-    }
-    .atencion-cliente{
-
-        display: flex;
-        justify-content: space-around;
-    }
-    .atencion-cliente li {
-        border-left: solid 2px white;
-        border-top: solid 2px white; 
-    }
-}
-
-
-
-/* PARA COMPU */
-@media(min-width:900px){
-    nav{
-        font-size: 24px;
-    }
-   
-    .menu{
-        display: none;
-    }
-    .menu-compu1{
-        display: block;
-        margin:0px;
-        list-style:none;
-        font-size: 24px;
-        display: flex;
-        justify-content:center;
-
-    }
-    .menu-compu1 li{
-        padding:0px 20px;
-    }
-    .menu-compu1 li a{
-        display: block;
-        text-decoration: none;
-        color:white;
-    }
-    .menu-compu1 li a:hover{
-        color:blue;
-        font-weight: bold;
-
-    }
-
-    .busqueda{
-        width: 80%;
-        height: 20% ;
-        /* justify-content: space-between; */
-        
-    }
-    
-    /* MODIF DEL FOOTER */
-    footer section{
-        width: 15%;
-    }
-    .compu{
-        display: block;
-    }
-
-
-}
