@@ -2,6 +2,11 @@ body{
     background-color: black;
 }
 
+.articulos{
+    width: 50%;
+    margin: auto;
+}
+
 .carrito-deseos{
     width: 95%;
     margin: auto;
@@ -13,7 +18,7 @@ body{
 }
 
 .carrito-compra{
-    width: 60%;
+    width: 70%;
     margin: auto;
     color: white;
     padding-bottom: 7.5%;
@@ -23,7 +28,7 @@ body{
 }
 
 .lista-deseos{
-    width: 60%;
+    width: 70%;
     color: white;
     padding-bottom: 7.5%;
     display: flex;    
@@ -43,6 +48,12 @@ body{
     text-align: center;
 }
 
+.mas{
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
 .carrito {
     width: 100%;
     font-size: 18px;
@@ -54,7 +65,8 @@ body{
 }
 
 .cantidad{
-    width:  100%;
+    width:  100% !important;
+    margin-left: 0px;
 }
 
 .cantidad i{
@@ -63,7 +75,7 @@ body{
 
 .cantidad-input{
     text-align: center;
-    width: 8%;
+    width: 10%;
     background-color: black;
     color: white;
 }
@@ -72,21 +84,21 @@ body{
     width: auto;
     text-align: center;
     background-color: black;
-    color: white
+    color: white;
 }
 
 .total-input{
     width: auto;
     text-align: center;
     background-color: black;
-    color: white
+    color: white;
 }
 
 .producto-elegido-input{
     width: auto;
     text-align: center;
     background-color: black;
-    color: white
+    color: white;
 }
 
 .botones-comprar-eliminar{
@@ -120,6 +132,11 @@ body{
     background-color: white;
     font-size: 25px;
     transition: 500ms;
+}
+
+.articulos{
+    width: 20%;
+    margin: auto;
 }
 
 .basurero{
@@ -161,7 +178,17 @@ body{
         flex-direction: column;
         align-items: center;
     }
-    
+
+    .articulos.cantidad-input{
+        margin-left: 0px;
+    }
+
+    .articulos {
+        width: 30%;
+        margin: auto; 
+    }
+
+
     .lista-deseos{
         width: 50%;
         color: white;
@@ -178,7 +205,7 @@ body{
 
 /* PARA COMPU */
 @media(min-width:900px){
-    .cantidad .masmenos{
+    .cantidad i{
         display: none;
     }
 }

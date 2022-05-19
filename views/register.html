@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- enlace con style.css y con normalize.css -->
     <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <!-- enlace con pagina de tipo de fuente-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,6 @@
 
     <title>GloriososClub - Tienda de Indumentaria deportiva</title>
 </head>
-
 <body>
     <header>
         <div class="buscador-nav">
@@ -44,48 +44,40 @@
             <li><a href="#marcas">Marcas</a></li>
             <li><a href="#Colecciones">Colecciones</a></li>
         </ul>
-
-
-        <img src="./images/banner gloriosos club.png" alt="" class="banner">
+        <img src="/images/sexta opcion 650 px 250 px.png" alt="" class="banner">
     </header>
     <main>
-        
         <form action="/" method="GET" class="tabla">
             <div class="control-formulario">
-               <label></label>
-               <input type="text" name="Usuario" required placeholder="Nombre y apellido"> 
+               <input class="input-formularios" type="text" name="Usuario" required placeholder="Nombre y apellido">
             </div> 
             <div class="control-formulario">
-                <label></label>
-                <input type="text" name="Usuario" required placeholder="Usuario"> 
+                </label>
+                <input class="input-formularios" type="text" name="Usuario" required placeholder="Usuario"> 
             </div> 
             <div class="control-formulario">
                 <label class="fechadenacimiento">Fecha de Nacimiento</label>
-                <input type="date" name="fecha" required placeholder="mm/dd/yy"> 
+                <input class="input-formularios-date" type="date" name="fecha" required placeholder="mm/dd/yy"> 
             </div> 
             <div class="control-formulario">
-                <label></label>
-                <input type="text" name="Localidad"  placeholder ="Localidad"> 
-            </div> 
-            <div class="control-formulario">
-                <label></label>
-                <input type="text" name="Domicilio" required placeholder ="Domicilio"> 
+            </label>
+            <input class="input-formularios" type="text" name="Domicilio" required placeholder ="Domicilio"> 
             </div>  
             <div class="control-formulario">
-              <label class="fotodeusuario">Foto de Usuario</label>
-              <input type="file" name="imagen">
-              </div>
+                </label>
+                <input class="input-formularios" type="text" name="Localidad"  placeholder ="Localidad"> 
+            </div> 
             <div class="control-formulario">
-              <label></label>
-              <input type="password" name="password" required placeholder="Contraseña"> 
+              </label>
+              <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
             </div>
             <div class="control-formulario">
-                <label></label>
-                <input type="password" name="password" required placeholder="Confirmar Contraseña"> 
+                </label>
+                <input class="input-formularios" type="password" name="password" required placeholder="Confirmar Contraseña"> 
             </div>
-            <div class="control-formulario">
-              <button  class="borra" type="reset">Borrar</button>
+            <div class="control-formulario">              
               <button class="envia" type="submit">Enviar</button><a href="/index"></a>
+              <button  class="borra" type="reset">Borrar</button>
             </div>
            </form>
     </main>

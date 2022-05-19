@@ -4,7 +4,12 @@
 
 main{
     padding: 5px;
-    background-color:rgb(211, 211, 211);
+    background-color:black;
+}
+
+h1{
+    color: white;
+    text-align: center;
 }
 
 .articulos{
@@ -78,7 +83,7 @@ main{
     .articulos{
         width: 30%;
     }
-    main{
+    .todos-los-articulos{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
