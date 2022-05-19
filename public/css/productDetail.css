@@ -1,0 +1,108 @@
+main{
+    padding: 20px 5px;
+    background-color: black;
+    box-sizing: border-box;
+    
+}
+.imagen-descripcion{
+    background-color: white;
+    margin-bottom:0px;
+    
+}
+.imagen-descripcion img{
+    width: 100%;
+
+}
+.nombre-detalle{
+    text-align: center;
+}
+.precio-detalle{
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.cuotas{
+    margin-top: 0px;
+}
+.cuotas, .envioGratis{
+    font-size: 14px;
+    margin-bottom:0px ;
+}
+.enlaces-detalle{
+    display: block;
+    text-decoration: none;
+    
+
+}
+form{
+    text-align: center;
+    padding: 10px 0px;
+}
+.cantidad{
+    display: block;
+    border: solid 2px rgb(211, 211, 211);
+    border-radius: 5%;
+    background-color: rgb(234, 233, 233);
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5px;
+    
+}
+form h3{
+    margin:5px 0px;
+
+}
+.comentarios{
+    width: 90%;
+    background-color: rgb(234, 233, 233);
+    border: solid 2px rgb(211, 211, 211);
+    
+}
+.descripcion-individual{
+    background-color: white;
+    padding: 5px;
+    text-align: left;
+}
+.descripcion-individual h3{
+    margin-top:0px;
+    text-align: center;
+}
+.descripcion-individual p{
+    font-size: 14px;
+    text-align: center;
+}
+.nombreTablets{
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.descripcion-individual-compu{
+    display: none;
+}
+
+@media(min-width:400px){
+    .imagen, .descripcion-detalle{
+        width: 45%;
+        margin: auto;
+
+    }
+    .imagen-descripcion{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .nombreTablets{
+        display: block;
+    }
+}
+
+@media(min-width:900px){
+    .descripcion-individual{
+        display: none;
+    }
+    .descripcion-individual-compu{
+        display: block;
+        text-align: center;
+    }
+
+}
