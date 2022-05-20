@@ -89,6 +89,11 @@ nav a:hover{
 .carrito{
     margin-right: 0px;
 }
+
+.boton-detalles{
+    position: relative;
+}
+
 /* flex para alinear la nav */
 nav{
     display: flex;
