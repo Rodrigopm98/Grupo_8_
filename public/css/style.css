@@ -83,7 +83,7 @@ nav a{
     
 }
 nav a:hover{
-    color:blue;
+    color:#004AAD;
     font-weight: bolder;
 }
 .carrito{
@@ -231,13 +231,12 @@ footer ul li:hover{
         color:white;
     }
     .menu-compu1 li a:hover{
-        color:blue;
+        color:#004AAD;
         font-weight: bold;
 
     }
     .busqueda{
-        
-        height: 20% ;
+        height: 20%;
         justify-content: space-between;
     }
     /* MODIF DEL FOOTER */
