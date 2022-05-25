@@ -6,7 +6,7 @@ body{
 /* MODIFICADORES DEL HEADER */
 header{
     padding: 5px;
-    background-color: black;
+    background-color: #232F3E;
     box-sizing: border-box;
 } 
 
@@ -23,7 +23,7 @@ header{
     
 }
 .logo{
-    width: 30%;
+    width: 20%;
     margin-right: 2px;
     
 }
@@ -88,6 +88,7 @@ nav a:hover{
 }
 .carrito{
     margin-right: 0px;
+    padding-right: 15px;
 }
 
 .boton-detalles{
@@ -109,7 +110,7 @@ nav{
 MODIFICADORES DEL FOOTER*/
 footer{
     color:white;
-    background-color: black;
+    background-color: #131A22;
     padding: 5px;
     padding-top: 40px;
 
@@ -218,6 +219,7 @@ footer ul li:hover{
         font-size: 24px;
         display: flex;
         justify-content:center;
+        padding-bottom: 14px;
 
     }
     .menu-compu1 li{

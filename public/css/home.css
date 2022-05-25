@@ -1,10 +1,12 @@
 :root{
     --Gris: rgb(211, 211, 211);
+    --Negro: #232F3E;
+    --Azul: #485769;
 }
 
 main{
     padding: 5px;
-    background-color:black;
+    background-color:#485769;
 }
 
 h1{
@@ -85,7 +87,7 @@ h1{
         display: block;
     }
     .articulos{
-        width: 30%;
+        width: 47%;
     }
     .todos-los-articulos{
         display: flex;
