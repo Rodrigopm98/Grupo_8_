@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %> 
+    <link rel="stylesheet" href="/css/register.css">
+
+<body>
+    <%- include("partials/header") %>
+    <main>
+        <form action="/" method="GET" class="tabla">
+            <div class="control-formulario">
+               <input class="input-formularios" type="text" name="Usuario" required placeholder="Nombre y apellido">
+            </div> 
+            <div class="control-formulario">
+                </label>
+                <input class="input-formularios" type="text" name="Usuario" required placeholder="Usuario"> 
+            </div> 
+            <div class="control-formulario">
+                <label class="fechadenacimiento">Fecha de Nacimiento</label>
+                <input class="input-formularios-date" type="date" name="fecha" required placeholder="mm/dd/yy"> 
+            </div> 
+            <div class="control-formulario">
+            </label>
+            <input class="input-formularios" type="text" name="Domicilio" required placeholder ="Domicilio"> 
+            </div>  
+            <div class="control-formulario">
+                </label>
+                <input class="input-formularios" type="text" name="Localidad"  placeholder ="Localidad"> 
+            </div> 
+            <div class="control-formulario">
+              </label>
+              <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
+            </div>
+            <div class="control-formulario">
+                </label>
+                <input class="input-formularios" type="password" name="password" required placeholder="Confirmar Contraseña"> 
+            </div>
+            <div class="control-formulario">              
+              <button class="envia" type="submit">Enviar</button><a href="/index"></a>
+              <button  class="borra" type="reset">Borrar</button>
+            </div>
+           </form>
+    </main>
+    <%- include("partials/footer") %> 
+</body>
+
+</html>

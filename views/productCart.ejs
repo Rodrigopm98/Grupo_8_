@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %> 
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/productCart.css">
+<body>
+    <%- include("partials/header") %>
+    <main>
+        <article class="articulos">
+            <img src="/images/Toronto Raptors 1998.png" alt="">
+            <div class="descripcion">
+                <i class="fas fa-heart"></i>
+                <p class="precio">$15.000</p>
+                <h3 class="nombre">Adidas Predator</h3>
+                <p class="categoria">Fútbol</p>
+            </div>
+        </article>
+        <div class="carrito-deseos">
+            <div class="carrito-compra">
+                <div class="carrito">Carrito (1) <i class="fas fa-shopping-cart"></i></div>
+                <div class="producto-elegido">Producto:<input class="producto-elegido-input" placeholder="Producto elegido" type="text" name="elegido" id="elegido"></div>
+                <div class="cantidad">Cantidad: <i class="fas fa-plus-circle mas"></i><input class="cantidad-input" placeholder="1" type="number" name="cantidad" id="cantidad"> <i class="fas fa-minus-circle masmenos"></i></div>
+                <div class="precio-unitario">Precio unitario: <input class="precio-unitario-input" placeholder="$$$" type="number" name="precio" id="precio"></div>
+                <div>Total: <input class="total-input" placeholder="$$$" type="number" name="total" id="total"></div>
+                <div class="botones-comprar-eliminar">
+                <label><button class="boton-buy" type="button"><i class="fas fa-check-square"></i></button></label>
+                <label><button class="boton-trash" type="reset"><i class="fas fa-trash"></i></i></button></label>
+                </div>
+            </div>
+            <div class="lista-deseos">            
+                <div class="deseos">Lista de deseos (0)</a> <i class="far fa-grin-hearts"></i></div>
+                <h2>¡Tu lista está vacia!</h2>
+                <p>¿No sabés qué comprar? ¡Hay cientos de productos disponibles!</p>
+                <a href="#">Comenzá a llenar tu carrito ahora</a>
+            </div>
+    </main>
+    <%- include("partials/footer") %> 
+</body>
+</html>

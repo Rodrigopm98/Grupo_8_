@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %> 
+    <link rel="stylesheet" href="/css/login.css">
+<body>
+    <%- include("partials/header") %>
+    <main>
+        <form action="/" method="GET" class="form-container">
+            <div class="nombre">
+                <label for="">
+                    <input type="text" name="username" placeholder="Nombre de Usuario" class="input-text" />
+                </label>
+            </div>
+            <div>
+                <input type="password" placeholder="Ingrese su contraseña" class="input-password" />
+            </div>
+            <div class="olvidar">
+                <p><a href='#'>¿Olvidaste tu Contraseña?</a></p>
+            </div>
+            <div class="boton">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <%- include("partials/footer") %> 
+</body>
+
+</html>
