@@ -7,6 +7,9 @@
 main{
     padding: 5px;
     background-color:#485769;
+    margin-top: -27px;
+    position: relative;
+
 }
 
 h1{

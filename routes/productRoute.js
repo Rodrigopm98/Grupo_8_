@@ -1,0 +1,9 @@
+const express = require("express");
+const router = express.Router();
+
+/* importando controlador */
+const productController= require("../controller/productController");
+
+router.get("/", productController.detail);
+
+module.exports= router;
