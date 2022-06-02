@@ -3,7 +3,7 @@
     background-color: #ebebeb;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #232F3E;
   }
 
   .boton{
@@ -35,8 +35,19 @@
   }
 
   .olvidar{
-      font-size: medium;      
+      font-size: medium;
+      color: white;
   }
+
+  .olvidar p a{
+      background-color: #232F3E;
+      color: rgba(255, 255, 255, 0.521);
+      border: 2px solid #232F3E;
+      padding: 5px 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
 
 .banner{
     width: 100%;  

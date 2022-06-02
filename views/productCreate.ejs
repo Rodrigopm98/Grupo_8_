@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("partials/head") %> 
+    <link rel="stylesheet" href="/css/productCreate.css">
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/login.css">
 <body>
     <%- include("partials/header") %>
     <main>
+    <form action="/" method="POST" class="form-container">
+        <div class="nombre">
+            <label for="">
+                <input type="text" name="username" placeholder="Nombre de nuevo producto" class="input-text">
+            </label>
+        </div>
+        <div class="nombre">
+            <input type="text" placeholder="Descripcion" class="input-text">
+        </div>
+        
+        <div class="nombre">
+            <input type="text" placeholder="Categoria" class="input-text">
+        </div>
+
+        <div class="nombre">
+            <input type="text" placeholder="Colores" class="input-text">
+        </div>
+
+        <div class="nombre">
+            <input type="text" placeholder="Precio" class="input-text">
+        </div>
+
+        <div class="buscarImagen">
+            <input type="file" name="imagenNuevoArchivo">
+        </div>
+
+    </form>
+</main>
+    
+    
+    
+    
+    
+    
+    <main>     
         <div class="imagen-descripcion">
+            <input class="buscarImagen" type="file" placeholder="Imagen de nuevo producto">
+            
             <div class="imagen">
             <h2 class="nombre-detalle">Camiseta Argentina 2004</h2>
             
-            <img src="/images/Camiseta Argentina Basquet 2004.png" alt="">
             </div>
             
             <div class="descripcion-detalle">
@@ -52,10 +90,6 @@
         <p>Vistiendo este modelo la Seleccion ganó la medalla dorada en Atenas 2004.</p>
         <p>¡Sentir la gloria, nunca fue tan fácil!</p>
         </div>
-
-       <form action="/product/productEdit" method="POST" class="botonEditar">
-            <button type="submit">Editar producto</button>
-        </form>
 
 
         

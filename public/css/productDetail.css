@@ -1,11 +1,12 @@
 main{
     padding: 20px 5px;
-    background-color: black;
+    background-color: #E0E0E0;
     box-sizing: border-box;
-    
+    color: black;    
 }
+
 .imagen-descripcion{
-    background-color: white;
+    background-color: #e0e0e0;
     margin-bottom:0px;
     
 }
@@ -59,7 +60,7 @@ form h3{
     
 }
 .descripcion-individual{
-    background-color: white;
+    background-color: #e0e0e0;
     padding: 5px;
     text-align: left;
 }
@@ -78,6 +79,12 @@ form h3{
 }
 .descripcion-individual-compu{
     display: none;
+}
+
+.botonEditar{
+    text-align: center;
+
+
 }
 
 @media(min-width:400px){

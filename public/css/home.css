@@ -20,9 +20,9 @@ h1{
 .articulos{
 
     margin-top:10px;
-    position:relative;
-    
+    position:relative;    
 }
+
 .articulos img{
     width: 100%;
    
@@ -34,7 +34,7 @@ h1{
     
     box-sizing: border-box; 
     margin-top: -3px; 
-    background-color: white;
+    background-color: #E0E0E0;
     
 }
 .precio{

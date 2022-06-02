@@ -2,6 +2,7 @@
 .fondo{
     height:5%;
 }
+
 .control-formulario{
     width: 50vw;
     padding: 5px;
@@ -42,11 +43,11 @@
     background-color: #ebebeb;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #232F3E;
 }
 
 .fechadenacimiento{
-    color:#9d8334;
+    color:rgba(255, 255, 255, 0.521);
 }
 .fotodeusuario{
     color:#9d8334;
