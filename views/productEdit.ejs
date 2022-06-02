@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %> 
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/productEdit.css">
+
+<body>
+    <%- include("partials/header") %>
+    <main>
+        <div class="imagen-descripcion">
+            <div class="imagen">
+            <h2 class="nombre-detalle">Camiseta Argentina 2004</h2> <button type="submit">Editar nombre</button>
+            
+            <img src="/images/Camiseta Argentina Basquet 2004.png" alt="">
+            </div>
+            
+            <div class="descripcion-detalle">
+
+                <h3 class="nombreTablets">Camiseta de la Seleccion Argentina de Básquet 2004</h3>
+                <p class="precio-detalle">$8.000</p>
+                <p class="cuotas">En 12 cuotas de $ 1.350 pagando con Mercado Crédito</p>
+                <a class="enlaces-detalle" href="#mediosDePago">Ver los medios de pago</a>
+                <p class="envioGratis">Envío gratis</p>
+                <a class="enlaces-detalle" href="#formasDeEntrega">Ver más formas de entrega</a>
+
+                <form class="unidadesSolicitadas" action="/" method="get" >
+                    <h3>Unidades solicitadas</h3>
+                    <input class="cantidad" type="text" name="cantidad" id="cantidad">
+                    <button type="submit">Comprar ahora</button>
+                    <button type="submit">Agregar al carrito</button>
+                </form>
+                <form class="dejanosTuComentario" action="/" method="get">
+                    <h3>Dejanos tu comentario</h3>
+                    <textarea class="comentarios" name="comentarios" id="" cols="30" rows="5"></textarea>
+                    <button type="submit">Enviar comentario</button>
+                </form>
+                <div class="descripcion-individual-compu">
+                    <h3>Descripción</h3>
+                    <p>Llevate la mítica camiseta de básquet y sentite el campeón olímpico.
+                    <p>Este modelo fue utilizado por la generación dorada de básquet conformada por Manu Ginobili, Carlos Delfino, Fabricio
+                        Oberto, Luis Scola, entre otros.</p>
+                    <p>Vistiendo este modelo la Seleccion ganó la medalla dorada en Atenas 2004.</p>
+                    <p>¡Sentir la gloria, nunca fue tan fácil!</p>
+
+                    <form action="/product/productEdit" method="GET" class="botonEditar">
+                        <button type="submit">Editar producto</button>
+                    </form>
+                    </div>
+                
+
+            </div>
+        </div>
+        <div class="descripcion-individual">
+        <h3>Descripción</h3>
+        <p>Llevate la mítica camiseta de básquet y sentite el campeón olímpico.
+        <p>Este modelo fue utilizado por la generación dorada de básquet conformada por Manu Ginobili, Carlos Delfino, Fabricio
+            Oberto, Luis Scola, entre otros.</p>
+        <p>Vistiendo este modelo la Seleccion ganó la medalla dorada en Atenas 2004.</p>
+        <p>¡Sentir la gloria, nunca fue tan fácil!</p>
+        
+        <form action="/product/productEdit" method="GET" class="botonEditar">
+            <button type="submit">Editar producto</button>
+        </form>    
+    </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <%- include("partials/footer") %> 
+</body>
+
+</html>

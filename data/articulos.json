@@ -1,0 +1,129 @@
+[
+    {
+    "id":1,
+    "precio":"8000",
+    "nombre":"Camiseta Basquet Argentina", 
+    "descripcion": "Camiseta Basquet Argentina 2004",
+    "imagen":"Camiseta Argentina Basquet 2004.png"
+    },
+    
+    {
+    "id":"2",
+    "precio":"15000",
+    "nombre": "Adidas Predator",
+    "descripcion": "Botines Adidas Predator",
+    "imagen": "Adidas Predator.png"
+    },
+    
+    {
+    "id":3,
+    "precio":"21000",
+    "nombre": "Adidas X",
+    "descripcion": "Botines Adidas X Dorados",
+    "imagen":"Adidas x -17-3 fg dorado.png"
+    },
+    
+    {
+    "id":3,
+    "precio":"9500",
+    "nombre":"Camiseta Argentina 86",
+    "descripcion": "Camiseta Selección Argentina de Fútbol 1986 titular",
+    "imagen":"Argentina 1986 .png"
+    },
+    
+    {
+    "id":"4",
+    "precio":"7400",
+    "nombre": "Camiseta Argentina Suplente 1986",
+    "descripcion": "Camiseta Selección Argentina de Fútbol 1986 Suplente",
+    "imagen":"Argentina 1986 alternativa .png"
+    },
+    
+    {
+    "id":"5",
+    "precio": "15000",
+    "nombre": "Camiseta Barcelona 1899", 
+    "descripcion":"Camiseta Fútbol Barcelona 1899",
+    "imagen":"Barcelona 1899.png"
+    },
+    
+    {
+    "id":"6",
+    "precio":"6000",
+    "nombre":"Camiseta Barcelona 2009",
+    "descripcion":"Camiseta Fútbol Barcelona 2009 Titular",
+    "imagen":"Barcelona 2009.png"
+    },
+    
+    {
+    "id": "7",
+    "precio": "10000",
+    "nombre":"Camiseta Real Madrid 2011",
+    "descripcion":"Camiseta Fútbol Real Madrid 2011 Titular",
+    "imagen":"Real Madrid 2011.png"
+    },
+    
+    {
+    "id":"8",
+    "precio":"15000",
+    "nombre":"Camiseta Real Madrid 2004", 
+    "descripcion": "Camiseta Fútbol Real Madrid 2004 Titular",
+    "imagen":"Real Madrid 2004 .png"
+    },
+    
+    {
+    "id":"9",
+    "precio":"5000",
+    "nombre":"Camiseta PSG 2020", 
+    "descripcion": "Camiseta Fútbol PSG Suplente",
+    "imagen":"Paris Saint Germain alternativa 2020.png"
+    },
+    
+    {
+    "id":"10",
+    "precio":"10000",
+    "nombre":"Camiseta River Plate 1996", 
+    "descripcion": "Camiseta Fútbol River Plate 1996 Titular",
+    "imagen":"River 1996 .png"
+    },
+    
+    {
+    "id":"11",
+    "precio":"20000",
+    "nombre":"Camiseta River Plate 1996", 
+    "descripcion": "Camiseta Fútbol River Plate 1996 Alternativa",
+    "imagen":"River 1996 alternativa .png"
+    },
+    
+    {
+    "id":"12",
+    "precio":"18700",
+    "nombre":"Camiseta 76 ers 2000", 
+    "descripcion": "Camiseta Basquet Philadelphia 2000 Titular",
+    "imagen":"Philadelphia 76 ers 2000.png"
+    },
+    
+    {
+    "id":"13",
+    "precio":"8000",
+    "nombre":"Camiseta Peñarol 2011", 
+    "descripcion": "Camiseta Basquet Peñarol 2011",
+    "imagen":"Peñarol 2011.png"
+    },
+    
+    {
+    "id":"14",
+    "precio":"15000",
+    "nombre":"Camiseta Toronto Raptors 1998", 
+    "descripcion": "Camiseta Basquet Toronto Raptors 1998",
+    "imagen":"Toronto Raptors 1998.png"
+    },
+    
+    {
+    "id":"15",
+    "precio":"12000",
+    "nombre":"Camiseta Chicago Bulls 1995", 
+    "descripcion": "Camiseta Basquet Chicago Bulls 1995",
+    "imagen":"Chicago Bulls 1995.png"
+    }
+    ]
