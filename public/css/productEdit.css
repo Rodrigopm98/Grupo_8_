@@ -1,0 +1,20 @@
+.input-edit{
+    text-align: center;
+    width: 80%;
+}
+
+.textarea{
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.confirmar{
+    display: block;
+    padding-top: 5px;;
+    padding-bottom: 8px;
+}
+
+.h3{
+    text-align: center;
+}
