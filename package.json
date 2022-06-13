@@ -4,7 +4,7 @@
   "description": "<center><img src=\"./public/images/logo.jpeg\" width=\"100\" height=\"100\"/></center>",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",

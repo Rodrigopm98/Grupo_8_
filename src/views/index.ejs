@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %> 
+<link rel="stylesheet" href="/css/home.css">
+<body>
+    <%- include("partials/header") %> 
+    <main>
+        <h1> PRODUCTOS EN OFERTAS </h1>
+        <div class="todos-los-articulos">
+            <% enOferta.forEach(p =>{ %>
+                  
+                <article class="articulos">
+                    <a class="detalleProducto" href="/products/productDetail/<%= p.id %>">
+                    <img src="/images/<%= p.imagen %> " alt="">
+                    <div class="descripcion">
+                        <i class="fas fa-heart"></i>
+                        <p class="precio">$ <%= p.precio %> </p>
+                        <h3 class="nombre"><%= p.nombre %> </h3>
+                        <p class="categoria"><%= p.categoria %> </p>
+                        <div class="boton-detalles"><a href="/products/productDetail"><i class="fas fa-info-circle"></i></a></div>
+                    </div>
+                    </a>
+                </article>
+                
+                <% }) %> 
+            <i class="fab fa-whatsapp whatsapp"></i>
+        </div>
+    </main>
+    <%- include("partials/footer") %> 
+</body>
+
+</html>
