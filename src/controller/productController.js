@@ -19,7 +19,10 @@ const productController ={
         let id= req.params.id;
         let producto = products.find(p=>p.id==id);
         res.render("productEdit", {producto})
-    },    
+    },
+    destroy: function(req,res){
+        
+    }    
 }
 
 module.exports=productController;
