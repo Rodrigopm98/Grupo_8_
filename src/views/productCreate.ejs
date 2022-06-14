@@ -7,30 +7,38 @@
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/" method="POST" class="form-container">
+    <form action="/" method="POST" class="form-container" enctype="multipart/form-data">
         <div class="nombre">
-            <label for="">
-                <input type="text" name="username" placeholder="Nombre de nuevo producto" class="input-text">
-            </label>
+            <label for="name" class="form-label">Nombre del producto:</label>
+                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="input-text">
         </div>
-        <div class="nombre">
-            <input type="text" placeholder="Descripcion" class="input-text">
+        <div class="descripcion">
+            <label for="descripcion" class="form-label"></label>
+            <textarea name="descripcion" id="descripcion" rows="10" cols="50" class="form-text" placeholder="Descripcion del producto"></textarea>
+        </div> 
+        <div class="categoria">
+            <label for="categoria" class="form-label">Categoria:</label>
+            <select name="categoria" id="categoria" class="form-text">
+                <option value="">Elegí</option>
+                <option value="in-sale">En oferta</option>
+                <option value="visited">Ultimos agregados</option>
+            </select>    
         </div>
-        
-        <div class="nombre">
-            <input type="text" placeholder="Categoria" class="input-text">
+        <div class="color">
+            <label for="color" class="form-label">Color:</label>
+            <input type="text" id="color" placeholder="Ej: Marron" class="input-text">
         </div>
-
-        <div class="nombre">
-            <input type="text" placeholder="Colores" class="input-text">
-        </div>
-
-        <div class="nombre">
-            <input type="text" placeholder="Precio" class="input-text">
+        <div class="precio">
+            <label for="precio" class="form-label">Precio del producto</label>
+            <input type="text" id="precio" name="precio" placeholder="Ej: 5678" class="form-input">
         </div>
 
         <div class="buscarImagen">
             <input type="file" name="imagenNuevoArchivo">
+        </div>
+
+        <div class="guardarProducto">
+            <input type="button" value="Guardar Producto">
         </div>
 
     </form>

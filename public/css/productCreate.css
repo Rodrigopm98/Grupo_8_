@@ -2,6 +2,33 @@ main{
     background-color: #485769;
 }
 
+.guardarProducto{
+    padding: 10px;
+}
+
+.nombre{
+    padding: 10px;
+}
+
+.descripcion{
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+.precio{
+    padding: 10px;
+}
+
+.color{
+    padding: 10px;
+}
+
+.categoria{
+    padding: 10px;
+}
+
 .buscarImagen{
-    
+    padding: 10px;
 }
