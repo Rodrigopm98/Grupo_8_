@@ -10,6 +10,10 @@ app.use(express.static(publicpath));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
+/* Tomar información del body */
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 /* creacion del puerto 3030 */
 app.listen(3030, ()=>console.log("puerto creado en: http://localhost:3030/"));
 

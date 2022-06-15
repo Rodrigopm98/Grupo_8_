@@ -1,13 +1,12 @@
 [
     {
     "id": 1,
-    "precio":8000,
-    "nombre":"Camiseta Basquet Argentina", 
+    "precio": 8000,
+    "nombre": "Camiseta Basquet Argentina", 
     "descripcion": "Llevate la mítica camiseta de básquet y sentite el campeón olímpico. Este modelo fue utilizado por la generación dorada de básquet conformada por Manu Ginobili, Carlos Delfino, Fabricio Oberto, Luis Scola, entre otros. Vistiendo este modelo la Seleccion ganó la medalla dorada en Atenas 2004.¡Sentir la gloria, nunca fue tan fácil!",
-    "imagen":"Camiseta Argentina Basquet 2004.png",
+    "imagen": "Camiseta Argentina Basquet 2004.png",
     "categoria": "Basquet",
-    "oferta": true,
-    "cuotas": 3
+    "oferta": true
     },
     
     {
@@ -21,11 +20,11 @@
     },
     
     {
-    "id":3,
+    "id": 3,
     "precio": 21000,
     "nombre": "Adidas X",
     "descripcion": "Botines Adidas X Dorados",
-    "imagen":"Adidas x -17-3 fg dorado.png",
+    "imagen": "Adidas x -17-3 fg dorado.png",
     "categoria": "Futbol",
     "oferta": true
     },
@@ -33,19 +32,19 @@
     {
     "id": 4,
     "precio": 9500,
-    "nombre":"Camiseta Argentina 86",
+    "nombre": "Camiseta Argentina 86",
     "descripcion": "Camiseta Selección Argentina de Fútbol 1986 titular",
-    "imagen":"Argentina 1986 .png",
+    "imagen": "Argentina 1986 .png",
     "categoria": "Futbol",
     "oferta": false
     },
     
     {
-    "id":5,
+    "id": 5,
     "precio": 7400,
     "nombre": "Camiseta Argentina Suplente 1986",
     "descripcion": "Camiseta Selección Argentina de Fútbol 1986 Suplente",
-    "imagen":"Argentina 1986 alternativa .png",
+    "imagen": "Argentina 1986 alternativa .png",
     "categoria": "Futbol",
     "oferta": true
     },
