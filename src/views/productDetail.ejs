@@ -1,64 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("partials/head", {titulo: "Detalle producto"}) %> 
+<%- include("partials/head", {titulo: "Detalle producto" }) %>
     <link rel="stylesheet" href="/css/productDetail.css">
-<body>
-    <%- include("partials/header") %>
-    <main>
-        <div class="imagen-descripcion">
-            <div class="imagen">
-            <h2 class="nombre-detalle"><%= producto.nombre %> </h2>
-            
-            <img src="/images/<%= producto.imagen %> " alt="">
-            </div>
-            
-            <div class="descripcion-detalle">
 
-                <h3 class="nombreTablets"><%= producto.nombre %> </h3>
-                <p class="precio-detalle">$<%= producto.precio %> </p>
-                <p class="cuotas">En 12 cuotas de ... pagando con Mercado Crédito</p>
-                <a class="enlaces-detalle" href="#mediosDePago">Ver los medios de pago</a>
-                <p class="envioGratis">Envío gratis</p>
-                <a class="enlaces-detalle" href="#formasDeEntrega">Ver más formas de entrega</a>
+    <body>
+        <%- include("partials/header") %>
+            <main>
+                <div class="imagen-descripcion">
+                    <div class="imagen">
+                        <h2 class="nombre-detalle">
+                            <%= producto.nombre %>
+                        </h2>
 
-                <form class="unidadesSolicitadas" action="/" method="get" >
-                    <h3>Unidades solicitadas</h3>
-                    <input class="cantidad" type="text" name="cantidad" id="cantidad">
-                    <button type="submit">Comprar ahora</button>
-                    <button type="submit">Agregar al carrito</button>
-                </form>
-                <form class="dejanosTuComentario" action="/" method="get">
-                    <h3>Dejanos tu comentario</h3>
-                    <textarea class="comentarios" name="comentarios" id="" cols="30" rows="5"></textarea>
-                    <button type="submit">Enviar comentario</button>
-                </form>
-                <div class="descripcion-individual-compu">
+                        <img src="/images/<%= producto.imagen %> " alt="">
+                    </div>
+
+                    <div class="descripcion-detalle">
+
+                        <h3 class="nombreTablets">
+                            <%= producto.nombre %>
+                        </h3>
+                        <p class="precio-detalle">$<%= producto.precio %>
+                        </p>
+                        <p class="cuotas">En 12 cuotas de ... pagando con Mercado Crédito</p>
+                        <a class="enlaces-detalle" href="#mediosDePago">Ver los medios de pago</a>
+                        <p class="envioGratis">Envío gratis</p>
+                        <a class="enlaces-detalle" href="#formasDeEntrega">Ver más formas de entrega</a>
+
+                        <form class="unidadesSolicitadas" action="/" method="get">
+                            <h3>Unidades solicitadas</h3>
+                            <input class="cantidad" type="text" name="cantidad" id="cantidad">
+                            <button type="submit">Comprar ahora</button>
+                            <button type="submit">Agregar al carrito</button>
+                        </form>
+                        <form class="dejanosTuComentario" action="/" method="get">
+                            <h3>Dejanos tu comentario</h3>
+                            <textarea class="comentarios" name="comentarios" id="" cols="30" rows="5"></textarea>
+                            <button type="submit">Enviar comentario</button>
+                        </form>
+                        <div class="descripcion-individual-compu">
+                            <h3>Descripción</h3>
+                            <p>
+                                <%= producto.descripcion %>
+                            </p>
+
+                            <form action="/products/productEdit/<%= producto.id %>" method="GET" class="botonEditar">
+                                <button type="submit">Editar producto</button>
+                            </form>
+    
+                                <form action="/products/productEdit/<%= producto.id%>?_method=DELETE" method="POST" class="botonEditar" >
+                                    <button type="submit">Eliminar Producto</button>
+                                </form>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="descripcion-individual">
                     <h3>Descripción</h3>
                     <p>
-                        <%= producto.descripcion %> 
+                        <%= producto.descripcion %>
                     </p>
 
-                    <form action="/products/productEdit/<%= producto.id %> " method="GET" class="botonEditar">
+                    <form action="/product/productEdit" method="GET" class="botonEditar">
                         <button type="submit">Editar producto</button>
                     </form>
-                    </div>
-                
+                    <form action="/product/productEdit/<%= producto.id%>?_method=DELETE" method="POST">
+                        <button type="submit">Eliminar Producto</button>
+                    </form>
 
-            </div>
-        </div>
-        <div class="descripcion-individual">
-        <h3>Descripción</h3>
-        <p>
-            <%= producto.descripcion %> 
-        </p>
-        
-        <form action="/product/productEdit" method="GET" class="botonEditar">
-            <button type="submit">Editar producto</button>
-        </form>    
-    </div>
 
-    </main>
-    <%- include("partials/footer") %> 
-</body>
+                </div>
+
+            </main>
+            <%- include("partials/footer") %>
+    </body>
 
 </html>

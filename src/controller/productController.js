@@ -21,11 +21,10 @@ const productController ={
         let newProduct = {
             id: products[products.length - 1].id + 1,
             username: req.body.name,
-            descripcion: req.body.description,
-            colores: req.body.color,
+            descripcion: req.body.descripcion,
             precio: req.body.precio,
             imagen: "default-image.png",
-            categoria: req.body.categoria,
+            categoria: req.body.categoria
         }
     
         products.push(newProduct);
@@ -37,11 +36,42 @@ const productController ={
     edit: function(req,res){
         let id= req.params.id;
         let producto = products.find(p=>p.id==id);
-        res.render("productEdit", {producto})
+        res.render("productEdit", {producto});
+
     },
-    destroy: function(req,res){
-        
-    }    
+    update: function(req, res){
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let id= req.params.id;
+        let producto = products.find(p=>p.id==id);
+        let editedProduct={
+            id: id,
+            precio: req.body.precio,
+            nombre: req.body.name,
+            descripcion:  req.body.descripcion ,
+            imagen: producto.imagen,
+            categoria: req.body.categoria,
+            oferta: producto.oferta
+        }
+        let indice= products.findIndex( product => product.id == req.params.id );
+        products[indice]= editedProduct; 
+        console.log(indice)
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+    
+        res.redirect("/products");
+
+         
+
+    },
+    destroy : (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let finalProducts = products.filter(product => product.id != req.params.id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
+		
+		res.redirect("/products");
+	}
+
 }
 
 module.exports=productController;

@@ -1,5 +1,9 @@
 const express=require("express");
 const app= express();
+const methodOverride=require("method-override");
+
+
+app.use(methodOverride("_method"));
 
 /* carpeta public como estatica */
 const path=require("path");

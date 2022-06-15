@@ -7,7 +7,7 @@
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/" method="POST" class="form-container" enctype="multipart/form-data">
+    <form action="/products/productCreate" method="POST" class="form-container" enctype="multipart/form-data">
         <div class="nombre">
             <label for="name" class="form-label">Nombre del producto:</label>
                 <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="input-text">
@@ -19,14 +19,12 @@
         <div class="categoria">
             <label for="categoria" class="form-label">Categoria:</label>
             <select name="categoria" id="categoria" class="form-text">
-                <option value="">Elegí</option>
-                <option value="in-sale">En oferta</option>
-                <option value="visited">Ultimos agregados</option>
+                <option value="" selected >Todas</option>
+                <option value="futbol">Fútbol</option>
+                <option value="basquet">Básquet</option>
+                <option value="boxeo">Boxeo</option>
+                <option value="otro">Otro</option>
             </select>    
-        </div>
-        <div class="color">
-            <label for="color" class="form-label">Color:</label>
-            <input type="text" id="color" placeholder="Ej: Marron" class="input-text">
         </div>
         <div class="precio">
             <label for="precio" class="form-label">Precio del producto</label>
@@ -38,7 +36,7 @@
         </div>
 
         <div class="guardarProducto">
-            <input type="button" value="Guardar Producto">
+            <button type="submit">Guardar Producto</button>
         </div>
 
     </form>

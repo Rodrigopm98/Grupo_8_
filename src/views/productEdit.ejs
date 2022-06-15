@@ -7,26 +7,29 @@
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/" method="POST" class="form-container">
+    <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST" class="form-container">
         <div class="nombre">
             <label for="">
-                <input type="text" name="username" placeholder="<%= producto.nombre %>" value="<%= producto.nombre %>" class="input-text">
+                <input type="text" name="name" placeholder="<%= producto.nombre %>" value="<%= producto.nombre %>" class="input-text">
             </label>
         </div>
         <div class="nombre">
-            <textarea class="input-text" rows="5" placeholder="<%=producto.descripcion%>"><%=producto.descripcion%></textarea>
+            <textarea class="input-text" rows="5" placeholder="<%=producto.descripcion%>" name="descripcion"><%=producto.descripcion%></textarea>
         </div>
         
         <div class="nombre">
-            <input type="text" placeholder="Categoria" value="<%= producto.categoria %>" class="input-text">
+            <input type="text" name="categoria" placeholder="Categoria" value="<%= producto.categoria %>" class="input-text">
         </div>
 
         <div class="nombre">
-            <input type="text" placeholder="$ <%=producto.precio%>" value="$ <%=producto.precio%>" class="input-text">
+            <input type="text" name="precio" placeholder="$ <%=producto.precio%>" value="<%=producto.precio%>" class="input-text">
         </div>
 
         <div class="buscarImagen">
             <input type="file" name="imagenNuevoArchivo">
+        </div>
+        <div>
+            <button type="submit">Confirmar cambio</button>
         </div>
 
     </form>
