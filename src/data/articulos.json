@@ -1,7 +1,7 @@
 [
  {
-  "id": 1,
-  "precio": 8000,
+  "id": "1",
+  "precio": "8000",
   "nombre": "Camiseta Basquet Argentina",
   "descripcion": "Llevate la mítica camiseta de básquet y sentite el campeón olímpico. Este modelo fue utilizado por la generación dorada de básquet conformada por Manu Ginobili, Carlos Delfino, Fabricio Oberto, Luis Scola, entre otros. Vistiendo este modelo la Seleccion ganó la medalla dorada en Atenas 2004.¡Sentir la gloria, nunca fue tan fácil!",
   "imagen": "Camiseta Argentina Basquet 2004.png",
@@ -9,17 +9,17 @@
   "oferta": true
  },
  {
-  "id": "2",
-  "precio": "150",
+  "id": 2,
+  "precio": 15000,
   "nombre": "Adidas Predator",
   "descripcion": "Botines Adidas Predator",
-  "imagen": "Adidas Predator 20-3 fg Negro .png",
+  "imagen": "Adidas Predator.png",
   "categoria": "Futbol",
   "oferta": false
  },
  {
   "id": 3,
-  "precio": 21,
+  "precio": 21000,
   "nombre": "Adidas ",
   "descripcion": "Botines Adidas X Dorados",
   "imagen": "Adidas x -17-3 fg dorado.png",
@@ -45,8 +45,8 @@
   "oferta": true
  },
  {
-  "id": 6,
-  "precio": 15000,
+  "id": "6",
+  "precio": "15",
   "nombre": "Camiseta Barcelona 1899",
   "descripcion": "Camiseta Fútbol Barcelona 1899",
   "imagen": "Barcelona 1899.png",
@@ -54,8 +54,8 @@
   "oferta": false
  },
  {
-  "id": 7,
-  "precio": 6000,
+  "id": "7",
+  "precio": "6000",
   "nombre": "Camiseta Barcelona 2009",
   "descripcion": "Camiseta Fútbol Barcelona 2009 Titular",
   "imagen": "Barcelona 2009.png",
@@ -126,14 +126,14 @@
   "oferta": false
  },
  {
-    "id": 15,
-    "precio": 15000,
-    "nombre": "Camiseta Toronto Raptors 1998",
-    "descripcion": "Camiseta Basquet Toronto Raptors 1998",
-    "imagen": "Toronto Raptors 1998.png",
-    "categoria": "Basquet",
-    "oferta": true
-   },
+  "id": 15,
+  "precio": 10000,
+  "nombre": "Camiseta Toronto Raptors 1998",
+  "descripcion": "Camiseta Basquet Toronto Raptors 1998",
+  "imagen": "Toronto Raptors 1998.png",
+  "categoria": "Basquet",
+  "oferta": true
+ },
  {
   "id": 16,
   "precio": 12000,
@@ -143,7 +143,6 @@
   "categoria": "Basquet",
   "oferta": false
  },
-
  {
   "id": 17,
   "precio": 15690,
@@ -153,7 +152,6 @@
   "categoria": "Boxeo",
   "oferta": false
  },
-
  {
   "id": 18,
   "precio": 4999,
@@ -163,7 +161,6 @@
   "categoria": "Fútbol",
   "oferta": true
  },
-
  {
   "id": 19,
   "precio": 9990,
@@ -173,7 +170,6 @@
   "categoria": "Boxeo",
   "oferta": false
  },
-
  {
   "id": 20,
   "precio": 9990,
@@ -183,27 +179,24 @@
   "categoria": "Fútbol",
   "oferta": false
  },
-
  {
   "id": 21,
   "precio": 5500,
   "nombre": "Camiseta Club Atlético Platense 1998-1999 local",
   "descripcion": "Camiseta Fútbol Club Atlético Platense 1998-1999 local",
-  "imagen": "ca-platense- 1998-99-home-kit.png",
+  "imagen": "ca-platense-1998-99-home-kit.png",
   "categoria": "Fútbol",
   "oferta": false
  },
- 
  {
   "id": 22,
   "precio": 5500,
   "nombre": "Camiseta Club Atlético Platense 1998-1999 visitante",
   "descripcion": "Camiseta Fútbol Club Atlético Platense 1998-1999 visitante",
-  "imagen": "ca-platense- 1998-99-away-kit.png",
+  "imagen": "ca-platense-1998-99-away-kit.png",
   "categoria": "Fútbol",
   "oferta": false
  },
-
  {
   "id": 23,
   "precio": 7200,
@@ -213,7 +206,6 @@
   "categoria": "Fútbol",
   "oferta": true
  },
-
  {
   "id": 24,
   "precio": 11999,
@@ -223,7 +215,6 @@
   "categoria": "Fútbol",
   "oferta": true
  },
-
  {
   "id": 25,
   "precio": 7200,
@@ -233,7 +224,6 @@
   "categoria": "Fútbol",
   "oferta": true
  },
-
  {
   "id": 26,
   "precio": 7200,
@@ -243,7 +233,6 @@
   "categoria": "Fútbol",
   "oferta": true
  },
- 
  {
   "id": 27,
   "precio": 17499,
@@ -253,17 +242,15 @@
   "categoria": "Fútbol",
   "oferta": false
  },
- 
  {
   "id": 28,
   "precio": 7000,
   "nombre": "Manchester United 1992 Alternativa",
   "descripcion": "Camiseta Fútbol Manchester United 1992 Alternativa ",
-  "imagen": "Manchester United 1992 Alternativa.png",
+  "imagen": "Manchester United 1992 Alternativa .png",
   "categoria": "Fútbol",
   "oferta": false
  },
-  
  {
   "id": 29,
   "precio": 7500,
@@ -271,9 +258,8 @@
   "descripcion": "Umbro Camiseta Fútbol Manchester United 1992-1994 Local ",
   "imagen": "Umbro Camiseta Manchester United 1992-1994 Local .png",
   "categoria": "Fútbol",
-  "oferta": false 
+  "oferta": false
  },
-
  {
   "id": 30,
   "precio": 10000,
@@ -281,9 +267,8 @@
   "descripcion": "Camiseta Fútbol Inter Milan Home 2021-2022 ",
   "imagen": "Inter Milan Home 2021-2022.png",
   "categoria": "Fútbol",
-  "oferta": true 
+  "oferta": true
  },
-
  {
   "id": 31,
   "precio": 6500,
@@ -482,5 +467,5 @@
   "categoria": "Fútbol",
   "oferta": false
  }
- 
+
 ]
