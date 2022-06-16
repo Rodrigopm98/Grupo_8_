@@ -291,8 +291,196 @@
   "descripcion": "Camiseta Fútbol Manchester United Retro tercer visitante 1986-1988 ",
   "imagen": "Manchester United Retro tercer visitante 1986-1988.png",
   "categoria": "Fútbol",
+  "oferta": false 
+ },
+
+ {
+  "id": 32,
+  "precio": 8000,
+  "nombre": "Manchester United visitante 92-93",
+  "descripcion": "Camiseta Fútbol Manchester United visitante 92-93",
+  "imagen": "Manchester United visitante 92-93.png",
+  "categoria": "Fútbol",
+  "oferta": false 
+ },
+
+ {
+  "id": 33,
+  "precio": 12499,
+  "nombre": "Camiseta Puma Independiente Titular 21/22 de Hombre",
+  "descripcion": "Camiseta Fútbol Puma Independiente Titular 21/22 de Hombre",
+  "imagen": "Camiseta Puma Independiente Titular 21/22 de Hombre.png",
+  "categoria": "Fútbol",
+  "oferta": false  
+ },
+
+ {
+  "id": 34,
+  "precio": 11499,
+  "nombre": "Camiseta suplente Borussia Dortmund 2022",
+  "descripcion": "Camiseta Fútbol Borussia Dortmund suplente 2022",
+  "imagen": "Camiseta suplente réplica BVB 2022.png",
+  "categoria": "Fútbol",
+  "oferta": false 
+ },
+
+ {
+  "id": 35,
+  "precio": 22099,
+  "nombre": "Guantes de arquero FUTURE Z Grip 1 Hybrid",
+  "descripcion": "Guantes de arquero Puma FUTURE Z Grip 1 Hybrid",
+  "imagen": "Guantes de arquero FUTURE Z Grip 1 Hybrid.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 36,
+  "precio": 22099,
+  "nombre": "Botines Ultra 3.3 FG/AG de fútbol juveniles",
+  "descripcion": "Botines Puma Ultra 3.3 FG/AG de fútbol juveniles",
+  "imagen": "Botines Ultra 3.3 FG/AG de fútbol juveniles.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 37,
+  "precio": 12499,
+  "nombre": "Camiseta titular Borussia Dortmund 2022",
+  "descripcion": "Camiseta Fútbol Borussia Dortmund titular 2022",
+  "imagen": "Camiseta titular réplica BVB 2022.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+{
+  "id": 38,
+  "precio": 12499,
+  "nombre": "Camiseta titular Manchester City",
+  "descripcion": "Camiseta titular Manchester City",
+  "imagen": "Camiseta titular réplica Manchester City.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 39,
+  "precio": 12499,
+  "nombre": "Camiseta Uruguay 2021 Titular",
+  "descripcion": "Camiseta Fútbol Uruguay 2021 Titular",
+  "imagen": "Camiseta Titular de URUGUAY 21 Réplica.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 40,
+  "precio": 7500,
+  "nombre": "Camiseta Manchester City 2021",
+  "descripcion": "Camiseta fútbol Manchester City 2021",
+  "imagen": "Camiseta para hombre réplica de la 1.ª equipación Man City 2021.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+ {
+  "id": 41,
+  "precio": 10499,
+  "nombre": "Botines de fútbol para jóvenes Future 5.4 FG/AG",
+  "descripcion": "Botines de fútbol para jóvenes Future 5.4 FG/AG",
+  "imagen": "Botines de fútbol para jóvenes Future 5.4 FGAG.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 42,
+  "precio": 11999,
+  "nombre": "Camiseta Nike Liverpool Fc 2021/22 Home",
+  "descripcion": "Camiseta Fútbol Nike Liverpool Fc 2021/22 Stadium Home",
+  "imagen": "Camiseta Nike Liverpool Fc 202122 Stadium Home.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 43,
+  "precio": 7799,
+  "nombre": "Camiseta Nike Barcelona Alternativa 2022",
+  "descripcion": "Camiseta Fútbol Nike Barcelona Alternativa 2022",
+  "imagen": "Camiseta Nike Barcelona Alternativa 2022.png",
+  "categoria": "Fútbol",
+  "oferta": true
+ },
+
+ {
+  "id": 44,
+  "precio": 10499,
+  "nombre": "Camiseta Juventus 2021-22",
+  "descripcion": "Camiseta Fútbol Juventus 2021-22",
+  "imagen": "Camiseta Juventus 2021-22.png",
+  "categoria": "Fútbol",
+  "oferta": true
+ },
+
+ {
+  "id": 45,
+  "precio": 6500,
+  "nombre": "Camiseta Francia 1998",
+  "descripcion": "Camiseta Fútbol Retro Francia 1998",
+  "imagen": "Camiseta Francia 1998.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 46,
+  "precio": 7500,
+  "nombre": "Camiseta Francia 2018",
+  "descripcion": "Camiseta Fútbol Francia 2018",
+  "imagen": "Camiseta Francia 2018.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 47,
+  "precio": 7499,
+  "nombre": "Camiseta Barcelona 2019",
+  "descripcion": "Camiseta Fútbol Barcelona 2019",
+  "imagen": "Camiseta Barcelona 2019.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 48,
+  "precio": 7000,
+  "nombre": "Camiseta Atletico de Madrid 2019",
+  "descripcion": "Camiseta Fútbol Atletico de Madrid 2019 titular",
+  "imagen": "Camiseta Atletico de Madrid 2019 titular.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 49,
+  "precio": 8499,
+  "nombre": "Camiseta AC Milan 2020-21",
+  "descripcion": "Camiseta Fútbol AC Milan 2020-21",
+  "imagen": "Camiseta AC Milan 2020-21.png",
+  "categoria": "Fútbol",
   "oferta": true 
  },
 
+ {
+  "id": 50,
+  "precio": 7500,
+  "nombre": "Camiseta Borussia Dortmund 2019",
+  "descripcion": "Puma Camiseta  Fútbol Borussia Dortmund 2019",
+  "imagen": "Puma Camiseta Borussia Dortmund 2019.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ }
  
 ]
