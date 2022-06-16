@@ -142,5 +142,157 @@
   "imagen": "Chicago Bulls 1995.png",
   "categoria": "Basquet",
   "oferta": false
- }
+ },
+
+ {
+  "id": 17,
+  "precio": 15690,
+  "nombre": "Guantes Everlast Powerlock 14 16 Onzas",
+  "descripcion": "Guantes Box Everlast Powerlock 14 16 Onzas",
+  "imagen": "Guantes Box Everlast Powerlock 14 16 Onzas.png",
+  "categoria": "Boxeo",
+  "oferta": false
+ },
+
+ {
+  "id": 18,
+  "precio": 4999,
+  "nombre": "Camiseta Brasil Home 2019/20",
+  "descripcion": "Camiseta Nike Brasil Fútbol Stadium Home 2019/20",
+  "imagen": "Camiseta Nike Brasil Stadium Home 201920.png",
+  "categoria": "Fútbol",
+  "oferta": true
+ },
+
+ {
+  "id": 19,
+  "precio": 9990,
+  "nombre": "Guantes Boxeo Adidas Energy 200",
+  "descripcion": "Guantes Boxeo Adidas Energy 200 Box Kick Full Thai Mma",
+  "imagen": "Guantes Boxeo adidas Energy 200 Box Kick Full Thai Mma.png",
+  "categoria": "Boxeo",
+  "oferta": false
+ },
+
+ {
+  "id": 20,
+  "precio": 9990,
+  "nombre": "Camiseta 1ra Equipación C. A. PLATENSE 2021",
+  "descripcion": "Camiseta  Fútbol 1ra Equipación C. A. PLATENSE 2021",
+  "imagen": "Camiseta 1ra Equipación C. A. PLATENSE 2021.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 21,
+  "precio": 5500,
+  "nombre": "Camiseta Club Atlético Platense 1998-1999 local",
+  "descripcion": "Camiseta Fútbol Club Atlético Platense 1998-1999 local",
+  "imagen": "ca-platense- 1998-99-home-kit.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+ 
+ {
+  "id": 22,
+  "precio": 5500,
+  "nombre": "Camiseta Club Atlético Platense 1998-1999 visitante",
+  "descripcion": "Camiseta Fútbol Club Atlético Platense 1998-1999 visitante",
+  "imagen": "ca-platense- 1998-99-away-kit.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+
+ {
+  "id": 23,
+  "precio": 7200,
+  "nombre": "Camiseta Local España 2022",
+  "descripcion": "Camiseta Fútbol Local España 2022",
+  "imagen": "Camiseta España local 2022.png",
+  "categoria": "Fútbol",
+  "oferta": true
+ },
+
+ {
+  "id": 24,
+  "precio": 11999,
+  "nombre": "Camiseta titular Alemania 2022",
+  "descripcion": "Camiseta titular Alemania 2022",
+  "imagen": "Camiseta titular Alemania 2022.png",
+  "categoria": "Fútbol",
+  "oferta": true
+ },
+
+ {
+  "id": 25,
+  "precio": 7200,
+  "nombre": "Camiseta Colombia visitante 2022",
+  "descripcion": "Camiseta Fútbol Colombia visitante 2022",
+  "imagen": "Camiseta Colombia Visitante 2022.png",
+  "categoria": "Fútbol",
+  "oferta": true
+ },
+
+ {
+  "id": 26,
+  "precio": 7200,
+  "nombre": "Botines de fútbol Predator 20.3 césped",
+  "descripcion": "Botines de fútbol Predator 20.3 césped natural seco",
+  "imagen": "BOTINES DE FÚTBOL PREDATOR 20.3 CÉSPED NATURAL SECO.png",
+  "categoria": "Fútbol",
+  "oferta": true
+ },
+ 
+ {
+  "id": 27,
+  "precio": 17499,
+  "nombre": "Botines X Speedflow.3 sin cordones terreno firme",
+  "descripcion": "Botines de fútbol X Speedflow.3 sin cordones terreno firme ",
+  "imagen": "BOTINES X SPEEDFLOW.3 SIN CORDONES TERRENO FIRME.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+ 
+ {
+  "id": 28,
+  "precio": 7000,
+  "nombre": "Manchester United 1992 Alternativa",
+  "descripcion": "Camiseta Fútbol Manchester United 1992 Alternativa ",
+  "imagen": "Manchester United 1992 Alternativa.png",
+  "categoria": "Fútbol",
+  "oferta": false
+ },
+  
+ {
+  "id": 29,
+  "precio": 7500,
+  "nombre": "Umbro Camiseta Manchester United 1992-1994 Local",
+  "descripcion": "Umbro Camiseta Fútbol Manchester United 1992-1994 Local ",
+  "imagen": "Umbro Camiseta Manchester United 1992-1994 Local .png",
+  "categoria": "Fútbol",
+  "oferta": false 
+ },
+
+ {
+  "id": 30,
+  "precio": 10000,
+  "nombre": "Camiseta Inter Milan Home 2021-2022",
+  "descripcion": "Camiseta Fútbol Inter Milan Home 2021-2022 ",
+  "imagen": "Inter Milan Home 2021-2022.png",
+  "categoria": "Fútbol",
+  "oferta": true 
+ },
+
+ {
+  "id": 31,
+  "precio": 6500,
+  "nombre": "Manchester United Retro tercer visitante 1986-1988",
+  "descripcion": "Camiseta Fútbol Manchester United Retro tercer visitante 1986-1988 ",
+  "imagen": "Manchester United Retro tercer visitante 1986-1988.png",
+  "categoria": "Fútbol",
+  "oferta": true 
+ },
+
+ 
 ]
