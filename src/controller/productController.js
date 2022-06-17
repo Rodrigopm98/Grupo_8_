@@ -26,9 +26,6 @@ const productController ={
             categoria: req.body.categoria,
             oferta: false
         }
-        console.log(req.body)
-        console.log(newProduct)
-        
     
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
