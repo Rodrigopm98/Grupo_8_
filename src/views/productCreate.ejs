@@ -7,14 +7,13 @@
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/products/productCreate" method="POST" class="form-container" enctype="multipart/form-data">
+    <form action="/products" method="POST" class="form-container" enctype="multipart/form-data">
         <div class="nombre">
-            <label for="name" class="form-label">Nombre del producto:</label>
-                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="input-text">
+            
+                <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" class="input-text">
         </div>
         <div class="descripcion">
-            <label for="descripcion" class="form-label"></label>
-            <textarea name="descripcion" id="descripcion" rows="10" cols="50" class="form-text" placeholder="Descripcion del producto"></textarea>
+            <textarea name="descripcion" id="descripcion" rows="5" cols="50" class="input-text" placeholder="Descripcion del producto"></textarea>
         </div> 
         <div class="categoria">
             <label for="categoria" class="form-label">Categoria:</label>
@@ -26,9 +25,9 @@
                 <option value="otro">Otro</option>
             </select>    
         </div>
-        <div class="precio">
-            <label for="precio" class="form-label">Precio del producto</label>
-            <input type="text" id="precio" name="precio" placeholder="Ej: 5678" class="form-input">
+        <div>
+            
+            <input type="text" id="precio" name="precio" placeholder="Precio del producto Ej: 5678" class="precio" >
         </div>
 
         <div class="buscarImagen">

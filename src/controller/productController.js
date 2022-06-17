@@ -15,17 +15,20 @@ const productController ={
     },
     cart: function(req,res){res.render("productCart")},
     create: function(req,res){res.render("productCreate")},
-    store: (req, res) => {
-        /* res.send("Producto nuevo agregado"); */
+    store: function(req, res){
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let newProduct = {
             id: products[products.length - 1].id + 1,
-            username: req.body.name,
-            descripcion: req.body.descripcion,
             precio: req.body.precio,
+            nombre: req.body.name,
+            descripcion: req.body.descripcion,
             imagen: "default-image.png",
-            categoria: req.body.categoria
+            categoria: req.body.categoria,
+            oferta: false
         }
+        console.log(req.body)
+        console.log(newProduct)
+        
     
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
@@ -54,7 +57,7 @@ const productController ={
         }
         let indice= products.findIndex( product => product.id == req.params.id );
         products[indice]= editedProduct; 
-        console.log(indice)
+        
 
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
     
