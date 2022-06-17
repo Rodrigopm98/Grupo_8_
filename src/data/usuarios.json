@@ -1,0 +1,364 @@
+[
+    {
+      "id": 1,
+      "nombre": "Lucas",
+      "apellido": "Cambon",
+      "contraseña": "123456789",
+      "mail": "lucas.cambon@digitalhouse.com"
+    },
+    {
+        "id": 2,
+        "nombre": "Luciana",
+        "apellido": "Hamade",
+        "contraseña": "2653135",
+        "mail": "luciana.b.hamade@gmail.com"
+      },
+
+      {
+        "id": 3,
+        "nombre": "Ignacio",
+        "apellido": "Scocco",
+        "contraseña": "Nacho31",
+        "mail": "nacho.scocco@gmail.com"
+      },
+
+      {
+        "id": 4,
+        "nombre": "Leonardo",
+        "apellido": "Ponzio",
+        "contraseña": "Leo555",
+        "mail": "leo.ponzio@gmail.com"
+      },
+      
+      {
+        "id": 5,
+        "nombre": "Juan Fernando",
+        "apellido": "Quintero",
+        "contraseña": "eltacono",
+        "mail": "juanfer.quintero@gmail.com"
+      },
+
+      {
+        "id": 6,
+        "nombre": "Gonzalo",
+        "apellido": "Martínez",
+        "contraseña": "yvaeltercero",
+        "mail": "pity.martinez@gmail.com"
+      },
+      {
+        "id": 7,
+        "nombre": "Lucas",
+        "apellido": "Pratto",
+        "contraseña": "homero23",
+        "mail": "prattolucas12@gmail.com"
+      },
+      {
+        "id": 8,
+        "nombre": "Franco",
+        "apellido": "Armani",
+        "contraseña": "nogol12",
+        "mail": "armani.franco@gmail.com"
+      },
+
+      {
+        "id": 9 ,
+        "nombre": "Marcelo",
+        "apellido": "Barovero",
+        "contraseña": "trapo123",
+        "mail": "barovero.marcelo@gmail.com"
+      },
+
+      {
+        "id": 10 ,
+        "nombre": "Bruno",
+        "apellido":"Zuculini",
+        "contraseña": "zucucinco",
+        "mail": "bruno.zuculini@gmail.com"
+      },
+      {
+        "id": 11 ,
+        "nombre": "Enzo",
+        "apellido":"Pérez",
+        "contraseña": "riverteamo",
+        "mail": "enzo.pe@gmail.com"
+      },
+      {
+        "id": 12 ,
+        "nombre": "Emanuel",
+        "apellido":"Mammana",
+        "contraseña": "yavolvi2022",
+        "mail": "emma.mammana@gmail.com"
+      },
+      {
+        "id": 13 ,
+        "nombre": "Leandro",
+        "apellido":"González Pires",
+        "contraseña": "melasmando2022",
+        "mail": "leapires@gmail.com"
+      },
+      {
+        "id": 14 ,
+        "nombre": "Jonatan",
+        "apellido":"Maidana",
+        "contraseña": "gladiador1233",
+        "mail": "jony.maidana@gmail.com"
+      },
+      {
+        "id": 15 ,
+        "nombre": "Leonardo",
+        "apellido":"Pisculichi",
+        "contraseña": "piscugol",
+        "mail": "piscu.leo@gmail.com"
+      },
+      {
+        "id": 16 ,
+        "nombre": "Andres",
+        "apellido":"Paulon",
+        "contraseña": "mdq13513",
+        "mail": "andres.p@gmail.com"
+      },
+      {
+        "id": 17 ,
+        "nombre": "Rodrigo",
+        "apellido":"Peralta Montero",
+        "contraseña": "tucu1631",
+        "mail": "rodri.peralta@gmail.com"
+      },
+      {
+        "id": 18 ,
+        "nombre": "Leandro",
+        "apellido":"Novoa",
+        "contraseña": "leiplatense",
+        "mail": "leo.novoa@gmail.com"
+      },
+      {
+        "id": 19 ,
+        "nombre": "Julian",
+        "apellido":"Alvarez",
+        "contraseña": "laarañaquepica",
+        "mail": "juli.alvarez@gmail.com"
+      },
+      {
+        "id": 20 ,
+        "nombre": "Rafael",
+        "apellido":"Santos Borré",
+        "contraseña": "elcomandate",
+        "mail": "rafa.borre@gmail.com"
+      },
+      {
+        "id": 21 ,
+        "nombre": "Lucas",
+        "apellido":"Alario",
+        "contraseña": "pipagol",
+        "mail": "lucas.alario@gmail.com"
+      },
+      {
+        "id": 22 ,
+        "nombre": "Carlos",
+        "apellido":"Sánchez",
+        "contraseña": "tedesbordo",
+        "mail": "charly.sanchez@gmail.com"
+      },
+      {
+        "id": 23 ,
+        "nombre": "Nicolas",
+        "apellido":"De la Cruz",
+        "contraseña": "supernico",
+        "mail": "nico.delacruz@gmail.com"
+      },
+      {
+        "id": 24 ,
+        "nombre": "Ignacio",
+        "apellido":"Fernandez",
+        "contraseña": "eltitiritero",
+        "mail": "nacho.fernandez@gmail.com"
+      },
+      {
+        "id": 25 ,
+        "nombre": "Leandro",
+        "apellido":"Chichizola",
+        "contraseña": "lasbolasnosvanaempatar",
+        "mail": "leo.chichi@gmail.com"
+      },
+      {
+        "id": 26 ,
+        "nombre": "Ariel",
+        "apellido":"Rojas",
+        "contraseña": "chino1234",
+        "mail": "ariel.rojas@gmail.com"
+      },
+      {
+        "id": 27 ,
+        "nombre": "Milton",
+        "apellido":"Casco",
+        "contraseña": "cascoquegoleador",
+        "mail": "milton.casco@gmail.com"
+      },
+      {
+        "id": 28 ,
+        "nombre": "Rogelio",
+        "apellido":"Funes Mori",
+        "contraseña": "melliriver",
+        "mail": "rogelio.funes@gmail.com"
+      },
+      {
+        "id": 29 ,
+        "nombre": "Ramiro",
+        "apellido":"Funes Mori",
+        "contraseña": "rama1234",
+        "mail": "ramiro.funes@gmail.com"
+      },
+      {
+        "id": 30 ,
+        "nombre": "Eder",
+        "apellido":"Alvarez Balanta",
+        "contraseña": "parce234",
+        "mail": "eder.balanta@gmail.com"
+      },
+      {
+        "id": 31 ,
+        "nombre": "German",
+        "apellido":"Pezzella",
+        "contraseña": "bahia135",
+        "mail": "ger.pezzella@gmail.com"
+      },
+      {
+        "id": 32 ,
+        "nombre": "Matias",
+        "apellido":"Kranevitter",
+        "contraseña": "kranetucu",
+        "mail": "mati.krane@gmail.com"
+      },
+      {
+        "id": 33 ,
+        "nombre": "Santiago",
+        "apellido":"Simon",
+        "contraseña": "peqie13",
+        "mail": "santi.simon@gmail.com"
+      },
+      {
+        "id": 34 ,
+        "nombre": "Santiago",
+        "apellido":"Sosa",
+        "contraseña": "contador653",
+        "mail": "santi.sosa@gmail.com"
+      },
+      {
+        "id": 35 ,
+        "nombre": "Teófilo",
+        "apellido":"Gutierrez",
+        "contraseña": "verdolagas 13",
+        "mail": "teito.gutierrez@gmail.com"
+      },
+      {
+        "id": 36 ,
+        "nombre": "Robert",
+        "apellido":"Rojas",
+        "contraseña": "mandioca5631",
+        "mail": "robert.sicario@gmail.com"
+      },
+      {
+        "id": 37 ,
+        "nombre": "Gonzalo",
+        "apellido":"Montiel",
+        "contraseña": "cache153",
+        "mail": "gonza.montiel@gmail.com"
+      },
+
+      {
+        "id": 38 ,
+        "nombre": "Sebastian",
+        "apellido":"Driussi",
+        "contraseña": "riverlocura",
+        "mail": "seba.driussi@gmail.com"
+      },
+
+      {
+        "id": 39 ,
+        "nombre":"Lola",
+        "apellido":"Chianelli",
+        "contraseña": "hunucviene",
+        "mail": "lolu.chianelli@gmail.com"
+      },
+      {
+        "id": 40 ,
+        "nombre":"Camila",
+        "apellido":"De Luca",
+        "contraseña": "vamosbarca",
+        "mail": "cami.deluca@gmail.com"
+      },
+
+      {
+        "id": 41 ,
+        "nombre":"Lucia",
+        "apellido":"De Luca",
+        "contraseña": "livingmendoza",
+        "mail": "lucia.deluca@gmail.com"
+      },
+      {
+        "id": 42 ,
+        "nombre":"Edgardo",
+        "apellido":"Hamade",
+        "contraseña": "gabrielcnlax",
+        "mail": "estudio.hamade@gmail.com"
+      },
+      {
+        "id": 43 ,
+        "nombre":"Juarez",
+        "apellido":"Natalia",
+        "contraseña": "cinefan",
+        "mail": "naty.juarez@gmail.com"
+      },
+      {
+        "id": 44 ,
+        "nombre":"Lionel",
+        "apellido":"Vangioni",
+        "contraseña": "elpiri87",
+        "mail": "piri.vangioni@gmail.com"
+      },
+      {
+        "id": 45 ,
+        "nombre":"Piruccio",
+        "apellido":"Mariano",
+        "contraseña": "mariani87",
+        "mail": "mariano.pirruccio@gmail.com"
+      },
+      {
+        "id": 46 ,
+        "nombre":"David",
+        "apellido":"Martínez",
+        "contraseña": "titocarp",
+        "mail": "hector.martinez@gmail.com"
+      },
+      {
+        "id": 47 ,
+        "nombre": "Paulo",
+        "apellido":"Díaz",
+        "contraseña": "chilebx2161",
+        "mail": "paulo.diaz@gmail.com"
+      },
+
+      {
+        "id": 48 ,
+        "nombre": "Leonel",
+        "apellido":"Sosa",
+        "contraseña": "sosita90",
+        "mail": "leo.sosa@gmail.com"
+      },
+      {
+        "id": 49 ,
+        "nombre": "Alexis",
+        "apellido":"Santos",
+        "contraseña": "paisadealva",
+        "mail": "alexis.santos@gmail.com"
+      },
+
+      {
+        "id": 50 ,
+        "nombre": "Fede",
+        "apellido":"Villaroel",
+        "contraseña": "peroniadeboca",
+        "mail": "fede.villaroel@gmail.com"
+      }
+  ]
+  
