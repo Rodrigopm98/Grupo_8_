@@ -22,14 +22,13 @@ const productController ={
             precio: req.body.precio,
             nombre: req.body.name,
             descripcion: req.body.descripcion,
-            imagen: "default-image.png",
+            imagen: req.file.filename,
             categoria: req.body.categoria,
             oferta: false
         }
     
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-    
         res.redirect("/products");
     },
 

@@ -6,7 +6,7 @@
 <body>
     <%- include("partials/header") %>
     <main>
-        <form action="/" method="GET" class="tabla">
+        <form action="/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
                <input class="input-formularios" type="text" name="Usuario" required placeholder="Nombre y apellido">
             </div> 
@@ -33,6 +33,10 @@
             <div class="control-formulario">
                 </label>
                 <input class="input-formularios" type="password" name="password" required placeholder="Confirmar Contraseña"> 
+            </div>
+            <div>
+                <label>Imagen de perfil:</label>
+                <input type="file" name="imagenUsuario">
             </div>
             <div class="control-formulario">              
               <button class="envia" type="submit">Enviar</button><a href="/index"></a>

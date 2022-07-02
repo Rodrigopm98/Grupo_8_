@@ -9,12 +9,12 @@
   "oferta": true
  },
  {
-  "id": 2,
-  "precio": 15000,
+  "id": "2",
+  "precio": "$ 15000",
   "nombre": "Adidas Predator",
   "descripcion": "Botines Adidas Predator",
   "imagen": "Adidas Predator.png",
-  "categoria": "Futbol",
+  "categoria": "",
   "oferta": false
  },
  {
@@ -292,7 +292,7 @@
   "precio": 12499,
   "nombre": "Camiseta Puma Independiente Titular 21/22 de Hombre",
   "descripcion": "Camiseta Fútbol Puma Independiente Titular 21/22 de Hombre",
-  "imagen": "Camiseta Puma Independiente Titular 21/22 de Hombre.png",
+  "imagen": "Camiseta Puma Independiente Titular 2122 de Hombre.png",
   "categoria": "Fútbol",
   "oferta": false
  },
@@ -301,7 +301,7 @@
   "precio": 11499,
   "nombre": "Camiseta suplente Borussia Dortmund 2022",
   "descripcion": "Camiseta Fútbol Borussia Dortmund suplente 2022",
-  "imagen": "Camiseta suplente réplica BVB 2022.png",
+  "imagen": "Camiseta suplente réplica BVB.png",
   "categoria": "Fútbol",
   "oferta": false
  },
@@ -319,7 +319,7 @@
   "precio": 22099,
   "nombre": "Botines Ultra 3.3 FG/AG de fútbol juveniles",
   "descripcion": "Botines Puma Ultra 3.3 FG/AG de fútbol juveniles",
-  "imagen": "Botines Ultra 3.3 FG/AG de fútbol juveniles.png",
+  "imagen": "Botines Ultra 3.3 FGAG de fútbol juveniles.png",
   "categoria": "Fútbol",
   "oferta": false
  },
@@ -355,7 +355,7 @@
   "precio": 7500,
   "nombre": "Camiseta Manchester City 2021",
   "descripcion": "Camiseta fútbol Manchester City 2021",
-  "imagen": "Camiseta para hombre réplica de la 1.ª equipación Man City 2021.png",
+  "imagen": "Camiseta para hombre réplica Man City 2021.png",
   "categoria": "Fútbol",
   "oferta": false
  },
@@ -427,7 +427,7 @@
   "precio": 7000,
   "nombre": "Camiseta Atletico de Madrid 2019",
   "descripcion": "Camiseta Fútbol Atletico de Madrid 2019 titular",
-  "imagen": "Camiseta Atletico de Madrid 2019 titular.png",
+  "imagen": "Camiseta Atlético de Madrid 2019 titular.png",
   "categoria": "Fútbol",
   "oferta": false
  },
@@ -447,11 +447,6 @@
   "descripcion": "Puma Camiseta  Fútbol Borussia Dortmund 2019",
   "imagen": "Puma Camiseta Borussia Dortmund 2019.png",
   "categoria": "Fútbol",
-  "oferta": false
- },
- {
-  "id": 51,
-  "imagen": "default-image.png",
   "oferta": false
  }
 ]

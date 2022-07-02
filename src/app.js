@@ -24,7 +24,9 @@ app.listen(3030, ()=>console.log("puerto creado en: http://localhost:3030/"));
 /* importando enrutadores */
 const mainRouter = require("./routes/mainRoute");
 const productRouter = require("./routes/productRoute");
+const usersRouter = require("./routes/usersRoute");
 
 app.use("/", mainRouter);
 app.use("/products", productRouter);
+app.use("/register", usersRouter);
 
