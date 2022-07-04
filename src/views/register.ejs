@@ -8,32 +8,39 @@
     <main>
         <form action="/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
-               <input class="input-formularios" type="text" name="Usuario" required placeholder="Nombre y apellido">
-            </div> 
+               <input class="input-formularios" type="text" name="nombre" required placeholder="Nombre">
+            </div>
+            <div class="control-formulario">
+                <input class="input-formularios" type="text" name="apellido" required placeholder="Apellido">
+             </div> 
             <div class="control-formulario">
                 </label>
-                <input class="input-formularios" type="text" name="Usuario" required placeholder="Usuario"> 
-            </div> 
+                <input class="input-formularios" type="text" name="usuario" required placeholder="Usuario"> 
+            </div>
+            <div class="control-formulario">
+            </label>
+            <input class="input-formularios" type="text" name="mail" required placeholder="e-mail"> 
+        </div>  
             <div class="control-formulario">
                 <label class="fechadenacimiento">Fecha de Nacimiento</label>
-                <input class="input-formularios-date" type="date" name="fecha" required placeholder="mm/dd/yy"> 
+                <input class="input-formularios-date" type="date" name="fechaNacimiento" required placeholder="mm/dd/yy"> 
             </div> 
             <div class="control-formulario">
             </label>
-            <input class="input-formularios" type="text" name="Domicilio" required placeholder ="Domicilio"> 
+            <input class="input-formularios" type="text" name="domicilio" required placeholder ="Domicilio"> 
             </div>  
             <div class="control-formulario">
                 </label>
-                <input class="input-formularios" type="text" name="Localidad"  placeholder ="Localidad"> 
+                <input class="input-formularios" type="text" name="localidad"  required placeholder ="Localidad"> 
             </div> 
             <div class="control-formulario">
               </label>
               <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
             </div>
-            <div class="control-formulario">
+           <!--  <div class="control-formulario">
                 </label>
                 <input class="input-formularios" type="password" name="password" required placeholder="Confirmar Contraseña"> 
-            </div>
+            </div> -->
             <div>
                 <label>Imagen de perfil:</label>
                 <input type="file" name="imagenUsuario">
