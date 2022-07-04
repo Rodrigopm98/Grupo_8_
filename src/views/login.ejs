@@ -5,7 +5,12 @@
 <body>
     <%- include("partials/header") %>
     <main>
-        <form action="/" method="GET" class="form-container">
+        <% if(locals.errors){
+            errors.forEach(error => {  %>  
+            <p class="error"><%= error.msg %> </p>
+            <% }) 
+            } %> 
+        <form action="/users/login" method="POST" class="form-container">
             <div class="nombre">
                 <label for="">
                     <input type="text" name="email" placeholder="email" class="input-text" />
@@ -18,7 +23,7 @@
                 <p><a href='#'>¿Olvidaste tu Contraseña?</a></p>
             </div>
             <div class="boton">
-                <button type="submit">Enviar</button>
+                <button type="submit">Ingresar</button>
             </div>
         </form>
     </main>

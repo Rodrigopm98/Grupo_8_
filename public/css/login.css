@@ -4,19 +4,19 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
     background-color: #232F3E;
-  }
+}
 
-  .boton{
-      padding: 0px;
-      font-size: large;
-      font-family: 'Roboto', sans-serif;
-      transition: all .5s ease;
-  }
-  
-  .input-text,
-  .input-email,
-  .input-password,
-  .input-date {
+.boton {
+    padding: 0px;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    transition: all .5s ease;
+}
+
+.input-text,
+.input-email,
+.input-password,
+.input-date {
     width: 50vw;
     font-size: 18px;
     padding: 5px;
@@ -27,33 +27,42 @@
     font-family: 'Roboto', sans-serif;
     outline: none;
     color: white;
-  }
+}
 
-  .nombre{
-      margin-bottom: 20px;  
-      
-  }
+.nombre {
+    margin-bottom: 20px;
 
-  .olvidar{
-      font-size: medium;
-      color: white;
-  }
+}
 
-  .olvidar p a{
-      background-color: #232F3E;
-      color: rgba(255, 255, 255, 0.521);
-      border: 2px solid #232F3E;
-      padding: 5px 5px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-    }
+.olvidar {
+    font-size: medium;
+    color: white;
+}
 
-
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+.olvidar p a {
+    background-color: #232F3E;
+    color: rgba(255, 255, 255, 0.521);
+    border: 2px solid #232F3E;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 
-
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+.error {
+    margin: auto;
+    width: 50%;
+    color:#ebebeb
+    
+    
+}
+main{
+    margin-top: -5%;
+    background-color: #232F3E;
+    padding-top: 5%;
+}

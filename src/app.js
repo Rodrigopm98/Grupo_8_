@@ -1,6 +1,10 @@
 const express=require("express");
 const app= express();
 const methodOverride = require("method-override");
+const session = require("express-session");
+
+/* middleware de aplicacion de session */
+app.use(session({secret: "secreto"}));
 
 
 app.use(methodOverride("_method"));
@@ -28,5 +32,5 @@ const usersRouter = require("./routes/usersRoute");
 
 app.use("/", mainRouter);
 app.use("/products", productRouter);
-app.use("/register", usersRouter);
+app.use("/users", usersRouter);
 
