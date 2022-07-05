@@ -9,7 +9,7 @@
                 <form action="/users/login" method="POST" class="form-container">
                     <div class="nombre">
                         <label for="">
-                            <input type="text" name="email" placeholder="email" class="input-text" />
+                            <input type="text" name="email" placeholder="email" class="input-text" value="<%= locals.oldData ? oldData.email : null %>" />
                         </label>
                         <% if(locals.errors && errors.email){ %>
                             <div class="error">

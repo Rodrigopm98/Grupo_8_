@@ -55,4 +55,8 @@
 .pais{
     color:#9d8334;
 }
+.error{
+    color: rgb(252, 83, 83);
+    font-size: 12px;
+}
 

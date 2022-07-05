@@ -8,30 +8,50 @@
     <main>
         <form action="/users/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
-               <input class="input-formularios" type="text" name="nombre" required placeholder="Nombre">
+               <input class="input-formularios" type="text" name="nombre"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+               <% if(locals.errors && errors.nombre){ %>
+                <div class="error">
+                    <%= errors.nombre.msg %> 
+                </div>
+            <% } %> 
             </div>
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="apellido" required placeholder="Apellido">
+                <input class="input-formularios" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <% if(locals.errors && errors.apellido){ %>
+                    <div class="error">
+                        <%= errors.apellido.msg %> 
+                    </div>
+                <% } %> 
              </div> 
             <div class="control-formulario">
                 </label>
-                <input class="input-formularios" type="text" name="usuario" required placeholder="Usuario"> 
+                <input class="input-formularios" type="text" name="usuario" placeholder="Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
+                <% if(locals.errors && errors.usuario){ %>
+                    <div class="error">
+                        <%= errors.usuario.msg %> 
+                    </div>
+                <% } %> 
             </div>
             <div class="control-formulario">
             </label>
-            <input class="input-formularios" type="text" name="mail" required placeholder="e-mail"> 
+            <input class="input-formularios" type="text" name="email"  placeholder="e-mail" value="<%= locals.oldData ? oldData.email : null %>">
+            <% if(locals.errors && errors.email){ %>
+                <div class="error">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %> 
         </div>  
             <div class="control-formulario">
                 <label class="fechadenacimiento">Fecha de Nacimiento</label>
-                <input class="input-formularios-date" type="date" name="fechaNacimiento" required placeholder="mm/dd/yy"> 
+                <input class="input-formularios-date" type="date" name="fechaNacimiento" required placeholder="mm/dd/yy" value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"> 
             </div> 
             <div class="control-formulario">
             </label>
-            <input class="input-formularios" type="text" name="domicilio" required placeholder ="Domicilio"> 
+            <input class="input-formularios" type="text" name="domicilio" required placeholder ="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>"> 
             </div>  
             <div class="control-formulario">
                 </label>
-                <input class="input-formularios" type="text" name="localidad"  required placeholder ="Localidad"> 
+                <input class="input-formularios" type="text" name="localidad"  required placeholder ="Localidad" value="<%= locals.oldData ? oldData.localidad : null %>"> 
             </div> 
             <div class="control-formulario">
               </label>

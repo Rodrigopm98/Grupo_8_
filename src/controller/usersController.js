@@ -13,22 +13,30 @@ const usersController ={
     },
     procesarFormulario: function(req, res){
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        let newUser = {
-            id: users[users.length - 1].id + 1,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            nombreDeUsuario: req.body.usuario,
-            fechaNacimiento:req.body.fechaNacimiento,
-            domicilio: req.body.domicilio,
-            localidad: req.body.localidad,
-            contraseña: bcrypt.hashSync(req.body.password, 10),
-            imagen: req.file.filename,
-            mail: req.body.mail
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            let newUser = {
+                id: users[users.length - 1].id + 1,
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                nombreDeUsuario: req.body.usuario,
+                fechaNacimiento:req.body.fechaNacimiento,
+                domicilio: req.body.domicilio,
+                localidad: req.body.localidad,
+                contraseña: bcrypt.hashSync(req.body.password, 10),
+                imagen: req.file ? req.file.filename : "systemusers_94754.png",
+                mail: req.body.mail
+            }
+            users.push(newUser);
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+            res.redirect("/");
+        } else{
+            res.render("register", {
+                errors: errors.mapped(),
+                oldData: req.body
+            })
         }
-    
-        users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.redirect("/");
+        
     
     },
     login: function(req, res){
@@ -57,7 +65,10 @@ const usersController ={
     
         }else{
             
-            return res.render("login", {errors: errors.mapped()}) 
+            return res.render("login", {
+                errors: errors.mapped(),
+                oldData: req.body
+            }) 
         } 
        
 
