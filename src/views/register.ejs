@@ -39,6 +39,11 @@
                 <div class="error">
                     <%= errors.email.msg %> 
                 </div>
+            <% } %>
+            <% if(locals.msg){  %> 
+            <div class="error">
+                <%= locals.msg %> 
+            </div>
             <% } %> 
         </div>  
             <div class="control-formulario">
