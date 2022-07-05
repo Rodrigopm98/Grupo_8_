@@ -34,7 +34,7 @@ const validacionesLogin =  [
 
 /* rutas para registrar usuarios */
 router.get("/register", usersController.register);
-router.post("/register", /* validacionesRegister */ fileUpload.single("imagenUsuario"), usersController.procesarFormulario);
+router.post("/register", fileUpload.single("imagenUsuario") /* , validacionesRegister */, usersController.procesarFormulario);
 
 /* rutas para loguear usuarios con session */
 router.get("/login", usersController.login);

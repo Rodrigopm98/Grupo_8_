@@ -55,9 +55,10 @@ body {
     font-size: 12px;
 }
 .error {
+
     margin: auto;
     width: 50%;
-    color:#ebebeb
+    color: rgb(252, 83, 83)
     
     
 }

@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("partials/head", {titulo: "Entrá a tu cuenta"}) %> 
+<%- include("partials/head", {titulo: "Entrá a tu cuenta" }) %>
     <link rel="stylesheet" href="/css/login.css">
-<body>
-    <%- include("partials/header") %>
-    <main>
-        <% if(locals.errors){
-            errors.forEach(error => {  %>  
-            <p class="error"><%= error.msg %> </p>
-            <% }) 
-            } %> 
-        <form action="/users/login" method="POST" class="form-container">
-            <div class="nombre">
-                <label for="">
-                    <input type="text" name="email" placeholder="email" class="input-text" />
-                </label>
-            </div>
-            <div>
-                <input type="password" placeholder="Ingrese su contraseña" class="input-password" />
-            </div>
-            <div class="olvidar">
-                <p><a href='#'>¿Olvidaste tu Contraseña?</a></p>
-            </div>
-            <div class="boton">
-                <button type="submit">Ingresar</button>
-            </div>
-        </form>
-    </main>
-    <%- include("partials/footer") %> 
-</body>
+
+    <body>
+        <%- include("partials/header") %>
+            <main>
+                <form action="/users/login" method="POST" class="form-container">
+                    <div class="nombre">
+                        <label for="">
+                            <input type="text" name="email" placeholder="email" class="input-text" />
+                        </label>
+                        <% if(locals.errors && errors.email){ %>
+                            <div class="error">
+                                <%= errors.email.msg %> 
+                            </div>
+                        <% } %>  
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Ingrese su contraseña" class="input-password" />
+                        <% if(locals.errors && errors.email){ %>
+                            <div class="error">
+                                <%= errors.password.msg %> 
+                            </div>
+                        <% } %>  
+                    </div>
+                    <div class="olvidar">
+                        <p><a href='#'>¿Olvidaste tu Contraseña?</a></p>
+                    </div>
+                    <div class="boton">
+                        <button type="submit">Ingresar</button>
+                    </div>
+                </form>
+            </main>
+            <%- include("partials/footer") %>
+    </body>
 
 </html>

@@ -56,7 +56,8 @@ const usersController ={
             res.render("index");
     
         }else{
-            return res.render("login", {errors: errors.array()})
+            
+            return res.render("login", {errors: errors.mapped()}) 
         } 
        
 
