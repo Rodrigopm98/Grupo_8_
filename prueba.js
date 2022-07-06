@@ -15,11 +15,7 @@ const usuarios = [
     } 
 ];
 
-// encontrar usuario por email
 
-let encontrarEmail = (email)=>{
-    let coincidencias = usuarios.find(p=> p.mail == email)
-    return coincidencias
-}
 
-console.log(encontrarEmail("luciana.b.hamade@gmail.com"))
+
+

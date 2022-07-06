@@ -30,7 +30,7 @@ const validacionesRegister = [
 
 const validacionesLogin = [
     body("email").isEmail().withMessage("Email invalido"),
-    body("password").isLength({ min: 7 }).withMessage("La contraseña debe tener al menos 8 caracteres")
+    body("password").isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 caracteres")
 ];
 
 /* rutas para registrar usuarios */

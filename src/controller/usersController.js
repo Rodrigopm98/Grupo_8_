@@ -2,6 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const { ResultWithContext } = require('express-validator/src/chain');
+
+//me traigo los productos para poder renderizar las vistas en el login
+const productsFilePath = path.join(__dirname, '../data/articulos.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -49,18 +54,25 @@ const usersController = {
         res.render("login")
     },
     processLogin: function (req, res) {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.body.email) {
-                    if (bcrypt.compareSync(req.body.password, users[i].password)) {
+             let busquedaEmail = users.find(u=>u.mail == req.body.email)
+            if(busquedaEmail){
+                let comparacionpassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)
+                if(comparacionpassword){res.render("products",{products})
+                }else { res.render("login",{passwordIncorrecto:"contraseña incorrecta"})}
+                
+            }else{ res.render("login",{emailInvalido:"El email ingresado no se encuentra registrado"})} 
+           /* for (let i = 0; i < users.length; i++) {
+                if (users[i].mail == req.body.email) {
+                    if (bcrypt.compareSync(req.body.password, users[i].contraseña)) {
                         let usuarioALoguearse = users[i];
                         break;
                     }
                 }
-
-            }
+            } 
             if (usuarioALoguearse == undefined) {
                 return res.render("login", {
                     errors: [
@@ -69,7 +81,7 @@ const usersController = {
                 })
             }
             req.session.usuarioLogueado = usuarioALoguearse;
-            res.render("index");
+            res.render("index");  */
 
         } else {
 

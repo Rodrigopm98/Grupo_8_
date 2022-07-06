@@ -15,15 +15,25 @@
                             <div class="error">
                                 <%= errors.email.msg %> 
                             </div>
-                        <% } %>  
+                        <% } %> 
+                        <% if(locals.emailInvalido){ %>
+                            <div class="error">
+                                <%= locals.emailInvalido %> 
+                            </div>
+                        <% } %>   
                     </div>
                     <div>
-                        <input type="password" placeholder="Ingrese su contraseña" class="input-password" />
-                        <% if(locals.errors && errors.email){ %>
+                        <input type="password" placeholder="Ingrese su contraseña" class="input-password" name="password" />
+                        <% if(locals.errors && errors.password){ %>
                             <div class="error">
                                 <%= errors.password.msg %> 
                             </div>
-                        <% } %>  
+                        <% } %> 
+                        <% if(locals.passwordIncorrecto){ %>
+                            <div class="error">
+                                <%= locals.passwordIncorrecto %> 
+                            </div>
+                        <% } %> 
                     </div>
                     <div class="olvidar">
                         <p><a href='#'>¿Olvidaste tu Contraseña?</a></p>

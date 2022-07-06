@@ -348,5 +348,17 @@
   "apellido": "Villaroel",
   "contraseña": "peroniadeboca",
   "mail": "fede.villaroel@gmail.com"
+ },
+ {
+  "id": 51,
+  "nombre": "Rodrigo",
+  "apellido": "Peralta Montero",
+  "nombreDeUsuario": "rodrigo123",
+  "fechaNacimiento": "2022-07-05",
+  "domicilio": "Martin Fierro 233",
+  "localidad": "Yerba Buena, Tucumán, Argentina",
+  "contraseña": "$2a$10$MXo6xTPFjFxNVj9lSNHBbOTJ1bUvwbBQyzEE2lrBw0URRBccKov8W",
+  "imagen": "systemusers_94754.png",
+  "mail": "rodrigo@gmail.com"
  }
 ]
