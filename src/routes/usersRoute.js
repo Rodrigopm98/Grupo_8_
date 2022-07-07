@@ -4,6 +4,8 @@ const multer = require("multer");
 const path = require("path");
 const { body } = require("express-validator");
 
+let guestMiddleware = require('../middlewares/guestMiddleware');
+
 let multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb) => {
         let profileImages = path.join(__dirname, "../../public/images/profileImages");
@@ -34,7 +36,7 @@ const validacionesLogin = [
 ];
 
 /* rutas para registrar usuarios */
-router.get("/register", usersController.register);
+router.get("/register",guestMiddleware, usersController.register);
 router.post("/register", fileUpload.single("imagenUsuario"), validacionesRegister , usersController.procesarFormulario);
 
 /* rutas para loguear usuarios con session */
