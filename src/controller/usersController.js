@@ -3,6 +3,7 @@ const path = require('path');
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const { ResultWithContext } = require('express-validator/src/chain');
+const session = require("express-session");
 
 //me traigo los productos para poder renderizar las vistas en el login
 const productsFilePath = path.join(__dirname, '../data/articulos.json');
@@ -60,8 +61,10 @@ const usersController = {
         if (errors.isEmpty()) {
              let busquedaEmail = users.find(u=>u.mail == req.body.email)
             if(busquedaEmail){
-                let comparacionpassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)
-                if(comparacionpassword){res.render("products",{products})
+                let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)
+                if(comparacionPassword){
+                 req.session.usuarioLogueado = busquedaEmail
+                    res.render("products",{products})
                 }else { res.render("login",{passwordIncorrecto:"contraseña incorrecta"})}
                 
             }else{ res.render("login",{emailInvalido:"El email ingresado no se encuentra registrado"})} 

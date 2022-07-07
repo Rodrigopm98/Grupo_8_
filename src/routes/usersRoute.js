@@ -5,6 +5,8 @@ const path = require("path");
 const { body } = require("express-validator");
 
 let guestMiddleware = require('../middlewares/guestMiddleware');
+let authMiddleware = require('../middlewares/authMiddleware');
+
 
 let multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -36,11 +38,11 @@ const validacionesLogin = [
 ];
 
 /* rutas para registrar usuarios */
-router.get("/register",guestMiddleware, usersController.register);
+router.get("/register", guestMiddleware, usersController.register);
 router.post("/register", fileUpload.single("imagenUsuario"), validacionesRegister , usersController.procesarFormulario);
 
 /* rutas para loguear usuarios con session */
-router.get("/login", usersController.login);
+router.get("/login", authMiddleware, usersController.login);
 router.post("/login", validacionesLogin, usersController.processLogin);
 
 

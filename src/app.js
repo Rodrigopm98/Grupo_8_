@@ -4,7 +4,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 
 /* middleware de aplicacion de session */
-app.use(session({secret: "secreto", resave: true, saveUninitialized: true }));
+app.use(session({secret: "secreto"/* , resave: true, saveUninitialized: true */ }));
 
 
 app.use(methodOverride("_method"));

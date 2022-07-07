@@ -1,4 +1,4 @@
-function guestMiddleware(req, res, next){
+let guestMiddleware = function (req, res, next){
     if(req.session.usuarioLogueado == undefined){
         next();
     } else {
