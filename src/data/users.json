@@ -360,5 +360,17 @@
   "contraseña": "$2a$10$MXo6xTPFjFxNVj9lSNHBbOTJ1bUvwbBQyzEE2lrBw0URRBccKov8W",
   "imagen": "systemusers_94754.png",
   "mail": "rodrigo@gmail.com"
+ },
+ {
+  "id": 52,
+  "nombre": "Jorge",
+  "apellido": "Deolivera",
+  "nombreDeUsuario": "jorge1234",
+  "fechaNacimiento": "1985-10-15",
+  "domicilio": "av.rivadavia 6585",
+  "localidad": "Caba",
+  "contraseña": "$2a$10$XWUyZ0ignvbD6qcNDUYn0Oe2TrEQCD78VXTv4VVyTJAe30oGPBf/G",
+  "imagen": "systemusers_94754.png",
+  "mail": "jorge@gmail.com"
  }
 ]
