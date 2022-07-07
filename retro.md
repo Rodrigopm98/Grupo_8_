@@ -14,3 +14,34 @@ Nos sentimos muy cómodos programando de manera colaborativa, corrigiendo en el 
 Nos resulta muy eficiente y ágil compartir pantalla para poder desarrollar las consignas de manera grupal. 
 
 
+
+*Retrospectiva Sprint 3* (Correspondiente al cuarto sprint)
+Conforme a las correcciones se le confirió a Trello un mayor protagonismo para que nos ayude a mejorar la organización a nivel equipo.
+Se creó la carpeta src y se modificaron las rutas acorde a esta nueva sugerencia. 
+Se modificaron las vistas de creación y edición de producto, según lo que fue señalado.
+Como inconscientemente habíamos avanzado en la creación del json de productos hicimos unas leves modificaciones para poder utilizarlo en el sprint 4.
+Programar en conjunto nos resultó lo más práctico para este sprint aunque las tareas de edición de archivos json y edición de imágenes se hicieron en diferido.
+Quedamos muy conformes con el resultado final y estamos abiertos a seguir mejorando con el correr de las entregas. El grupo se siente cada vez más consolidado y cómodo frente a los nuevos desafíos que se nos van presentando.
+
+
+
+*Retrospectiva Sprint 4* (Correspondiente al quinto sprint)
+Pudimos salir ilesos del CRUD para sorpresa nuestra y solo nos quedó corregir el hecho de que no sea necesario recargar la página para que se vean reflejados los cambios.
+Nos gusta retroalimentarnos con las sugerencias para poder seguir mejorando el producto final, de hecho solemos hacer mucho hincapié en este aspecto.
+Nos queda pendiente otorgarle funcionalidad a los botones de la navbar y continuar progresando en las diferentes vistas. 
+En esta ocasión la gestión de tiempos no fue nuestro mejor aliado, pero creemos firmemente que en el próximo sprint nos irá muchísimo mejor en este aspecto.
+La realización de los desafíos planteados no nos ocasionó demasiada complejidad por lo que pudimos resolverlos a nuestro criterio, correctamente.
+Seguimos muy entusiasmados y motivados para seguir mejorando de cara a cada entrega. 
+Nos sentimos muy cómodos trabajando como grupo, debemos automatizar el uso del Trello para que refleje la realidad del trabajo.
+
+
+*Retrospectiva Sprint 5*  (Aguardando devoluciones)
+
+
+
+
+
+
+
+
+
