@@ -26,7 +26,7 @@ const productController ={
             categoria: req.body.categoria,
             oferta: false
         }
-    
+        
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products");

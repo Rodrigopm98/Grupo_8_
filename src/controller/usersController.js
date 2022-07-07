@@ -64,27 +64,11 @@ const usersController = {
                 let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)
                 if(comparacionPassword){
                  req.session.usuarioLogueado = busquedaEmail
-                    res.render("products",{products})
+                    res.render("products",{products:products,
+                    usuario: req.session.usuarioLogueado})
                 }else { res.render("login",{passwordIncorrecto:"contraseña incorrecta"})}
                 
             }else{ res.render("login",{emailInvalido:"El email ingresado no se encuentra registrado"})} 
-           /* for (let i = 0; i < users.length; i++) {
-                if (users[i].mail == req.body.email) {
-                    if (bcrypt.compareSync(req.body.password, users[i].contraseña)) {
-                        let usuarioALoguearse = users[i];
-                        break;
-                    }
-                }
-            } 
-            if (usuarioALoguearse == undefined) {
-                return res.render("login", {
-                    errors: [
-                        { msg: "Credenciales invalidas" }
-                    ]
-                })
-            }
-            req.session.usuarioLogueado = usuarioALoguearse;
-            res.render("index");  */
 
         } else {
 
@@ -96,6 +80,9 @@ const usersController = {
 
 
 
+    },
+    perfil: function(req, res){
+        res.render("perfilUsuario", {usuario:req.session.usuarioLogueado})
     }
 };
 

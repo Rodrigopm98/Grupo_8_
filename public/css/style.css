@@ -77,6 +77,10 @@ header{
 nav ul{
     display: flex;
     list-style: none;
+    align-items: center;
+    
+    
+    
 }
 nav a{
     text-decoration: none;
@@ -92,11 +96,13 @@ nav a:hover{
 .carrito{
     margin-right: 0px;
     padding-right: 15px;
+   
 }
 
 .boton-detalles{
     position: relative;
 }
+
 
 /* flex para alinear la nav */
 nav{
@@ -109,6 +115,12 @@ nav{
 .menu-compu1{
     display: none;
 }
+
+.imagenUsuario{
+    width: 5vw;
+   
+}
+
 /* ----------------- 
 MODIFICADORES DEL FOOTER*/
 footer{
