@@ -64,7 +64,7 @@ const usersController = {
                 let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)
                 if(comparacionPassword){
                  req.session.usuarioLogueado = busquedaEmail
-                    res.render("products",{products:products,
+                    res.render("products" ,{products:products,
                     usuario: req.session.usuarioLogueado})
                 }else { res.render("login",{passwordIncorrecto:"contraseña incorrecta"})}
                 
@@ -83,6 +83,10 @@ const usersController = {
     },
     perfil: function(req, res){
         res.render("perfilUsuario", {usuario:req.session.usuarioLogueado})
+    },
+    cerrarSession: function(req, res){
+        req.session.destroy();
+        res.redirect("/")
     }
 };
 

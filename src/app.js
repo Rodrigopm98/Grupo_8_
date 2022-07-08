@@ -3,8 +3,13 @@ const app= express();
 const methodOverride = require("method-override");
 const session = require("express-session");
 
+const userLogged = require("./middlewares/deAplicacion/userLogged")
+
 /* middleware de aplicacion de session */
 app.use(session({secret: "secreto"/* , resave: true, saveUninitialized: true */ }));
+
+/* middleware de aplicacion de usuarios */
+app.use(userLogged)
 
 
 app.use(methodOverride("_method"));
