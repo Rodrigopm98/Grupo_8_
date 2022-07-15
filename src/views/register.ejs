@@ -49,23 +49,27 @@
             <div class="control-formulario">
                 <label class="fechadenacimiento">Fecha de Nacimiento</label>
                 <input class="input-formularios-date" type="date" name="fechaNacimiento" required placeholder="mm/dd/yy" value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"> 
-            </div> 
+            </div>
             <div class="control-formulario">
-            </label>
-            <input class="input-formularios" type="text" name="domicilio" required placeholder ="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>"> 
+                <select name="province">
+                    <option selected disabled>Provincia</option>
+                        <% p.forEach(p => { %>
+                         <option >
+                            <%= p.nombre %> 
+                         </option>
+                        <% }) %>
+                    
+                </select>
             </div>  
             <div class="control-formulario">
-                </label>
                 <input class="input-formularios" type="text" name="localidad"  required placeholder ="Localidad" value="<%= locals.oldData ? oldData.localidad : null %>"> 
             </div> 
             <div class="control-formulario">
-              </label>
+                <input class="input-formularios" type="text" name="domicilio" required placeholder ="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>"> 
+            </div> 
+            <div class="control-formulario">
               <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
             </div>
-           <!--  <div class="control-formulario">
-                </label>
-                <input class="input-formularios" type="password" name="password" required placeholder="Confirmar Contraseña"> 
-            </div> -->
             <div>
                 <label>Imagen de perfil:</label>
                 <input type="file" name="imagenUsuario">

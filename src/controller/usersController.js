@@ -5,6 +5,8 @@ const { validationResult } = require("express-validator");
 const { ResultWithContext } = require('express-validator/src/chain');
 const session = require("express-session");
 
+const fetch = require("node-fetch");
+
 //me traigo los productos para poder renderizar las vistas en el login
 const productsFilePath = path.join(__dirname, '../data/articulos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -15,7 +17,13 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     register: function (req, res) {
-        res.render("register")
+        fetch( "https://apis.datos.gob.ar/georef/api/provincias")
+        .then(r=>r.json())
+        .then(p=>{
+           
+           res.render("register",{p:p.provincias})
+        })
+      
     },
     procesarFormulario: function (req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -29,8 +37,9 @@ const usersController = {
                     apellido: req.body.apellido,
                     nombreDeUsuario: req.body.usuario,
                     fechaNacimiento: req.body.fechaNacimiento,
-                    domicilio: req.body.domicilio,
+                    provincia: req.body.province,
                     localidad: req.body.localidad,
+                    domicilio: req.body.domicilio,
                     contraseña: bcrypt.hashSync(req.body.password, 10),
                     imagen: req.file ? req.file.filename : "systemusers_94754.png",
                     mail: req.body.email
