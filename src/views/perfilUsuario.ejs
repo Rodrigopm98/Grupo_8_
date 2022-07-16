@@ -7,11 +7,14 @@
     <title>Perfil de Usuario</title>
 </head>
 <body>
-    <H1>Cuenta de <%= locals.usuario.mail %></H1>
-    <!-- intentando de cerrar cuenta -->
+    <% if(locals.usuarioLogueado){  %> 
+    <H1>Cuenta de <%= locals.usuarioLogueado.mail %></H1>
     <form action="/users/perfilUsuario/cerrarSession" method="get">
         <button type="submit">Salir de la cuenta </button>
     </form>
+    <% }else{ %>
+        <h2>Pagina disponible solo para usuarios logueados</h2>
+        <%  } %> 
     
 </body>
 </html>

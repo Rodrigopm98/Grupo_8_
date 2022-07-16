@@ -1,11 +1,13 @@
-function userLogged(req, res, next)
-{if(req.session.usuarioLogueado){
-    res.locals.isLogged = true;
+function userLogged(req, res, next){   
+    res.locals.isLogged = false;   
+    if(req.session && req.session.usuarioLogueado){
+    res.locals.isLogged = true; 
     res.locals.usuarioLogueado = req.session.usuarioLogueado
 }   next();
 }; 
 
 module.exports = userLogged;
+
 
 
 

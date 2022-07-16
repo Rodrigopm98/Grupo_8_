@@ -11,9 +11,9 @@
         </section>
         <nav>
             <ul>
-                <% if(locals.usuario){ %> 
-                <li><a href="/users/perfilUsuario"><%= locals.usuario.nombreDeUsuario %></a></li>
-                <li><a href="/imagen"><img class="imagenUsuario" src="/images/profileImages/<%= locals.usuario.imagen %> "></i></a></li>
+                <% if(locals.isLogged){ %> 
+                <li><a href="/users/perfilUsuario"><%= locals.usuarioLogueado.nombreDeUsuario %></a></li>
+                <li><a href="/imagen"><img class="imagenUsuario" src="/images/profileImages/<%= locals.usuarioLogueado.imagen %> "></i></a></li>
                 <% }else{ %> 
                 <li><a href="/users/register" class="register">Registrarse</a></li>
                 <li><a href="/users/login" class="login">Ingresar</a></li>
