@@ -10,12 +10,12 @@
            <% products.forEach(p =>{ %>  
             <article class="articulos">
                 <a class="detalleProducto" href="/products/productDetail/<%= p.id %>">
-                <img src="/images/<%= p.imagen %> " alt="">
+                <img src="/images/<%= p.image %> " alt="">
                 <div class="descripcion">
                     <i class="fas fa-heart"></i>
-                    <p class="precio">$ <%= p.precio %> </p>
-                    <h3 class="nombre"><%= p.nombre %> </h3>
-                    <p class="categoria"><%= p.categoria %> </p>
+                    <p class="precio">$ <%= p.price %> </p>
+                    <h3 class="nombre"><%= p.name %> </h3>
+                    <p class="categoria"><%= p.categoria.category %> </p>
                     <div class="boton-detalles"><a href="/products/productDetail"></a></div>
                 </div>
                 </a>

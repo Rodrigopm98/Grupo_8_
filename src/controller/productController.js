@@ -8,9 +8,13 @@ const db = require("../database/models");
 
 const productController ={
     products: function(req, res){
-        /* db.sports.findAll()
-        .then(r=> res.JSON(r)) */
-        res.render("products", {products})
+        db.Product.findAll({
+            include: [{association: "categoria"}]
+        } )
+        .then((p)=>{
+            let products = p.filter((p=>p.deleted == 0))
+            res.render("products", {products})})
+       /*  res.render("products", {products}) */
     },
     detail: function(req,res){
         let id= req.params.id;
@@ -67,12 +71,21 @@ const productController ={
 
     },
     destroy : (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        db.Product.update({
+            deleted: 1
+        },{
+            where:{
+               id: req.params.id
+            }
+        }),
+        res.redirect("/products")
+
+		/* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 		let finalProducts = products.filter(product => product.id != req.params.id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
 		
-		res.redirect("/products");
+		res.redirect("/products"); */
 	}
 
 }
