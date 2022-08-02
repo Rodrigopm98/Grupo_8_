@@ -23,6 +23,7 @@ const usersController = {
            
            res.render("register",{p:p.provincias})
         })
+        .catch(error=>req.send(error))
       
     },
     procesarFormulario: function (req, res) {

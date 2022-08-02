@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `gloriososClub_db`;
-USE `gloriososClub_db`;
+CREATE DATABASE IF NOT EXISTS `gloriososclub_db`;
+USE `gloriososclub_db`;
 
 
 CREATE TABLE `users` (

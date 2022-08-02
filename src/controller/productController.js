@@ -4,8 +4,12 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/articulos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const db = require("../database/models");
+
 const productController ={
     products: function(req, res){
+        /* db.sports.findAll()
+        .then(r=> res.JSON(r)) */
         res.render("products", {products})
     },
     detail: function(req,res){
