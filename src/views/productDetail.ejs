@@ -9,18 +9,18 @@
                 <div class="imagen-descripcion">
                     <div class="imagen">
                         <h2 class="nombre-detalle">
-                            <%= producto.nombre %>
+                            <%= producto.name %>
                         </h2>
 
-                        <img src="/images/<%= producto.imagen %> " alt="">
+                        <img src="/images/<%= producto.image %> " alt="">
                     </div>
 
                     <div class="descripcion-detalle">
 
                         <h3 class="nombreTablets">
-                            <%= producto.nombre %>
+                            <%= producto.name %>
                         </h3>
-                        <p class="precio-detalle">$<%= producto.precio %>
+                        <p class="precio-detalle">$<%= producto.price %>
                         </p>
                         <p class="cuotas">En 12 cuotas de ... pagando con Mercado Crédito</p>
                         <a class="enlaces-detalle" href="#mediosDePago">Ver los medios de pago</a>
@@ -41,7 +41,7 @@
                         <div class="descripcion-individual-compu">
                             <h3>Descripción</h3>
                             <p>
-                                <%= producto.descripcion %>
+                                <%= producto.description %>
                             </p>
 
                             <form action="/products/productEdit/<%= producto.id %>" method="GET" class="botonEditar">

@@ -59,7 +59,7 @@ INSERT INTO `gloriososclub_db`.`brands` (`id`,`brand`) VALUES (5,'Puma');
 INSERT INTO `gloriososclub_db`.`categories` (`id`,`category`) VALUES (1,'Camisetas');
 INSERT INTO `gloriososclub_db`.`categories` (`id`,`category`) VALUES (2,'Botines');
 INSERT INTO `gloriososclub_db`.`categories` (`id`,`category`) VALUES (3,'Guantes');
-
+INSERT INTO `gloriososclub_db`.`categories` (`id`, `category`) VALUES ('4', 'Otras');
 
 /* Sports */
 

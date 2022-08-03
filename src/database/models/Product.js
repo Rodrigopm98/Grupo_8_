@@ -58,6 +58,22 @@ module.exports= (sequelize, dataTypes)=>{
         Product.belongsTo(models.Category, {
             as: "categoria",
             foreignKey: "categoryId"
+        }),
+        Product.belongsTo(models.Brand, {
+            as: "marca",
+            foreignKey: "brandId"
+        }),
+        Product.belongsTo(models.Size, {
+            as: "talle",
+            foreignKey: "sizeId"
+        }),
+        Product.belongsTo(models.Sport, {
+            as: "deporte",
+            foreignKey: "sportId"
+        }),
+        Product.belongsTo(models.User, {
+            as: "administrador",
+            foreignKey: "userId"
         })
     }; 
     return Product;

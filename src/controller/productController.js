@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/articulos.json');
+/* const productsFilePath = path.join(__dirname, '../data/articulos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+ */
 const db = require("../database/models");
 
 const productController ={
@@ -17,27 +17,50 @@ const productController ={
        /*  res.render("products", {products}) */
     },
     detail: function(req,res){
-        let id= req.params.id;
+        db.Product.findByPk(req.params.id)
+        .then((producto)=>{
+            res.render("productDetail", {producto})
+        })
+       /*  let id= req.params.id;
         let producto = products.find(p=>p.id==id);
-        res.render("productDetail", {producto})
+        res.render("productDetail", {producto}) */
     },
     cart: function(req,res){res.render("productCart")},
-    create: function(req,res){res.render("productCreate")},
-    store: function(req, res){
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let newProduct = {
-            id: products[products.length - 1].id + 1,
-            precio: req.body.precio,
-            nombre: req.body.name,
-            descripcion: req.body.descripcion,
-            imagen: req.file.filename,
-            categoria: req.body.categoria,
-            oferta: false
-        }
+    create: function(req,res){
+        let size = db.Size.findAll();
+        let sport = db.Sport.findAll();
+        let brand = db.Brand.findAll();
+        let category = db.Category.findAll();
+        Promise.all([size, sport, brand, category])
+        .then(([size, sport, brand, category])=>{
+            res.render("productCreate", {fk:[size, sport, brand, category]})})
         
-        products.push(newProduct);
+    },
+    store: function(req, res){
+       
+      /*   const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
+        db.Product.create({
+            name: req.body.name,
+            description: req.body.descripcion,
+            image: req.file.filename,
+            discount: req.body.discount,
+            price: req.body.precio,
+            sportId: req.body.sport,
+            userId: 1,
+            brandId: req.body.brand,
+            sizeId: req.body.size,
+            genre:req.body.genre,
+            categoryId: req.body.category,
+            deleted : 0
+        })
+        .then(()=>{
+          res.redirect("/products") })
+        .catch((error)=>res.send(error));
+        
+
+        /* products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.render("products", {products});
+        res.render("products", {products}); */
     },
 
     edit: function(req,res){
