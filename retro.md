@@ -35,7 +35,13 @@ Seguimos muy entusiasmados y motivados para seguir mejorando de cara a cada entr
 Nos sentimos muy cómodos trabajando como grupo, debemos automatizar el uso del Trello para que refleje la realidad del trabajo.
 
 
-*Retrospectiva Sprint 5*  (Aguardando devoluciones)
+*Retrospectiva Sprint 5*  
+Nos sentimos muy conformes con el avance de nuestro proyecto integrador. 
+Nuestro diagrama tuvo devoluciones positivas y aplicamos los cambios señalados.
+A pesar de que contamos con más tiempo para la realización de este sprint, nos vimos más comprometidos con los tiempos 
+de realización. 
+Nos juntamos con mayor frecuencia que en los tramos anteriores.
+Pudimos aplicar el desafío extra de recordar usuario.
 
 
 
