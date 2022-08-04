@@ -28,7 +28,7 @@
         <div class="categoria">
             <label for="categoria" class="form-label">Categoria:</label>
             <select name="category" id="categoria" class="form-text">
-                <option value="" selected disabled>Todas</option>
+                <option value="" selected disabled>Selec Categoria</option>
                 <% fk[3].forEach((cat)=>{ %>
                     <option value="<%= cat.id %>"><%= cat.category %> </option>
                 <% }) %> 
@@ -38,11 +38,12 @@
         <div class="categoria">
             <label for="categoria" class="form-label">Deporte:</label>
             <select name="sport" id="categoria" class="form-text">
-                <option value="" selected disabled>Todas</option>
+                <option value="" selected disabled>Selec Deporte</option>
                 <% fk[1].forEach((sport)=>{ %>
                     <option value="<%= sport.id %>"><%= sport.sport %> </option>
 
                 <% }) %> 
+                <option value="otro">Otro</option>
             </select>    
         </div>
         <div class="categoria">

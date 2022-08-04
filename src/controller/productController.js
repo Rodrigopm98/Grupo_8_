@@ -64,9 +64,20 @@ const productController ={
     },
 
     edit: function(req,res){
-        let id= req.params.id;
+        let producto =  db.Product.findByPk(req.params.id)
+        let size = db.Size.findAll();
+        let sport = db.Sport.findAll();
+        let brand = db.Brand.findAll();
+        let category = db.Category.findAll();
+        Promise.all([producto, size, sport, brand, category])
+        .then(([producto, size, sport, brand, category])=>{
+            res.render("productEdit", {producto:producto, size: size, sport:sport, brand: brand, category: category})})
+        
+       
+        /* .then((producto)=>{res.render("productEdit", {producto})}) */
+       /*  let id= req.params.id;
         let producto = products.find(p=>p.id==id);
-        res.render("productEdit", {producto});
+        res.render("productEdit", {producto}); */
 
     },
     update: function(req, res){

@@ -41,7 +41,7 @@ Nuestro diagrama tuvo devoluciones positivas y aplicamos los cambios señalados.
 A pesar de que contamos con más tiempo para la realización de este sprint, nos vimos más comprometidos con los tiempos 
 de realización. 
 Nos juntamos con mayor frecuencia que en los tramos anteriores.
-Pudimos aplicar el desafío extra de recordar usuario.
+
 
 
 
