@@ -47,6 +47,17 @@
             </select>    
         </div>
         <div class="categoria">
+            <label for="brand" class="form-label">Marca:</label>
+            <select name="brand" id="brand" class="form-text">
+                <option value="" selected disabled>Selec Marca</option>
+                <% fk[2].forEach((brand)=>{ %>
+                    <option value="<%= brand.id %>"><%= brand.brand %> </option>
+
+                <% }) %> 
+                <option value="otro">Otra</option>
+            </select>    
+        </div>
+        <div class="categoria">
             <label for="categoria" class="form-label">Genero:</label>
             <select name="genre" id="categoria" class="form-text">
                 <option value="Hombre" >Hombre</option>

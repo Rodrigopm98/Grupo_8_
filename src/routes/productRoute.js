@@ -18,7 +18,10 @@ let fileUpload = multer({storage: multerDiskStorage})
 /* importando controlador */
 const productController= require("../controller/productController");
 
-router.get("/", productController.products)
+router.get("/", productController.products);
+
+router.get("/search", productController.search); 
+
 router.get("/productDetail/:id", productController.detail);
 router.get("/productCart", productController.cart);
 
@@ -26,7 +29,7 @@ router.get("/productCreate", productController.create);
 router.post("/",  fileUpload.single("imagenProducto") ,productController.store);
 
 router.get("/productEdit/:id", productController.edit);
-router.put("/productEdit/:id", productController.update);
+router.post("/productEdit/:id", fileUpload.single("imagenProducto"), productController.update);
 
 router.post("/productDetail/:id", productController.destroy)
 

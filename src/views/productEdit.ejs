@@ -7,7 +7,7 @@
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST" class="form-container">
+    <form action="/products/productEdit/<%= producto.id %>" method="POST" enctype="multipart/form-data" class="form-container">
         <div class="nombre">
             <label for="">
                 <input type="text" name="name" placeholder="<%= producto.name%>" value="<%= producto.name %>" class="input-text">
@@ -16,8 +16,8 @@
         <div class="nombre">
             <textarea class="input-text" rows="5" placeholder="<%=producto.description%>" name="description"><%=producto.description%></textarea>
             <div class="categoria">
-                <label for="categoria" class="form-label">Descuento</label>
-                <select name="discount" id="categoria" class="form-text">
+                <label for="discount" class="form-label">Descuento</label>
+                <select name="discount" id="discount" class="form-text">
                     <option value="0" selected >Sin descuento</option>
                     <% for (let i = 0; i < 17; i++) { %>
                         <% let desc = i * 5 %> 
@@ -27,7 +27,7 @@
             </div>
             <div class="categoria">
                 <label for="categoria" class="form-label">Categoria:</label>
-                <select name="sport" id="categoria" class="form-text" >
+                <select name="category" id="categoria" class="form-text" >
                     <option value="" disabled>Selec Categoria</option>
                     <% for(let i=0; i < category.length; i++){%>
                        <% if(category[i].id == producto.categoryId){ %> 
@@ -41,8 +41,8 @@
                 </select>    
             </div>
             <div class="categoria">
-                <label for="categoria" class="form-label">Deporte:</label>
-                <select name="sport" id="categoria" class="form-text" >
+                <label for="sport" class="form-label">Deporte:</label>
+                <select name="sport" id="sport" class="form-text" >
                    <% for(let i=0; i < sport.length; i++){%>
                       <% if(sport[i].id == producto.sportId){ %> 
                     <option value="<%= sport[i].id %>" selected><%= sport[i].sport %></option>
@@ -55,8 +55,22 @@
                 </select>    
             </div>
             <div class="categoria">
-                <label for="categoria" class="form-label">Genero:</label>
-                <select name="genre" id="categoria" class="form-text">
+                <label for="brand" class="form-label">Marca:</label>
+                <select name="brand" id="brand" class="form-text" >
+                   <% for(let i=0; i < brand.length; i++){%>
+                      <% if(brand[i].id == producto.brandId){ %> 
+                    <option value="<%= brand[i].id %>" selected><%= brand[i].brand %></option>
+                      <% } else { %>
+                        <option value="<%= brand[i].id %> "><%= brand[i].brand %> </option>
+                        
+                      <%  } %>
+                   <% }  %>    
+                    <option value="otro">Otro</option>
+                </select>    
+            </div>
+            <div class="categoria">
+                <label for="genre" class="form-label">Genero:</label>
+                <select name="genre" id="genre" class="form-text">
                     <option value="Hombre" >Hombre</option>
                     <option value="Mujer" >Mujer</option>
                     <option value="Niño" >Niño</option>
@@ -65,7 +79,7 @@
             </div>
             <div class="categoria">
                 <label for="size" class="form-label">Talle:</label>
-                <select name="size" id="categoria" class="form-text">
+                <select name="size" id="size" class="form-text">
                     <option value="" disabled >Talle</option>
                     <% for(let i=0; i < size.length; i++){%>
                         <% if(size[i].id == producto.sizeId){ %> 
@@ -81,12 +95,12 @@
 
 
         <div>
-            
-            <input type="text" id="precio" name="price" value=" $<%= producto.price %>" class="precio" >
+            <label for="precio" class="form-label">Precio:$</label>
+            <input type="text" id="precio" name="price"   value="<%= producto.price %>"class="precio" >
         </div>
 
         <div class="buscarImagen">
-            <input type="file" name="image" >
+            <input type="file" name="imagenProducto" >
         </div>
         <div>
             <button type="submit">Confirmar cambio</button>

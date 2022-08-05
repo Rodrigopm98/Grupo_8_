@@ -71,8 +71,8 @@ INSERT INTO `gloriososclub_db`.`sports` (`id`, `sport`) VALUES ('3', 'Boxeo');
 
 /* USERS */
 
-INSERT INTO `gloriososclub_db`.`users` (`id`,`firstName`,`lastName`,`userName`,`email`,`birthdate`,`province`,`city`,`address`,`profileImage`,`password`,`role`,`deleted`) VALUES (1,'Rodrigo','Peralta','Rodrigo123','rodrigo@gmail.com','1998-10-27','Tucumán','Yerba Buena','Martín Fierro 1234','systemusers_94754.png','$2a$10$MXo6xTPFjFxNVj9lSNHBbOTJ1bUvwbBQyzEE2lrBw0URRBccKov8W','Usuario',0);
-INSERT INTO `gloriososclub_db`.`users` (`id`,`firstName`,`lastName`,`userName`,`email`,`birthdate`,`province`,`city`,`address`,`profileImage`,`password`,`role`,`deleted`) VALUES (2,'Jorge','Deolivera','Jorge1234','jorge@gmail.com','1985-10-15','Buenos Aires','CABA','av.rivadavia 6585','systemusers_94754.png','$2a$10$XWUyZ0ignvbD6qcNDUYn0Oe2TrEQCD78VXTv4VVyTJAe30oGPBf/G','Usuario',0);
+INSERT INTO `gloriososclub_db`.`users` (`id`,`firstName`,`lastName`,`userName`,`email`,`birthdate`,`province`,`city`,`address`,`profileImage`,`password`,`role`,`deleted`) VALUES (1,'Rodrigo','Peralta','Rodrigo123','rodrigo@gmail.com','1998-10-27','Tucumán','Yerba Buena','Martín Fierro 1234','systemusers_94754.png','$2a$10$MXo6xTPFjFxNVj9lSNHBbOTJ1bUvwbBQyzEE2lrBw0URRBccKov8W','Admin',0);
+INSERT INTO `gloriososclub_db`.`users` (`id`,`firstName`,`lastName`,`userName`,`email`,`birthdate`,`province`,`city`,`address`,`profileImage`,`password`,`role`,`deleted`) VALUES (2,'Jorge','Deolivera','Jorge1234','jorge@gmail.com','1985-10-15','Buenos Aires','CABA','av.rivadavia 6585','systemusers_94754.png','$2a$10$XWUyZ0ignvbD6qcNDUYn0Oe2TrEQCD78VXTv4VVyTJAe30oGPBf/G','Admin',0);
 
 
 /* PRODUCTS */

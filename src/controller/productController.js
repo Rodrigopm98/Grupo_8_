@@ -1,10 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const { Sequelize } = require('../database/models');
 
-/* const productsFilePath = path.join(__dirname, '../data/articulos.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
- */
 const db = require("../database/models");
+const Op = Sequelize.Op;
 
 const productController ={
     products: function(req, res){
@@ -14,16 +13,27 @@ const productController ={
         .then((p)=>{
             let products = p.filter((p=>p.deleted == 0))
             res.render("products", {products})})
-       /*  res.render("products", {products}) */
+  
     },
+    search:function(req, res){
+        db.Product.findAll({
+            include: [{association: "categoria"}],
+            where: {
+                name:{[Op.like]: "%"+req.query.search+"%"} 
+            }
+        })
+        .then((products)=>{ 
+            /* res.send(products) */
+            res.render("products", {products}) 
+        })
+        .catch((e)=> res.send(e))
+    }, 
+
     detail: function(req,res){
         db.Product.findByPk(req.params.id)
         .then((producto)=>{
             res.render("productDetail", {producto})
         })
-       /*  let id= req.params.id;
-        let producto = products.find(p=>p.id==id);
-        res.render("productDetail", {producto}) */
     },
     cart: function(req,res){res.render("productCart")},
     create: function(req,res){
@@ -37,8 +47,6 @@ const productController ={
         
     },
     store: function(req, res){
-       
-      /*   const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
         db.Product.create({
             name: req.body.name,
             description: req.body.descripcion,
@@ -57,10 +65,6 @@ const productController ={
           res.redirect("/products") })
         .catch((error)=>res.send(error));
         
-
-        /* products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.render("products", {products}); */
     },
 
     edit: function(req,res){
@@ -73,36 +77,28 @@ const productController ={
         .then(([producto, size, sport, brand, category])=>{
             res.render("productEdit", {producto:producto, size: size, sport:sport, brand: brand, category: category})})
         
-       
-        /* .then((producto)=>{res.render("productEdit", {producto})}) */
-       /*  let id= req.params.id;
-        let producto = products.find(p=>p.id==id);
-        res.render("productEdit", {producto}); */
-
     },
     update: function(req, res){
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let id= req.params.id;
-        let producto = products.find(p=>p.id==id);
-        let editedProduct={
-            id: id,
-            precio: req.body.precio,
-            nombre: req.body.name,
-            descripcion:  req.body.descripcion ,
-            imagen: producto.imagen,
-            categoria: req.body.categoria,
-            oferta: producto.oferta
-        }
-        let indice= products.findIndex( product => product.id == req.params.id );
-        products[indice]= editedProduct; 
-        
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-    
-        res.redirect("/products");
-
-         
-
+        db.Product.update({
+            name: req.body.name,
+            description: req.body.description,
+            image: req.file.filename,
+            discount: req.body.discount,
+            price: req.body.price,
+            sportId: req.body.sport,
+            userId: 1,
+            brandId: req.body.brand,
+            sizeId: req.body.size,
+            genre:req.body.genre,
+            categoryId: req.body.category,
+            deleted : 0
+        },{
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/products/productDetail/" + req.params.id )
+       
     },
     destroy : (req, res) => {
         db.Product.update({
@@ -113,13 +109,6 @@ const productController ={
             }
         }),
         res.redirect("/products")
-
-		/* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-		let finalProducts = products.filter(product => product.id != req.params.id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
-		
-		res.redirect("/products"); */
 	}
 
 }
