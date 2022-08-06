@@ -88,6 +88,14 @@ const usersController = {
             })
         }
 
+        if (req.body.recordame != undefined) {
+            res.cookie('recordame', 
+            usuarioALoguearse.email, { maxAge: 60000 })
+
+        }
+
+
+
 
 
     },
