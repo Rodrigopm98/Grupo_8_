@@ -25,9 +25,9 @@ const { nextTick } = require("process");
 
 // validaciones para la creacion de usuarios
 const validacionesRegister = [
-    body("nombre").notEmpty().withMessage("Debes completar el campo de nombre"),
-    body("apellido").notEmpty().withMessage("Debes completar el campo de apellido"),
-    body("usuario").notEmpty().withMessage("Debes completar el campo de Nombre de usuario"),
+    body("firstName").notEmpty().withMessage("Debes completar el campo de nombre"),
+    body("lastName").notEmpty().withMessage("Debes completar el campo de apellido"),
+    body("userName").notEmpty().withMessage("Debes completar el campo de Nombre de usuario"),
     body("email").isEmail().withMessage("Debes completar un email válido"),
     body("password").isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 caracteres")
 ];

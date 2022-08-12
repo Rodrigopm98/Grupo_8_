@@ -22,45 +22,46 @@ const usersController = {
             .then(r => r.json())
             .then(p => {
 
-                res.render("register", { p: p.provincias })
+        res.render("register", { p: p.provincias } )
             })
             .catch(error => req.send(error))
 
     },
     procesarFormulario: function (req, res) {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        let errors = validationResult(req);
+        /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
+     let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let encontrarEmail = users.find(p => p.mail == req.body.email);
-            if (!encontrarEmail) {
-                let newUser = {
-                    id: users[users.length - 1].id + 1,
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                    nombreDeUsuario: req.body.usuario,
-                    fechaNacimiento: req.body.fechaNacimiento,
-                    provincia: req.body.province,
-                    localidad: req.body.localidad,
-                    domicilio: req.body.domicilio,
-                    contraseña: bcrypt.hashSync(req.body.password, 10),
-                    imagen: req.file ? req.file.filename : "systemusers_94754.png",
-                    mail: req.body.email
+            db.User.findAll()
+            .then(user=>{let encontrarEmail = user.find(u => u.email == req.body.email);
+                if(!encontrarEmail){
+                    db.User.create({
+                        firstName: req.body.firstName,
+                        lastName: req.body.lastName,
+                        userName: req.body.userName,
+                        email: req.body.email,
+                        birthdate: req.body.birthdate,
+                        province: req.body.province,
+                        city: req.body.city,
+                        address: req.body.address,
+                        profileImage: req.file ? req.file.filename : "systemusers_94754.png",
+                        password: bcrypt.hashSync(req.body.password, 10),
+                        role: " ",
+                        deleted: 0
+                    })
+                    res.redirect("/");
+                }else {
+                    res.render("register", {
+                        msg: "Ya hay un usuario registrado con dicho email",
+                        oldData: req.body
+                    })
                 }
-                users.push(newUser);
-                fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-                res.redirect("/");
-            } else {
-                res.render("register", {
-                    msg: "Ya hay un usuario registrado con dicho email",
-                    oldData: req.body
-                })
-            }
+             })
         } else {
             res.render("register", {
                 errors: errors.mapped(),
                 oldData: req.body
             })
-        }
+        } 
 
 
     },
@@ -98,16 +99,6 @@ const usersController = {
                 oldData: req.body
             })
         }
-        /* 
-                if (req.body.recordame != undefined) {
-                    res.cookie('recordame', 
-                    usuarioALoguearse.email, { maxAge: 60000 })
-        
-                }
-         */
-
-
-
 
     },
     perfil: function (req, res) {

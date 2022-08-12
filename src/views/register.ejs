@@ -8,7 +8,7 @@
     <main>
         <form action="/users/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
-               <input class="input-formularios" type="text" name="nombre"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+               <input class="input-formularios" type="text" name="firstName"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                <% if(locals.errors && errors.nombre){ %>
                 <div class="error">
                     <%= errors.nombre.msg %> 
@@ -16,7 +16,7 @@
             <% } %> 
             </div>
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <input class="input-formularios" type="text" name="lastName" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
                 <% if(locals.errors && errors.apellido){ %>
                     <div class="error">
                         <%= errors.apellido.msg %> 
@@ -25,7 +25,7 @@
              </div> 
             <div class="control-formulario">
                 </label>
-                <input class="input-formularios" type="text" name="usuario" placeholder="Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
+                <input class="input-formularios" type="text" name="userName" placeholder="Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
                 <% if(locals.errors && errors.usuario){ %>
                     <div class="error">
                         <%= errors.usuario.msg %> 
@@ -48,24 +48,24 @@
         </div>  
             <div class="control-formulario">
                 <label class="fechadenacimiento">Fecha de Nacimiento</label>
-                <input class="input-formularios-date" type="date" name="fechaNacimiento" required placeholder="mm/dd/yy" value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"> 
+                <input class="input-formularios-date" type="date" name="birthdate" required placeholder="mm/dd/yy" value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"> 
             </div>
             <div class="control-formulario">
                 <select name="province">
                     <option selected disabled>Provincia</option>
-                        <% p.forEach(p => { %>
-                         <option >
-                            <%= p.nombre %> 
-                         </option>
-                        <% }) %>
+                    <% p.forEach(p => { %>
+                        <option >
+                           <%= p.nombre %> 
+                        </option>
+                       <% }) %>
                     
                 </select>
             </div>  
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="localidad"  required placeholder ="Localidad" value="<%= locals.oldData ? oldData.localidad : null %>"> 
+                <input class="input-formularios" type="text" name="city"  required placeholder ="Localidad" value="<%= locals.oldData ? oldData.localidad : null %>"> 
             </div> 
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="domicilio" required placeholder ="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>"> 
+                <input class="input-formularios" type="text" name="address" required placeholder ="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>"> 
             </div> 
             <div class="control-formulario">
               <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
