@@ -54,7 +54,7 @@ const productController ={
             discount: req.body.discount,
             price: req.body.precio,
             sportId: req.body.sport,
-            userId: 1,
+            userId:  req.session.usuarioLogueado.id,
             brandId: req.body.brand,
             sizeId: req.body.size,
             genre:req.body.genre,

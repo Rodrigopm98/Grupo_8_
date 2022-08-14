@@ -45,7 +45,7 @@ const usersController = {
                         address: req.body.address,
                         profileImage: req.file ? req.file.filename : "systemusers_94754.png",
                         password: bcrypt.hashSync(req.body.password, 10),
-                        role: " ",
+                        role: "",
                         deleted: 0
                     })
                     res.redirect("/");
