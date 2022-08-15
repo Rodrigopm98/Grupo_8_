@@ -9,26 +9,26 @@
         <form action="/users/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
                <input class="input-formularios" type="text" name="firstName"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
-               <% if(locals.errors && errors.nombre){ %>
+               <% if(locals.errors && errors.firstName){ %>
                 <div class="error">
-                    <%= errors.nombre.msg %> 
+                    <%= errors.firstName.msg %> 
                 </div>
             <% } %> 
             </div>
             <div class="control-formulario">
                 <input class="input-formularios" type="text" name="lastName" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
-                <% if(locals.errors && errors.apellido){ %>
+                <% if(locals.errors && errors.lastName){ %>
                     <div class="error">
-                        <%= errors.apellido.msg %> 
+                        <%= errors.lastName.msg %> 
                     </div>
                 <% } %> 
              </div> 
             <div class="control-formulario">
                 </label>
                 <input class="input-formularios" type="text" name="userName" placeholder="Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
-                <% if(locals.errors && errors.usuario){ %>
+                <% if(locals.errors && errors.userName){ %>
                     <div class="error">
-                        <%= errors.usuario.msg %> 
+                        <%= errors.userName.msg %> 
                     </div>
                 <% } %> 
             </div>
@@ -54,7 +54,7 @@
                 <select name="province">
                     <option selected disabled>Provincia</option>
                     <% p.forEach(p => { %>
-                        <option >
+                        <option value="<%= p.nombre %>" >
                            <%= p.nombre %> 
                         </option>
                        <% }) %>
@@ -69,10 +69,20 @@
             </div> 
             <div class="control-formulario">
               <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
+              <% if(locals.errors && errors.password){ %>
+                <div class="error">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>  
             </div>
             <div>
                 <label>Imagen de perfil:</label>
                 <input type="file" name="imagenUsuario">
+                <% if(locals.errors && errors.imagenUsuario){ %>
+                    <div class="error">
+                        <%= errors.imagenUsuario.msg %> 
+                    </div>
+                <% } %> 
             </div>
             <div class="control-formulario">              
               <button class="envia" type="submit">Enviar</button><a href="/index"></a>
