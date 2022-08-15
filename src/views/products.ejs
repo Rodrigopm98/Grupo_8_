@@ -15,7 +15,11 @@
                     <i class="fas fa-heart"></i>
                     <p class="precio">$ <%= p.price %> </p>
                     <h3 class="nombre"><%= p.name %> </h3>
-                    <p class="categoria"><%= p.categoria.category %> </p>
+                    <p class="categoria">
+                        <% if(p.categoria){ %>
+                        <%= p.categoria.category %> 
+                        <% } %> 
+                    </p>
                     <div class="boton-detalles"><a href="/products/productDetail"></a></div>
                 </div>
                 </a>

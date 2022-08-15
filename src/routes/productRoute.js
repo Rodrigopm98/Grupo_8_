@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
+const { body } = require("express-validator");
 
 let multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb)=>{
@@ -15,6 +16,44 @@ let multerDiskStorage = multer.diskStorage({
 });
 let fileUpload = multer({storage: multerDiskStorage})
 
+/* validaciones productCreate */
+const validacionesCreate = [
+    body("name")
+    .notEmpty().withMessage("Debes colocar el nombre del producto").bail()
+    .isLength({min : 5}).withMessage("El nombre del producto debe contener al menos 5 caracteres"),
+    body("descripcion").isLength({ min: 20 }).withMessage("La descripción debe tener al menos 20 caracteres"),
+    body("imagenProducto").custom((value, { req })=>{
+        let file = req.file;
+        let extensionesPermitidas= [".jpg",".jpeg",".png",".gif" ];
+        if(file){
+            let extensionArchivo = path.extname(file.originalname);
+            if(!extensionesPermitidas.includes(extensionArchivo)){
+                throw new Error("Solo se permiten extensiones .jpg, .jpeg, .png, .gif")
+        } }
+        return true;   
+        
+    })
+];
+
+/*validaciones para el productEdit  */
+const validacionesEdit = [
+    body("name")
+    .notEmpty().withMessage("Debes colocar el nombre del producto").bail()
+    .isLength({min : 5}).withMessage("El nombre del producto debe contener al menos 5 caracteres"),
+    body("description").isLength({ min: 20 }).withMessage("La descripción debe tener al menos 20 caracteres"),
+    body("imagenProducto").custom((value, { req })=>{
+        let file = req.file;
+        let extensionesPermitidas= [".jpg",".jpeg",".png",".gif" ];
+        if(file){
+            let extensionArchivo = path.extname(file.originalname);
+            if(!extensionesPermitidas.includes(extensionArchivo)){
+                throw new Error("Solo se permiten extensiones .jpg, .jpeg, .png, .gif")
+        } }
+        return true;   
+        
+    })
+];
+
 /* importando controlador */
 const productController= require("../controller/productController");
 
@@ -26,10 +65,10 @@ router.get("/productDetail/:id", productController.detail);
 router.get("/productCart", productController.cart);
 
 router.get("/productCreate", productController.create);
-router.post("/",  fileUpload.single("imagenProducto") ,productController.store);
+router.post("/",  fileUpload.single("imagenProducto") ,validacionesCreate, productController.store);
 
 router.get("/productEdit/:id", productController.edit);
-router.post("/productEdit/:id", fileUpload.single("imagenProducto"), productController.update);
+router.post("/productEdit/:id", fileUpload.single("imagenProducto"), validacionesEdit, productController.update);
 
 router.post("/productDetail/:id", productController.destroy)
 

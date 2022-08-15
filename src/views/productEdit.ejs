@@ -11,10 +11,20 @@
         <div class="nombre">
             <label for="">
                 <input type="text" name="name" placeholder="<%= producto.name%>" value="<%= producto.name %>" class="input-text">
+                <% if(locals.errors && errors.name){ %>
+                    <div class="error">
+                        <%= errors.name.msg %> 
+                    </div>
+                <% } %>
             </label>
         </div>
         <div class="nombre">
             <textarea class="input-text" rows="5" placeholder="<%=producto.description%>" name="description"><%=producto.description%></textarea>
+            <% if(locals.errors && errors.description){ %>
+                <div class="error">
+                    <%= errors.description.msg %> 
+                </div>
+            <% } %>
             <div class="categoria">
                 <label for="discount" class="form-label">Descuento</label>
                 <select name="discount" id="discount" class="form-text">
@@ -101,6 +111,11 @@
 
         <div class="buscarImagen">
             <input type="file" name="imagenProducto" >
+            <% if(locals.errors && errors.imagenProducto){ %>
+                <div class="error">
+                    <%= errors.imagenProducto.msg %> 
+                </div>
+            <% } %>
         </div>
         <div>
             <button type="submit">Confirmar cambio</button>
