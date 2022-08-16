@@ -131,7 +131,7 @@ const productController = {
         let category = db.Category.findAll();
         Promise.all([producto, size, sport, brand, category])
             .then(([producto, size, sport, brand, category]) => {
-                res.render("productEdit", { producto: producto, size: size, sport: sport, brand: brand, category: category,  errors: errors.mapped() })
+                res.render("productEdit" + req.params.id, { producto: producto, size: size, sport: sport, brand: brand, category: category,  errors: errors.mapped() })
             })
 
      }

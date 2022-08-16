@@ -8,7 +8,7 @@
     <main>
         <form action="/users/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
-               <input class="input-formularios" type="text" name="firstName"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+               <input class="input-formularios name" type="text" name="firstName"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                <% if(locals.errors && errors.firstName){ %>
                 <div class="error">
                     <%= errors.firstName.msg %> 
@@ -51,15 +51,7 @@
                 <input class="input-formularios-date" type="date" name="birthdate" required placeholder="mm/dd/yy" value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"> 
             </div>
             <div class="control-formulario">
-                <select name="province">
-                    <option selected disabled>Provincia</option>
-                    <% p.forEach(p => { %>
-                        <option value="<%= p.nombre %>" >
-                           <%= p.nombre %> 
-                        </option>
-                       <% }) %>
-                    
-                </select>
+               
             </div>  
             <div class="control-formulario">
                 <input class="input-formularios" type="text" name="city"  required placeholder ="Localidad" value="<%= locals.oldData ? oldData.localidad : null %>"> 
@@ -91,6 +83,7 @@
            </form>
     </main>
     <%- include("partials/footer") %> 
+    <script src="/js/register.js"></script>
 </body>
 
 </html>
