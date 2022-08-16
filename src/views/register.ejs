@@ -9,6 +9,7 @@
         <form action="/users/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
                <input class="input-formularios name" type="text" name="firstName"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+               <div class="errorName validacionesFront"></div>
                <% if(locals.errors && errors.firstName){ %>
                 <div class="error">
                     <%= errors.firstName.msg %> 
@@ -16,7 +17,8 @@
             <% } %> 
             </div>
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="lastName" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <input class="input-formularios lastName" type="text" name="lastName" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <div class="errorLastName validacionesFront"></div>
                 <% if(locals.errors && errors.lastName){ %>
                     <div class="error">
                         <%= errors.lastName.msg %> 
@@ -25,7 +27,8 @@
              </div> 
             <div class="control-formulario">
                 </label>
-                <input class="input-formularios" type="text" name="userName" placeholder="Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
+                <input class="input-formularios userName" type="text" name="userName" placeholder="Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
+                <div class="errorUserName validacionesFront"></div>
                 <% if(locals.errors && errors.userName){ %>
                     <div class="error">
                         <%= errors.userName.msg %> 
@@ -34,7 +37,8 @@
             </div>
             <div class="control-formulario">
             </label>
-            <input class="input-formularios" type="text" name="email"  placeholder="e-mail" value="<%= locals.oldData ? oldData.email : null %>">
+            <input class="input-formularios email" type="text" name="email"  placeholder="e-mail" value="<%= locals.oldData ? oldData.email : null %>">
+            <div class="errorEmail validacionesFront"></div>
             <% if(locals.errors && errors.email){ %>
                 <div class="error">
                     <%= errors.email.msg %> 
@@ -51,7 +55,7 @@
                 <input class="input-formularios-date" type="date" name="birthdate" required placeholder="mm/dd/yy" value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"> 
             </div>
             <div class="control-formulario">
-               
+                <input class="input-formularios name" type="text" name="province"  placeholder="Provincia">
             </div>  
             <div class="control-formulario">
                 <input class="input-formularios" type="text" name="city"  required placeholder ="Localidad" value="<%= locals.oldData ? oldData.localidad : null %>"> 
@@ -60,7 +64,8 @@
                 <input class="input-formularios" type="text" name="address" required placeholder ="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>"> 
             </div> 
             <div class="control-formulario">
-              <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
+              <input class="input-formularios password" type="password" name="password" password placeholder="Contraseña"> 
+              <div class="errorPassword validacionesFront"></div>
               <% if(locals.errors && errors.password){ %>
                 <div class="error">
                     <%= errors.password.msg %> 
