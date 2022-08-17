@@ -42,6 +42,14 @@ A pesar de que contamos con más tiempo para la realización de este sprint, nos
 de realización. 
 Nos juntamos con mayor frecuencia que en los tramos anteriores.
 Pudimos aplicar el desafío extra de recordar usuario.
+ 
+ 
+***Retrospectiva sprint 6***
+Nos sentimos muy cómodos trabajando juntos, reunidos de manera online.
+Como equipo estamos muy conformes con los resultados de nuestro trabajo.
+Este sprint no nos resultó demasiado complejo a comparación de todo lo expuesto en el sprint 6 donde la lógica de CRUD aplicada a las bases de datos nos pareció desafiante.
+Estamos emocionados y ansiosos respecto al último sprint.
+Nos quedan aún algunos asuntos penduentes que pulir
 
 
 
