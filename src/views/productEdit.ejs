@@ -10,7 +10,8 @@
     <form action="/products/productEdit/<%= producto.id %>" method="POST" enctype="multipart/form-data" class="form-container">
         <div class="nombre">
             <label for="">
-                <input type="text" name="name" placeholder="<%= producto.name%>" value="<%= producto.name %>" class="input-text">
+                <input type="text" name="name" placeholder="<%= producto.name%>" value="<%= producto.name %>" class="input-text name">
+                <div class="errorName validacionesFront"></div>
                 <% if(locals.errors && errors.name){ %>
                     <div class="error">
                         <%= errors.name.msg %> 
@@ -19,7 +20,8 @@
             </label>
         </div>
         <div class="nombre">
-            <textarea class="input-text" rows="5" placeholder="<%=producto.description%>" name="description"><%=producto.description%></textarea>
+            <textarea class="input-text textareaDescripcion" rows="5" placeholder="<%=producto.description%>" name="description"><%=producto.description%></textarea>
+            <div class="errorDescripcion validacionesFront"></div>
             <% if(locals.errors && errors.description){ %>
                 <div class="error">
                     <%= errors.description.msg %> 
@@ -110,7 +112,8 @@
         </div>
 
         <div class="buscarImagen">
-            <input type="file" name="imagenProducto" >
+            <input type="file" name="imagenProducto" class="imagenProducto">
+            <div class="errorImage validacionesFront"></div>
             <% if(locals.errors && errors.imagenProducto){ %>
                 <div class="error">
                     <%= errors.imagenProducto.msg %> 

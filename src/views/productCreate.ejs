@@ -10,7 +10,8 @@
     <form action="/products" method="POST" class="form-container" enctype="multipart/form-data" >
         <div class="nombre">
             
-                <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" class="input-text">
+                <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" class="input-text name">
+                <div class="errorName validacionesFront"></div>
                 <% if(locals.errors && errors.name){ %>
                     <div class="error">
                         <%= errors.name.msg %> 
@@ -18,7 +19,8 @@
                 <% } %>  
         </div>
         <div class="descripcion">
-            <textarea name="descripcion" id="descripcion" rows="5" cols="50" class="input-text" placeholder="Descripcion del producto"></textarea>
+            <textarea name="descripcion" id="descripcion" rows="5" cols="50" class="input-text textareaDescripcion" placeholder="Descripcion del producto"></textarea>
+            <div class="errorDescripcion validacionesFront"></div>
             <% if(locals.errors && errors.descripcion){ %>
                 <div class="error">
                     <%= errors.descripcion.msg %> 
@@ -78,22 +80,25 @@
         </div>
         <div class="categoria">
             <label for="size" class="form-label">Talle:</label>
-            <select name="size" id="categoria" class="form-text">
+            <select name="size" id="categoria" class="form-text size">
                 <option value="" selected disabled >Talle</option>
                 <% fk[0].forEach((size)=>{ %>
                     <option value="<%= size.id %>"><%= size.size %> </option>
 
                 <% }) %> 
                 
-            </select>    
+            </select>
+               
         </div>
         <div>
+            <input type="text" id="precio" name="precio" placeholder="Precio del producto Ej: 5678" class="precio price" >
             
-            <input type="text" id="precio" name="precio" placeholder="Precio del producto Ej: 5678" class="precio" >
         </div>
 
+
         <div class="buscarImagen">
-            <input type="file" name="imagenProducto">
+            <input type="file" name="imagenProducto" class="imagenProducto">
+            <div class="errorImage validacionesFront"></div>
             <% if(locals.errors && errors.imagenProducto){ %>
                 <div class="error">
                     <%= errors.imagenProducto.msg %> 

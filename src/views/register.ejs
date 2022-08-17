@@ -74,7 +74,8 @@
             </div>
             <div>
                 <label>Imagen de perfil:</label>
-                <input type="file" name="imagenUsuario">
+                <input type="file" name="imagenUsuario" class="imageUser">
+                <div class="errorImagenUsuario validacionesFront"></div>
                 <% if(locals.errors && errors.imagenUsuario){ %>
                     <div class="error">
                         <%= errors.imagenUsuario.msg %> 

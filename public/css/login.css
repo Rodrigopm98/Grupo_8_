@@ -67,3 +67,8 @@ main{
     background-color: #232F3E;
     padding-top: 5%;
 }
+/* para las validaciones de js front */
+.validacionesFront p{
+    color:  rgb(252, 83, 83);
+    font-size: 12px
+}
