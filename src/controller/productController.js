@@ -17,6 +17,16 @@ const productController = {
             })
 
     },
+   /*  menu: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "categoria" }]
+        })
+            .then((p) => {
+                let hombres = p.filter((p => p.genre == "Hombre"))
+                res.render("menu", { hombres })
+            })
+
+    } */
     search: function (req, res) {
         db.Product.findAll({
             include: [{ association: "categoria" }],
@@ -111,7 +121,7 @@ const productController = {
             discount: req.body.discount,
             price: req.body.price,
             sportId: req.body.sport,
-            userId: 1,
+            userId: req.session.usuarioLogueado.id,
             brandId: req.body.brand,
             sizeId: req.body.size,
             genre: req.body.genre,

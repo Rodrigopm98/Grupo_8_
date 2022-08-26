@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %> 
+<link rel="stylesheet" href="/css/home.css">
+<body>
+    <%- include("partials/header") %> 
+    <main>
+        <div>
+            <% hombres.forEach((product){ %>
+            <%= product.name %>
+            <% }) %>  
+        </div>
+     
+
+    </main>
+    <%- include("partials/footer") %>
+</body>
+
+</html>

@@ -8,12 +8,12 @@
 </head>
 <body>
     <% if(locals.usuarioLogueado){  %> 
-    <H1>Cuenta de <%= locals.usuarioLogueado.mail %></H1>
+    <H1>Cuenta de <%= locals.usuarioLogueado.userName %></H1>
+    <form action="/products/productCreate" method="get">
+        <button type="submit">Vender producto</button>
+    </form>
     <form action="/users/perfilUsuario/cerrarSession" method="get">
         <button type="submit">Salir de la cuenta </button>
-    </form>
-    <form action="/products/productCreate" method="get">
-        <button type="submit">Crear producto</button>
     </form>
     <% }else{ %>
         <h2>Pagina disponible solo para usuarios logueados</h2>

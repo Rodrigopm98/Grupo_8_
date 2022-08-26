@@ -27,6 +27,9 @@
                         <p class="envioGratis">Envío gratis</p>
                         <a class="enlaces-detalle" href="#formasDeEntrega">Ver más formas de entrega</a>
 
+                        <% if(!locals.usuarioLogueado || locals.usuarioLogueado.id != producto.userId){ %>
+
+
                         <form class="unidadesSolicitadas" action="/" method="get">
                             <h3>Unidades solicitadas</h3>
                             <input class="cantidad" type="text" name="cantidad" id="cantidad">
@@ -38,19 +41,24 @@
                             <textarea class="comentarios" name="comentarios" id="" cols="30" rows="5"></textarea>
                             <button type="submit">Enviar comentario</button>
                         </form>
+                        <% } %> 
                         <div class="descripcion-individual-compu">
                             <h3>Descripción</h3>
                             <p>
                                 <%= producto.description %>
                             </p>
+                            <% if(locals.usuarioLogueado){ %>  
 
+                            <% if(locals.usuarioLogueado.id == producto.userId){%> 
                             <form action="/products/productEdit/<%= producto.id %>" method="GET" class="botonEditar">
                                 <button type="submit">Editar producto</button>
                             </form>
-    
                                 <form action="/products/productDetail/<%= producto.id%>" method="POST" class="botonEditar" >
                                     <button type="submit">Eliminar Producto</button>
                                 </form>
+                           <% } %> 
+
+                           <% } %> 
 
                                 <form action="/" method="GET" class="botonVolver">
                                     <button type="submit">Volver</button>
