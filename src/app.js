@@ -42,8 +42,10 @@ app.listen(3030, ()=>console.log("puerto creado en: http://localhost:3030/"));
 const mainRouter = require("./routes/mainRoute");
 const productRouter = require("./routes/productRoute");
 const usersRouter = require("./routes/usersRoute");
+const apiMainRouter = require("./routes/api/apiMainRouter.js")
 
 app.use("/", mainRouter);
+app.use("/api", apiMainRouter);
 app.use("/products", productRouter);
 app.use("/users", usersRouter);
 
