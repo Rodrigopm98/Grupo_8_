@@ -20,6 +20,9 @@ const apiMainController = {
             }}
             res.json(respuesta);
         })
-    }};
+    },
+
+    
+};
 
 module.exports = apiMainController;
