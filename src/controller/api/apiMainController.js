@@ -10,7 +10,7 @@ const apiMainController = {
                     name: usuarios.firstName,
                     last_name: usuarios.last_name,
                     email: usuarios.email,
-                    endpoint: "api/users/" + usuarios.id
+                    detailUrl: "api/users/" + usuarios.id
                 }
             })         
             let respuesta = {
@@ -33,7 +33,7 @@ const apiMainController = {
                     name: productos.name,
                     description: productos.description,
                     categoryId: productos.categoryId,
-                    endpoint: "api/products/" + productos.id
+                    detailUrl: "api/products/" + productos.id
                 }
             })         
 
