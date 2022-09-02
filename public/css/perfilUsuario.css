@@ -11,7 +11,7 @@ body {
     font-size: 12px;
 }
 
-main{
+.mainPerfilUsuario{
     margin-top: -5%;
     background-color: #232F3E;
     padding-top: 5%;
@@ -22,7 +22,7 @@ main{
     text-align: justify;
     margin: 0px auto;
     padding: 8px;
-    font-size: 36px;
+    font-size: 6vw;
     color: white;
     box-sizing: inherit;
     border: 3px dotted white;
@@ -51,24 +51,34 @@ main{
     border:        0px solid #556699;
     border-radius: 1000px;
     box-shadow:    1px -1px #444444;
-    padding:       20px 45px;
+    padding:       10px 22px;
     color:         #ffffff;
     display:       inline-block;
-    font:          normal bold 26px/1 "Roboto", sans-serif;
+    font:          normal bold 3vw "Roboto", sans-serif;
     text-align:    center;
     text-shadow:   2px 2px #000000;
 }
 
 .botonSalir{
-    background:    #ff0000;
-    background:    linear-gradient(#073763, #970e0e 50%, #073763);
+    background:    #15d798;
+    background:    linear-gradient(#073763, #16996f 50%, #073763);
     border:        0px solid #556699;
     border-radius: 1000px;
     box-shadow:    1px -1px #444444;
-    padding:       20px 45px;
+    padding:       10px 22px;
     color:         #ffffff;
     display:       inline-block;
-    font:          normal bold 26px/1 "Roboto", sans-serif;
+    font:          normal bold 3vw "Roboto", sans-serif;
     text-align:    center;
     text-shadow:   2px 2px #000000;
+}
+
+@media(max-width:400px){
+    .botonVender{
+        padding: 5px 12px;
+    }
+    .botonSalir{
+        padding: 5px 12px;
+    }
+
 }

@@ -3,15 +3,18 @@
 <%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %> 
 <link rel="stylesheet" href="/css/perfilUsuario.css">
 <body>
-    <main>    
+    <main class="mainPerfilUsuario">    
     <%- include("partials/header") %> 
     <% if(locals.usuarioLogueado){  %> 
     <div class="nombreUsuario"> ¡Bienvenido <%= locals.usuarioLogueado.userName %>!</div>
     <div class="venta">¿Trajiste algo para vender hoy?</div>
     <div class="botones">
         <div class="botonVender">
-            <form action="/products/productCreate" method="get" type="submit">Vender producto</form>
+            <form action="/products/productCreate" method="get">Vender producto</form>
         </div>
+        <!-- <div class="editarProducto">
+            <form action="/products/productEdit" method="get" type="submit">Editar producto</form>
+        </div> -->
         <div class="botonSalir" form action="/users/perfilUsuario/cerrarSession" method="get">
             <span type="submit">Salir de la cuenta </span>
                 </form>
