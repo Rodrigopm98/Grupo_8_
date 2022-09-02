@@ -7,8 +7,9 @@
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/products" method="POST" class="form-container" enctype="multipart/form-data" >
-        <div class="nombre">
+        <div class="form-container">
+            <form action="/products" method="POST"  enctype="multipart/form-data">
+            <div class="nombre">
             
                 <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" class="input-text name">
                 <div class="errorName validacionesFront"></div>
@@ -17,8 +18,8 @@
                         <%= errors.name.msg %> 
                     </div>
                 <% } %>  
-        </div>
-        <div class="descripcion">
+            </div>
+            <div class="descripcion">
             <textarea name="descripcion" id="descripcion" rows="5" cols="50" class="input-text textareaDescripcion" placeholder="Descripcion del producto"></textarea>
             <div class="errorDescripcion validacionesFront"></div>
             <% if(locals.errors && errors.descripcion){ %>
@@ -26,18 +27,18 @@
                     <%= errors.descripcion.msg %> 
                 </div>
             <% } %>
-        </div> 
-        <div class="categoria">
+            </div> 
+            <div class="categoria">
             <label for="categoria" class="form-label">Descuento</label>
             <select name="discount" id="categoria" class="form-text">
-                <option value="0" selected >Sin descuento</option>
+                <option value="0" selected disabled>Agregar descuento</option>
                 <% for (let i = 0; i < 17; i++) { %>
                     <% let desc = i * 5 %> 
                     <option value="<%= desc %>"><%= desc %>% </option>
                 <% } %>
             </select>    
-        </div>
-        <div class="categoria">
+            </div>
+            <div class="categoria">
             <label for="categoria" class="form-label">Categoria:</label>
             <select name="category" id="categoria" class="form-text">
                 <option value="otras" selected disabled>Selec Categoria</option>
@@ -45,9 +46,9 @@
                     <option value="<%= cat.id %>"><%= cat.category %> </option>
                 <% }) %> 
             </select>    
-        </div>
+            </div>
         
-        <div class="categoria">
+            <div class="categoria">
             <label for="categoria" class="form-label">Deporte:</label>
             <select name="sport" id="categoria" class="form-text">
                 <option value="otro" selected disabled>Selec Deporte</option>
@@ -57,8 +58,8 @@
                 <% }) %> 
                 <option value="otro">Otro</option>
             </select>    
-        </div>
-        <div class="categoria">
+            </div>
+            <div class="categoria">
             <label for="brand" class="form-label">Marca:</label>
             <select name="brand" id="brand" class="form-text">
                 <option value="Otra" selected disabled>Selec Marca</option>
@@ -68,17 +69,18 @@
                 <% }) %> 
                 <option value="otro">Otra</option>
             </select>    
-        </div>
-        <div class="categoria">
+            </div>
+            <div class="categoria">
             <label for="categoria" class="form-label">Genero:</label>
             <select name="genre" id="categoria" class="form-text">
+                <option value=" " selected disabled>Elegir género</option>
                 <option value="Hombre" >Hombre</option>
                 <option value="Mujer" >Mujer</option>
                 <option value="Niño" >Niño</option>
                 <option value="Niña" >Niña</option>
             </select>    
-        </div>
-        <div class="categoria">
+            </div>
+            <div class="categoria">
             <label for="size" class="form-label">Talle:</label>
             <select name="size" id="categoria" class="form-text size">
                 <option value="" selected disabled >Talle</option>
@@ -89,14 +91,14 @@
                 
             </select>
                
-        </div>
-        <div>
+            </div>
+            <div>
             <input type="text" id="precio" name="precio" placeholder="Precio del producto Ej: 5678" class="precio price" >
             
-        </div>
+            </div>
 
 
-        <div class="buscarImagen">
+            <div class="buscarImagen">
             <input type="file" name="imagenProducto" class="imagenProducto">
             <div class="errorImage validacionesFront"></div>
             <% if(locals.errors && errors.imagenProducto){ %>
@@ -105,13 +107,16 @@
                 </div>
             <% } %>
 
-        </div>
+            </div>
 
-        <div class="guardarProducto">
-            <button type="submit">Guardar Producto</button>
+            <div class="guardar">
+            <button class="input-guardar" type="submit">Guardar Producto</button>
+            </div>
+        </form>
         </div>
-
-    </form>
+        <div class="volver">
+            <form action="/users/perfilUsuario" method="get"><button class="input-volver">Volver</button>
+        </div>
 </main>
     <%- include("partials/footer") %> 
     <script src="/js/productCreate.js"></script>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %> 
+<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %>
+<script src="https://kit.fontawesome.com/37146b37c4.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/css/perfilUsuario.css">
 <body>
     <main class="mainPerfilUsuario">    
@@ -10,18 +11,24 @@
     <div class="venta">¿Trajiste algo para vender hoy?</div>
     <div class="botones">
         <div class="botonVender">
-            <form action="/products/productCreate" method="get">Vender producto</form>
+            <form action="/products/productCreate" method="get"><button type="submit" class="input-venta">Vender producto</button></form>
         </div>
         <!-- <div class="editarProducto">
             <form action="/products/productEdit" method="get" type="submit">Editar producto</form>
         </div> -->
-        <div class="botonSalir" form action="/users/perfilUsuario/cerrarSession" method="get">
-            <span type="submit">Salir de la cuenta </span>
-                </form>
+        <div class="botonSalir">
+            <form action="/users/perfilUsuario/cerrarSession" method="get"><button type="submit" class="input-salir">Salir de la cuenta</button></form>
         </div>
     </div>
     <% }else{ %>
-        <h2>Pagina disponible solo para usuarios logueados</h2>
+        <div class="soloParaUsuarios">
+            <div class="alerta">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+        <h2>¡Esta página está disponible solo para usuarios logueados!</h2>
+        <p>Podés registrarte haciendo click <a href="/users/register">acá</a></p>
+
+        </div>
         <%  } %> 
     </main>
     <%- include("partials/footer") %>
