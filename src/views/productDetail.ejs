@@ -22,7 +22,7 @@
                         </h3>
                         <p class="precio-detalle">$<%= producto.price %>
                         </p>
-                        <p class="cuotas">En 12 cuotas de ... pagando con Mercado Crédito</p>
+                        <p class="cuotas">$<%= producto.discount %> -- </p>
                         <a class="enlaces-detalle" href="#mediosDePago">Ver los medios de pago</a>
                         <p class="envioGratis">Envío gratis</p>
                         <a class="enlaces-detalle" href="#formasDeEntrega">Ver más formas de entrega</a>
@@ -72,17 +72,8 @@
                 <div class="descripcion-individual">
                     <h3>Descripción</h3>
                     <p>
-                        <%= producto.descripcion %>
+                        <%= producto.description %>
                     </p>
-
-                    <form action="/product/productEdit" method="GET" class="botonEditar">
-                        <button type="submit">Editar producto</button>
-                    </form>
-                    <form action="/product/productEdit/<%= producto.id%>?_method=DELETE" method="POST">
-                        <button type="submit">Eliminar Producto</button>
-                    </form>
-
-
                 </div>
 
             </main>
