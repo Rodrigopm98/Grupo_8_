@@ -58,7 +58,7 @@ const validacionesEdit = [
 const productController= require("../controller/productController");
 
 router.get("/", productController.products);
-/* router.get("/menu", productController.menu); */
+router.get("/menu", productController.menu);
 
 
 router.get("/search", productController.search); 

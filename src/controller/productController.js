@@ -17,7 +17,8 @@ const productController = {
             })
 
     },
-   /*  menu: function (req, res) {
+    
+   menu: function (req, res) {
         db.Product.findAll({
             include: [{ association: "categoria" }]
         })
@@ -26,7 +27,8 @@ const productController = {
                 res.render("menu", { hombres })
             })
 
-    } */
+    },
+
     search: function (req, res) {
         db.Product.findAll({
             include: [{ association: "categoria" }],

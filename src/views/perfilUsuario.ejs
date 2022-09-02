@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-</head>
+<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %> 
+<link rel="stylesheet" href="/css/perfilUsuario.css">
 <body>
+    <main>    
+    <%- include("partials/header") %> 
     <% if(locals.usuarioLogueado){  %> 
-    <H1>Cuenta de <%= locals.usuarioLogueado.userName %></H1>
-    <form action="/products/productCreate" method="get">
-        <button type="submit">Vender producto</button>
-    </form>
-    <form action="/users/perfilUsuario/cerrarSession" method="get">
-        <button type="submit">Salir de la cuenta </button>
-    </form>
+    <div class="nombreUsuario"> ¡Bienvenido <%= locals.usuarioLogueado.userName %>!</div>
+    <div class="venta">¿Trajiste algo para vender hoy?</div>
+    <div class="botones">
+        <div class="botonVender">
+            <form action="/products/productCreate" method="get" type="submit">Vender producto</form>
+        </div>
+        <div class="botonSalir" form action="/users/perfilUsuario/cerrarSession" method="get">
+            <span type="submit">Salir de la cuenta </span>
+                </form>
+        </div>
+    </div>
     <% }else{ %>
         <h2>Pagina disponible solo para usuarios logueados</h2>
         <%  } %> 
-    
+    </main>
+    <%- include("partials/footer") %>
 </body>
 </html>
