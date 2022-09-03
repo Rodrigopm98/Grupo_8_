@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %>
+<script src="https://kit.fontawesome.com/37146b37c4.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="/css/ayuda.css">
+<body>
+    <main class="contenedor">    
+    <%- include("partials/header") %>
+    <div class="ayudaFormulario">
+        <h1>¿Con qué podemos ayudarte?</h1>
+        <form class="busquedaAyuda" action="/products/search" method="get">
+            <input class="input" type="text" name="search" placeholder="Ej: Me robaron la cuenta">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>""
+
+    <div class="cajaCompra">
+        <h2>COMPRAS</h2>
+        <div class="administrar">ADMINISTRAR Y CANCELAR COMPRAS</div>
+
+
+    </div>
+
+    <div class="volverContainer">
+        <form action="/" class="botonVolver" method="GET">
+            <button class="botonVolverInput" type="submit">Volver a OFERTAS</button>
+        </form>
+    </div>
+    </main>
+    <%- include("partials/footer") %>
+</body>
+</html>

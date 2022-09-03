@@ -82,9 +82,9 @@ const usersController = {
                         if (comparacionPassword) {
                             delete busquedaEmail.password
                             req.session.usuarioLogueado = busquedaEmail
-                            if(req.body.recordame != undefined){
+                                 if(req.body.recordame != undefined){
                                 res.cookie("recordame", busquedaEmail.email,
-                                { maxAge: 600000 })
+                                { maxAge: 6000 })
                             }
                             res.redirect("/products")
                         } else { res.render("login", { passwordIncorrecto: "contraseña incorrecta" }) }

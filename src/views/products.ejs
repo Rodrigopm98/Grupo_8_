@@ -10,16 +10,14 @@
            <% products.forEach(p =>{ %>  
             <article class="articulos">
                 <a class="detalleProducto" href="/products/productDetail/<%= p.id %>">
+                <div><h3 class="nombre"><%= p.name %> </h3></div>
                 <img src="/images/<%= p.image %> " alt="">
                 <div class="descripcion">
-                    <i class="fas fa-heart"></i>
-                    <p class="precio">$ <%= p.price %> </p>
-                    <h3 class="nombre"><%= p.name %> </h3>
-                    <p class="categoria">
-                        <% if(p.categoria){ %>
-                        <%= p.categoria.category %> 
-                        <% } %> 
-                    </p>
+                    <div><i class="fas fa-heart"></i></div>
+                    <div class="precio">Precio publicado: $ <del><%= p.price %></del></div>
+                    <div class="descuento"> Con descuento del <%= p.discount %> %</div>
+                    <div class="precioFinal">Precio final : $ <%= p.price * ((100-p.discount)/100) %></div>
+                    <p class="categoria"><%= p.category %> </p>
                     <div class="boton-detalles"><a href="/products/productDetail"></a></div>
                 </div>
                 </a>
