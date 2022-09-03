@@ -23,6 +23,7 @@ h1{
     position:relative;    
 }
 .detalleProducto{
+    padding-top: 5%;
     text-decoration: none;
     color: black;
 }
@@ -30,34 +31,38 @@ h1{
 .articulos img{
     width: 100%;
     max-height: 245.8px;
-   
     box-sizing: border-box;
     
     
 }
 .descripcion{
-    
-    box-sizing: border-box; 
-    margin-top: -3px; 
-    background-color: #E0E0E0;
-    
-}
-.precio{
-  
-    margin:0px;
-    display: inline;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
     background-color: rgb(211, 211, 211);
-    position:absolute;
-    bottom: 42px;
-
 }
-.precio:hover{
-    font-size:14px ;
+
+.descuento{
+    color: green;
+}
+
+.precio{
+    margin:0px;
+    display: block;
+}
+
+.precioFinal{
+    text-emphasis: 4px;
+}
+
+.precioFinal:hover{
+    font-size: 14px;
     font-weight: bold;
 }
 .nombre{
-    
-    margin: 0px;
+    text-align: center;
+    color: #485769;
+    font-weight: bold;
 }
 .categoria{
    
@@ -66,19 +71,13 @@ h1{
 .fa-heart{
     font-size: 20px;
     position: absolute;
-    bottom:60px;
+    top: 2px;
+    right: 2px;
 }
     
 .descripcion i:hover{
     color: #004AAD;
     font-size: 25px;
-}
-
-.boton-detalles{
-    font-size: 20px;
-    position: absolute;
-    right: 2px;
-    top: 0px;
 }
 
 .whatsapp{
