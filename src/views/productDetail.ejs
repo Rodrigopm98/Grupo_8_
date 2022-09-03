@@ -2,15 +2,13 @@
 <html lang="en">
 <%- include("partials/head", {titulo: "GloriososClub - Detalle producto" }) %>
     <link rel="stylesheet" href="/css/productDetail.css">
-
     <body>
         <%- include("partials/header") %>
             <main>
                 <div class="imagen-descripcion">
                     <div class="imagen">
-                        <img src="/images/<%= producto.image %> " alt="">
+                        <img class="imagenProducto" src="/images/<%= producto.image %> " alt="">
                     </div>
-
                 <div class="descripcion-detalle">
                         <div class="nombreTablets"><%= producto.name %></div>
                         <div class="precio">Precio original de publicación: $ <del><%= producto.price %></del></div></br>
@@ -22,12 +20,11 @@
 
                         <form class="unidadesSolicitadas" action="/" method="get">
                             <h3>Unidades solicitadas</h3>
-                            <input class="cantidad" type="text" name="cantidad" id="cantidad">
-                            <button type="submit">Comprar ahora</button>
-                            <button type="submit">Agregar al carrito</button>
+                            <input class="cantidad" type="text" name="cantidad" placeholder="Ej: 1, 2, 3" id="cantidad">
+                            <button class="agregarCarrito" type="submit">Agregar al carrito</button>
                         </form>
                         <form class="dejanosTuComentario" action="/" method="get">
-                            <h3>Dejanos tu comentario</h3>
+                            <h3>¿Necesitás más detalles? Escribinos</h3>
                             <textarea class="comentarios" name="comentarios" id="" cols="30" rows="5"></textarea>
                             <button type="submit">Enviar comentario</button>
                         </form>
@@ -49,9 +46,8 @@
                            <% } %> 
 
                            <% } %> 
-
                                 <form action="/" method="GET" class="botonVolver">
-                                    <button type="submit">Volver</button>
+                                    <button type="submit">Volver a la página de inicio</button>
                                 </form>
                             
                         </div>
