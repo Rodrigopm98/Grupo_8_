@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head", {titulo: "Detalle producto" }) %>
+<%- include("partials/head", {titulo: "GloriososClub - Detalle producto" }) %>
     <link rel="stylesheet" href="/css/productDetail.css">
 
     <body>
@@ -8,24 +8,14 @@
             <main>
                 <div class="imagen-descripcion">
                     <div class="imagen">
-                        <h2 class="nombre-detalle">
-                            <%= producto.name %>
-                        </h2>
-
                         <img src="/images/<%= producto.image %> " alt="">
                     </div>
 
-                    <div class="descripcion-detalle">
-
-                        <h3 class="nombreTablets">
-                            <%= producto.name %>
-                        </h3>
-                        <p class="precio-detalle">$<%= producto.price %>
-                        </p>
-                        <p class="cuotas">$<%= producto.discount %> -- </p>
-                        <a class="enlaces-detalle" href="#mediosDePago">Ver los medios de pago</a>
-                        <p class="envioGratis">Envío gratis</p>
-                        <a class="enlaces-detalle" href="#formasDeEntrega">Ver más formas de entrega</a>
+                <div class="descripcion-detalle">
+                        <div class="nombreTablets"><%= producto.name %></div>
+                        <div class="precio">Precio original de publicación: $ <del><%= producto.price %></del></div></br>
+                        <div class="descuento"><span class="parpadea">¡Aprovechá el descuento del % <%= producto.discount %>!</span></div></br>
+                        <div class="precioFinal">¡Precio final: $ <u><%= producto.price * ((100-producto.discount)/100) %></u>!</div>
 
                         <% if(!locals.usuarioLogueado || locals.usuarioLogueado.id != producto.userId){ %>
 

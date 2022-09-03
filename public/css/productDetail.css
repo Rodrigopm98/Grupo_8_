@@ -1,5 +1,5 @@
 main{
-    padding: 20px 5px;
+    padding: 10px 5px;
     background-color: #E0E0E0;
     box-sizing: border-box;
     color: black;    
@@ -14,6 +14,27 @@ main{
     width: 100%;
 
 }
+
+
+.descuento{
+    color: green;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.precio{
+    margin:0px;
+    font-size: 2vw;
+    display: block;
+    text-align: center;
+}
+
+.precioFinal{
+    text-emphasis: 4px;
+    font-size: 2vw;
+    text-align: center;
+}
+
 .nombre-detalle{
     text-align: center;
 }
@@ -74,9 +95,12 @@ form h3{
     text-align: center;
 }
 .nombreTablets{
-    display: none;
+    color: #485769;
+    font-size: 3vw;
+    font-weight: bolder;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
+    padding-bottom: 2vw;
 }
 .descripcion-individual-compu{
     display: none;
