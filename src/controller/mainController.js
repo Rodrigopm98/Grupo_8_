@@ -29,6 +29,10 @@ let mainController = {
 
     ayuda: function(req, res){
         res.render("ayuda")
+    },
+
+    terminosCondiciones: function(req, res){
+        res.render("terminosCondiciones")
     }
 }
 

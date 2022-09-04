@@ -8,6 +8,7 @@ const mainController = require("../controller/mainController");
 router.get("/", mainController.index);
 router.get("/login", mainController.login);
 router.get("/ayuda", mainController.ayuda);
+router.get("/terminosCondiciones", mainController.terminosCondiciones);
 
 
 

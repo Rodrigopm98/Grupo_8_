@@ -1,5 +1,52 @@
-<script src="https://kit.fontawesome.com/37146b37c4.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/css/footer.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- enlace con style.css y con normalize.css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- enlace con pagina de tipo de fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- enlace con pagina de los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/37146b37c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/terminosCondiciones.css">
+    <title><%= titulo %></title>
+</head>
+<header>
+    <div class="buscador-nav">
+        <section class="navbar-top">
+            <div class="menu"><i class="fas fa-bars"></i></div>
+            <div class="divLogo"><a href="/" class="inicio"><img src="/images/logoGloriososClub.png" alt="home" class="logo"></a></div>
+            <form class="busqueda" action="/products/search" method="get">
+                <input class="input" type="text" name="search" placeholder="Buscar">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </section>
+        <nav>
+            <ul>
+                <% if(locals.isLogged){ %> 
+                <li><a href="/users/perfilUsuario"><%= locals.usuarioLogueado.userName %></a></li>
+                <li><a href="/imagen"><img class="imagenUsuario" src="/images/profileImages/<%= locals.usuarioLogueado.profileImage %> "></i></a></li>
+                <% }else{ %> 
+                <li><a href="/users/register" class="register">Registrarse</a></li>
+                <li><a href="/users/login" class="login">Ingresar</a></li>
+                <% } %> 
+                <li><a href="/products/productCart" class="carrito"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <ul class="menu-compu1">
+        <li><a href="/products/menu">Hombre</a></li>
+        <li><a href="#mujer">Mujer</a></li>
+        <li><a href="#niños">Niños</a></li>
+        <li><a href="#deportes">Deportes</a></li>
+        <li><a href="#marcas">Marcas</a></li>
+        <li><a href="/products">Todos los productos</a></li>
+        <li><a href="/ayuda">Ayuda</a></li>
+    </ul>
+    <img src="/images/banner gloriosos 728150.png" alt="" class="banner">
+</header>
 <footer>
     <div class="menu-footer">
         <!-- <section>
@@ -61,7 +108,7 @@
     </div>
     <div>
         <ul class="atencion-cliente">
-            <li><a href="/src/views/terminosCondiciones.ejs">Terminos y condiciones</a></li>
+            <li><a href="terminosYCondiciones">Terminos y condiciones</a></li>
             <li><a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor">Defensa al consumidor</a></li>
         </ul>
         
