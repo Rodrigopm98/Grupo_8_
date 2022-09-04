@@ -61,6 +61,8 @@ router.get("/", productController.products);
 router.get("/hombres", productController.hombres);
 router.get("/mujeres", productController.mujeres);
 router.get("/ninios", productController.ninios);
+router.get("/deportes", productController.deportes);
+
 
 
 router.get("/search", productController.search); 

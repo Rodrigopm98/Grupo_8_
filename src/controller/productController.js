@@ -48,6 +48,16 @@ const productController = {
             })
     },
 
+    deportes: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "categoria" }]
+        })
+            .then((p) => {
+                let basquet = p.filter((p => p.Sport == "Basquet"));
+                res.render("deportes", { basquet })
+            })
+    },
+
     search: function (req, res) {
         db.Product.findAll({
             include: [{ association: "categoria" }],

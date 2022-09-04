@@ -5,9 +5,9 @@
 <body>
     <%- include("partials/header") %> 
     <main>
-        <h1> PRODUCTOS DE NIÑOS</h1>
-        <div class="todos-los-articulos">
-            <% niños.forEach(p => { %>
+        <h1> DEPORTES </h1>
+        <div class="futbol">
+            <% basquet.forEach(p => { %>
                 <%if (p.deleted != true){%>
                 <article class="articulos">
                     <a class="detalleProducto" href="/products/productDetail/<%= p.id %>">
@@ -30,8 +30,7 @@
                 </article>
                     <% } %>
                 <% }) %>
-                
-
+        </div>
     </main>
     <%- include("partials/footer") %>
 </body>
