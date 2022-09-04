@@ -18,15 +18,34 @@ const productController = {
 
     },
     
-   menu: function (req, res) {
+   hombres: function (req, res) {
         db.Product.findAll({
             include: [{ association: "categoria" }]
         })
             .then((p) => {
                 let hombres = p.filter((p => p.genre == "Hombre"))
-                res.render("menu", { hombres })
+                res.render("hombres", { hombres })
             })
+    },
 
+    mujeres: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "categoria" }]
+        })
+            .then((p) => {
+                let mujeres = p.filter((p => p.genre == "Mujer"))
+                res.render("mujeres", { mujeres })
+            })
+    },
+
+    ninios: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "categoria" }]
+        })
+            .then((p) => {
+                let niños = p.filter((p => p.genre == "Niño"))
+                res.render("ninios", { niños })
+            })
     },
 
     search: function (req, res) {

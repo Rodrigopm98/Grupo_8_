@@ -58,6 +58,17 @@ h1{
     font-size: 14px;
     font-weight: bold;
 }
+
+.precioSinDescuento{
+        font-size: 16px;
+        text-decoration-style: dashed;
+}
+    
+.precioSinDescuento:hover{
+        font-size: 1.8vw;
+        font-weight: bold;
+    }
+
 .nombre{
     text-align: center;
     color: #485769;
