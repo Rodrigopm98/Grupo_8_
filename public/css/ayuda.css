@@ -55,15 +55,91 @@ main{
     margin-top:-2px;
 }
 
-.cajaCompra{
+.cajaCompras{
     margin: auto;
+    border-style: inset;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.cajaCompra h2{
-    color:rgb(211, 211, 211)
+.cajaVentas{
+    margin: auto;
+    border-style: inset;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.cajaCuenta{
+    margin: auto;
+    border-style: inset;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    color:rgb(211, 211, 211);
+}
+
+
+.cajaCompras ul{
+    list-style: none;
+    align-items: center;
+}
+
+.cajaVentas ul{
+    list-style: none;
+    align-items: center;
+}
+
+.cajaCuenta ul{
+    list-style: none;
+    align-items: center;
+}
+
+.cajaCompras a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+.cajaVentas a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+.cajaCuenta a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+.cajaCompras ul{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+}
+
+.cajaVentas ul{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+}
+
+.cajaCuenta ul{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
 }
 
 .administrar{
+    color:rgb(211, 211, 211);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ventas{
+    color:rgb(211, 211, 211);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cuenta{
     color:rgb(211, 211, 211);
     font-family: 'Courier New', Courier, monospace;
 }

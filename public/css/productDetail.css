@@ -20,7 +20,7 @@ main{
 }
 
 .imagen-descripcion img:hover{
-    transform: scale(1.3)
+    transform: scale(1.15)
 }
 
 
@@ -38,6 +38,12 @@ main{
 }
 
 .precioFinal{
+    text-emphasis: 4px;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.precioSinDescuento{
     text-emphasis: 4px;
     font-size: 2vw;
     text-align: center;
@@ -131,8 +137,33 @@ form h3{
 
 .botonEditar{
     text-align: center;
+}
 
+.volverContainer{
+    width: 100%;
+    text-align: center;
+}
 
+.botonVolver{
+    width: 25%;
+    margin: 0px auto;
+    margin-top: 3%;
+    background: #15d798;
+    background: linear-gradient(#073763, #16996f 50%, #073763);
+    border: 0px solid #556699;
+    border-radius: 1000px;
+    box-shadow: 1px -1px #444444;
+    padding: 5px 10px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal bold 1vw "Roboto", sans-serif;
+    text-shadow: 2px 2px #000000;
+}
+
+.botonVolverInput{
+    background-color: transparent;
+    border: transparent;
+    color: white;
 }
 
 @media(min-width:400px){
