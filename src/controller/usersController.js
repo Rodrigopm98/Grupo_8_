@@ -22,52 +22,55 @@ const usersController = {
             .then(r => r.json())
             .then(p => {
 
-        res.render("register", { p: p.provincias } )
+                res.render("register", { p: p.provincias })
             })
             .catch(error => req.send(error))
 
     },
     procesarFormulario: function (req, res) {
         /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
-     let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            db.User.findAll()
-            .then(user=>{let encontrarEmail = user.find(u => u.email == req.body.email);
-                if(!encontrarEmail){
-                    db.User.create({
-                        firstName: req.body.firstName,
-                        lastName: req.body.lastName,
-                        userName: req.body.userName,
-                        email: req.body.email,
-                        birthdate: req.body.birthdate,
-                        province: req.body.province,
-                        city: req.body.city,
-                        address: req.body.address,
-                        profileImage: req.file ? req.file.filename : "systemusers_94754.png",
-                        password: bcrypt.hashSync(req.body.password, 10),
-                        role: "",
-                        deleted: 0
-                    })
-                    res.redirect("/");
-                }else {
-                    res.render("register", {
-                        msg: "Ya hay un usuario registrado con dicho email",
-                        oldData: req.body
-                    })
-                }
-             })
-        } else {
-            res.render("register", {
-                errors: errors.mapped(),
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            return res.render("register", {
+                errors: resultValidation.mapped(),
                 oldData: req.body
             })
-        } 
-
-
+        } else {
+            db.User.findAll()
+                .then(user => {
+                    let chequeado = user.find(u => (u.email == req.body.email) && (u.userName == req.body.userName));
+                    if (!chequeado) {
+                        db.User.create({
+                            firstName: req.body.firstName,
+                            lastName: req.body.lastName,
+                            userName: req.body.userName,
+                            email: req.body.email,
+                            birthdate: req.body.birthdate,
+                            province: req.body.province,
+                            city: req.body.city,
+                            address: req.body.address,
+                            profileImage: req.file ? req.file.filename : "systemusers_94754.png",
+                            password: bcrypt.hashSync(req.body.password, 10),
+                            role: "",
+                            deleted: 0
+                        })
+                        /* window.alert("El usuario de ha creado con éxito!") */
+                        res.redirect("/");
+                    } else {
+                        res.render("register", {
+                            msg: "Ya existe un usuario registrado con esos datos",
+                            oldData: req.body
+                        })
+                    }
+                })
+        }
     },
+
+
     login: function (req, res) {
         res.render("login")
-        
+
     },
     processLogin: function (req, res) {
         /* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
@@ -82,12 +85,12 @@ const usersController = {
                         if (comparacionPassword) {
                             delete busquedaEmail.password
                             req.session.usuarioLogueado = busquedaEmail
-                                 if(req.body.recordame != undefined){
+                            if (req.body.recordame != undefined) {
                                 res.cookie("recordame", busquedaEmail.email,
-                                { maxAge: 6000 })
+                                    { maxAge: 6000 })
                             }
                             res.redirect("/products")
-                        } else { res.render("login", { passwordIncorrecto: "contraseña incorrecta" }) }
+                        } else { res.render("login", { passwordIncorrecto: "La contraseña es incorrecta" }) }
 
                     } else { res.render("login", { emailInvalido: "El email ingresado no se encuentra registrado" }) }
                 })

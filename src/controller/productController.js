@@ -43,7 +43,7 @@ const productController = {
             include: [{ association: "categoria" }]
         })
             .then((p) => {
-                let niños = p.filter((p => p.genre == "Niño"))
+                let niños = p.filter((p => p.genre == "Niña"))
                 res.render("ninios", { niños })
             })
     },
