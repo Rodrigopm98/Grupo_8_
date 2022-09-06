@@ -94,7 +94,11 @@
             </div>
             <div>
             <input type="text" id="precio" name="precio" placeholder="Precio del producto Ej: 5678" class="precio price" >
-            
+            <% if(locals.errors && errors.precio){ %>
+                <div class="error">
+                    <%= errors.precio.msg %> 
+                </div>
+            <% } %>
             </div>
 
 

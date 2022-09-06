@@ -8,6 +8,9 @@ window.addEventListener("load", function(){
         let lastNamee = document.querySelector("input.lastName");
         let userName = document.querySelector("input.userName");
         let email = document.querySelector("input.email");
+        let provincia = document.querySelector("input.province");
+        let ciudad = document.querySelector("input.city");
+        let direccion = document.querySelector("input.address");
         let imagenUsuario = document.querySelector("input.imageUser");
        
 
@@ -53,6 +56,24 @@ window.addEventListener("load", function(){
             e.preventDefault();
             let errorEmail = document.querySelector("div.errorEmail");
             errorEmail.innerHTML = "<p>"+ "Formato de email inválido" + "</p>"
+
+        }
+        if(provincia.value == ""){
+            e.preventDefault();
+            let province = document.querySelector("div.errorProvince");
+            province.innerHTML = "<p>"+ "Debes colocar una provincia" + "</p>"
+
+        }
+        if(ciudad.value == ""){
+            e.preventDefault();
+            let city = document.querySelector("div.errorCity");
+            city.innerHTML = "<p>"+ "Debes colocar una localidad" + "</p>"
+
+        }
+        if(direccion.value == ""){
+            e.preventDefault();
+            let address= document.querySelector("div.errorAddress");
+            address.innerHTML = "<p>"+ "Debes colocar una dirección" + "</p>"
 
         }
        

@@ -55,7 +55,7 @@ const usersController = {
                             role: "",
                             deleted: 0
                         })
-                        /* window.alert("El usuario de ha creado con éxito!") */
+
                         res.redirect("/");
                     } else {
                         res.render("register", {
@@ -109,6 +109,7 @@ const usersController = {
     },
     cerrarSession: function (req, res) {
         req.session.destroy();
+        res.clearCookie('recordame');
         res.redirect("/")
     }
 };

@@ -48,9 +48,7 @@ const validacionesRegister = [
     body("imagenUsuario").custom((value, { req })=>{
         let file = req.file;
         let extensionesPermitidas= [".jpg",".jpeg",".png",".gif" ];
-        if(!file) {
-            throw new Error ("Tienes que subir una imagen");
-        } else {
+        if(file){
             let extensionArchivo = path.extname(file.originalname)
             if (!extensionesPermitidas.includes(extensionArchivo)){
                 throw new Error("Sólo se permiten extensiones .jpg, .jpeg, .png, .gif");

@@ -22,10 +22,13 @@ const validacionesCreate = [
     .notEmpty().withMessage("Debes colocar el nombre del producto").bail()
     .isLength({min : 5}).withMessage("El nombre del producto debe contener al menos 5 caracteres"),
     body("descripcion").isLength({ min: 20 }).withMessage("La descripción debe tener al menos 20 caracteres"),
+    body("precio").isNumeric().withMessage("El precio debe ser expresado en numero"),
     body("imagenProducto").custom((value, { req })=>{
         let file = req.file;
         let extensionesPermitidas= [".jpg",".jpeg",".png",".gif" ];
-        if(file){
+        if(!file){
+            throw new Error ("Tienes que subir una imagen");
+        } else{
             let extensionArchivo = path.extname(file.originalname);
             if(!extensionesPermitidas.includes(extensionArchivo)){
                 throw new Error("Solo se permiten extensiones .jpg, .jpeg, .png, .gif")

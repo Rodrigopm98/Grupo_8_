@@ -43,8 +43,26 @@ const productController = {
             include: [{ association: "categoria" }]
         })
             .then((p) => {
-                let niños = p.filter((p => p.genre == "Niña"))
-                res.render("ninios", { niños })
+                let niños = p.filter((p => p.genre == "Niña"));
+                /* let niña = p.filter((p => p.genre == "Niña"));
+                let niños = niño.concat(niña) */
+                /* let niños = p.map((p)=>{
+                    let niños = [];
+                    if(p.genre == "Niño" || p.genre == "Niña" ){
+                        niños.push(p)    
+                    }
+                    return niños
+
+                }) */
+                /* let products = p.filter((p => p.deleted == 0));
+                let niños = [];
+                for (let i = 0; i < products.length; i++) {
+                   (products[i].dataValues.genre== "Niño")
+                   niños.push(products[i])
+
+                    
+                } */
+                res.render("ninios", { niños})
             })
     },
 
