@@ -14,7 +14,7 @@
                     <div><h3 class="nombre"><%= p.name %> </h3></div>
                     <img src="/images/<%= p.image %> " alt="">
                     <div class="descripcion">
-                        <div><i class="fas fa-heart"></i></div>
+                        
                         <div class="precio">Precio publicado: $ <del><%= p.price %></del></div>
                         <div class="descuento"> Con descuento del % <%= p.discount %></div>
                         <div class="precioFinal">Precio final : $ <%= p.price * ((100-p.discount)/100) %></div>

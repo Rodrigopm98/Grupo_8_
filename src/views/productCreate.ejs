@@ -31,7 +31,6 @@
             <div class="categoria">
             <label for="categoria" class="form-label">Descuento</label>
             <select name="discount" id="categoria" class="form-text">
-                <option value="0" selected disabled>Agregar descuento</option>
                 <% for (let i = 0; i < 17; i++) { %>
                     <% let desc = i * 5 %> 
                     <option value="<%= desc %>"><%= desc %>% </option>

@@ -67,11 +67,7 @@
                     <%= errors.province.msg %> 
                 </div>
                 <% } %>
-                <% if(locals.msg){  %> 
-                <div class="error">
-                    <%= locals.msg %> 
-                </div>
-                    <% } %>
+                
             </div>  
             <div class="control-formulario">
                 <input class="input-formularios city" type="text" name="city" placeholder ="Localidad" value="<%= locals.oldData ? oldData.city : null %>">
@@ -82,11 +78,7 @@
                     <%= errors.city.msg %> 
                 </div>
                 <% } %>
-                <% if(locals.msg){  %> 
-                <div class="error">
-                    <%= locals.msg %> 
-                </div>
-                    <% } %> 
+                
             </div> 
             <div class="control-formulario">
                 <input class="input-formularios address" type="text" name="address" placeholder ="Dirección completa domicilio" value="<%= locals.oldData ? oldData.address : null %>"> 
@@ -97,11 +89,7 @@
                     <%= errors.address.msg %> 
                 </div>
                 <% } %>
-                <% if(locals.msg){  %> 
-                <div class="error">
-                    <%= locals.msg %> 
-                </div>
-                    <% } %>
+                
             </div> 
             <div class="control-formulario">
               <input class="input-formularios password" type="password" name="password" password placeholder="Contraseña"> 

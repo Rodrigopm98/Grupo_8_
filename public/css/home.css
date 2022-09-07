@@ -125,6 +125,17 @@ h1{
     border: transparent;
     color: white;
 }
+.sinProductos{
+    text-align: center;
+    color:tomato;
+}
+.imagenMessi{
+    text-align: center;
+
+}
+.imagenMessi img{
+    width: 90%;
+}
 
 @media(min-width:400px){
     .whatsapp{

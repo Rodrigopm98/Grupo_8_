@@ -5,7 +5,11 @@
 <body>
     <%- include("partials/header") %> 
     <main>
-        <h1> TODOS LOS PRODUCTOS </h1>
+        <h1> MIS PRODUCTOS</h1>
+        <% if(!(products.length > 0)){ %> 
+            <h2 class="sinProductos">No tienes productos en venta</h2>
+            <% } %> 
+        
         <div class="todos-los-articulos">
            <% products.forEach(p =>{ %>  
             <article class="articulos">

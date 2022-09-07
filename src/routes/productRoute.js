@@ -44,6 +44,7 @@ const validacionesEdit = [
     .notEmpty().withMessage("Debes colocar el nombre del producto").bail()
     .isLength({min : 5}).withMessage("El nombre del producto debe contener al menos 5 caracteres"),
     body("description").isLength({ min: 20 }).withMessage("La descripción debe tener al menos 20 caracteres"),
+    body("price").isNumeric().withMessage("El precio debe ser expresado en numero"),
     body("imagenProducto").custom((value, { req })=>{
         let file = req.file;
         let extensionesPermitidas= [".jpg",".jpeg",".png",".gif" ];
@@ -65,6 +66,7 @@ router.get("/hombres", productController.hombres);
 router.get("/mujeres", productController.mujeres);
 router.get("/ninios", productController.ninios);
 router.get("/deportes", productController.deportes);
+router.get("/misProductos", productController.misProductos)
 
 
 

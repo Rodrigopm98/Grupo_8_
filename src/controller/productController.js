@@ -17,8 +17,35 @@ const productController = {
             })
 
     },
-    
-   hombres: function (req, res) {
+    misProductos: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "categoria" },
+            { association: "administrador" }
+            ]
+        })
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+
+            })
+            .then((p) => {
+
+                let products = [];
+                for (let i = 0; i < p.length; i++) {
+                    /* let producto=p[i].dataValues; */
+                    let admin = p[i].dataValues.administrador.dataValues.email
+                    if (req.session.usuarioLogueado.email == admin) {
+                        products.push(p[i])
+                    }
+
+                }
+                /* let products = p.filter(p=>{p.userId == }) */
+                res.render("misProductos", { products })
+            })
+
+    },
+
+    hombres: function (req, res) {
         db.Product.findAll({
             include: [{ association: "categoria" }]
         })
@@ -39,30 +66,23 @@ const productController = {
     },
 
     ninios: function (req, res) {
-        db.Product.findAll({
+        db.Product.findAll({ raw: true},{
             include: [{ association: "categoria" }]
-        })
+        } )
             .then((p) => {
-                let niños = p.filter((p => p.genre == "Niña"));
-                /* let niña = p.filter((p => p.genre == "Niña"));
-                let niños = niño.concat(niña) */
-                /* let niños = p.map((p)=>{
-                    let niños = [];
-                    if(p.genre == "Niño" || p.genre == "Niña" ){
-                        niños.push(p)    
-                    }
-                    return niños
+                
+                let products = p.filter((p => p.deleted == 0))
+                return products
+                
+            })
 
-                }) */
-                /* let products = p.filter((p => p.deleted == 0));
-                let niños = [];
-                for (let i = 0; i < products.length; i++) {
-                   (products[i].dataValues.genre== "Niño")
-                   niños.push(products[i])
-
-                    
-                } */
-                res.render("ninios", { niños})
+            .then((p) => {
+                
+                let niño = p.filter((p => p.genre == "Niña"));
+                let niña = p.filter((p => p.genre == "Niño"));
+                let niños = niño.concat(niña)
+                
+                res.render("ninios", { niños })
             })
     },
 
@@ -127,22 +147,25 @@ const productController = {
                 deleted: 0
             })
                 .then(() => {
+
                     res.redirect("/products")
                 })
                 .catch((error) => res.send(error));
-        }else{
-            
+        } else {
+
             let size = db.Size.findAll();
             let sport = db.Sport.findAll();
             let brand = db.Brand.findAll();
             let category = db.Category.findAll();
             Promise.all([size, sport, brand, category])
                 .then(([size, sport, brand, category]) => {
-                    res.render("productCreate", { fk: [size, sport, brand, category],
-                    errors: errors.mapped() })
+                    res.render("productCreate", {
+                        fk: [size, sport, brand, category],
+                        errors: errors.mapped()
+                    })
                 })
 
-            
+
         }
 
     },
@@ -163,37 +186,37 @@ const productController = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-        db.Product.update({
-            name: req.body.name,
-            description: req.body.description,
-            image: req.file.filename,
-            discount: req.body.discount,
-            price: req.body.price,
-            sportId: req.body.sport,
-            userId: req.session.usuarioLogueado.id,
-            brandId: req.body.brand,
-            sizeId: req.body.size,
-            genre: req.body.genre,
-            categoryId: req.body.category,
-            deleted: 0
-        }, {
-            where: {
-                id: req.params.id
-            }
-        })
-        res.redirect("/products/productDetail/" + req.params.id) 
-     }else{
-        let producto = db.Product.findByPk(req.params.id)
-        let size = db.Size.findAll();
-        let sport = db.Sport.findAll();
-        let brand = db.Brand.findAll();
-        let category = db.Category.findAll();
-        Promise.all([producto, size, sport, brand, category])
-            .then(([producto, size, sport, brand, category]) => {
-                res.render("productEdit" + req.params.id, { producto: producto, size: size, sport: sport, brand: brand, category: category,  errors: errors.mapped() })
+            db.Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                image: req.file.filename,
+                discount: req.body.discount,
+                price: req.body.price,
+                sportId: req.body.sport,
+                userId: req.session.usuarioLogueado.id,
+                brandId: req.body.brand,
+                sizeId: req.body.size,
+                genre: req.body.genre,
+                categoryId: req.body.category,
+                deleted: 0
+            }, {
+                where: {
+                    id: req.params.id
+                }
             })
+            res.redirect("/products/productDetail/" + req.params.id)
+        } else {
+            let producto = db.Product.findByPk(req.params.id)
+            let size = db.Size.findAll();
+            let sport = db.Sport.findAll();
+            let brand = db.Brand.findAll();
+            let category = db.Category.findAll();
+            Promise.all([producto, size, sport, brand, category])
+                .then(([producto, size, sport, brand, category]) => {
+                    res.render("productEdit" + req.params.id, { producto: producto, size: size, sport: sport, brand: brand, category: category, errors: errors.mapped() })
+                })
 
-     }
+        }
 
 
     },

@@ -56,7 +56,7 @@ const usersController = {
                             deleted: 0
                         })
 
-                        res.redirect("/");
+                        res.render("usuarioCreado");
                     } else {
                         res.render("register", {
                             msg: "Ya existe un usuario registrado con esos datos",
