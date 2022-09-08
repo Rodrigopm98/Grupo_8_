@@ -1,5 +1,43 @@
 window.addEventListener("load", function(){
     let formulario = document.querySelector("form.tabla");
+    let nombre = document.querySelector("input.name");
+    let lastNamee = document.querySelector("input.lastName");
+    let userName = document.querySelector("input.userName");
+    let email = document.querySelector("input.email");
+    let provincia = document.querySelector("input.province");
+    let ciudad = document.querySelector("input.city");
+    let direccion = document.querySelector("input.address");
+
+    nombre.addEventListener("keypress", function(e){
+        let errorName = document.querySelector("div.errorName");
+            errorName.innerHTML = "<p>"+ "" + "</p>"
+    })
+    lastNamee.addEventListener("keypress", function(e){
+        let errorLastName = document.querySelector("div.errorLastName");
+        errorLastName.innerHTML = "<p>"+ "" + "</p>"
+    })
+    userName.addEventListener("keypress", function(e){
+        let errorUserName = document.querySelector("div.errorUserName");
+        errorUserName.innerHTML = "<p>"+ "" + "</p>"
+    })
+    email.addEventListener("keypress", function(e){
+        let errorEmail = document.querySelector("div.errorEmail");
+        errorEmail.innerHTML = "<p>"+ "" + "</p>"
+    })
+    provincia.addEventListener("keypress", function(e){
+        let province = document.querySelector("div.errorProvince");
+        province.innerHTML = "<p>"+ "" + "</p>"
+    })
+    ciudad.addEventListener("keypress", function(e){
+        let city = document.querySelector("div.errorCity");
+        city.innerHTML = "<p>"+ "" + "</p>"
+    })
+    direccion.addEventListener("keypress", function(e){
+        let address = document.querySelector("div.errorAddress");
+        address.innerHTML = "<p>"+ "" + "</p>"
+    })
+
+
 
     formulario.addEventListener("submit", function(e){
      
@@ -27,9 +65,11 @@ window.addEventListener("load", function(){
         }else if(!(nombre.value.length >= 2)){
             e.preventDefault();
             let errorName = document.querySelector("div.errorName");
-            errorName.innerHTML = "<p>"+ "El campo de nombre debe contener al menos 2 caracteres" + "</p>"
+            errorName.innerHTML = "<p>"+ "El campo de nombre debe contener al menos 2 caracteres" + "</p>"}
 
-        }
+          
+        
+
         if(lastNamee.value == ""){
             e.preventDefault();
             let errorLastName = document.querySelector("div.errorLastName");

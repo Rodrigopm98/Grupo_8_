@@ -284,8 +284,12 @@ const productController = {
     },
 
     detail: function (req, res) {
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id,{
+            include: [{ association: "talle" },
+        {association: "categoria"}]
+        })
             .then((producto) => {
+        
                 res.render("productDetail", { producto })
             })
     },

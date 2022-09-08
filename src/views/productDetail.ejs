@@ -20,7 +20,10 @@
                             <div class="descuento">¡Aprovechá el descuento del <%= producto.discount %>%!</div></br>
                             <div class="precioFinal">¡Precio final: $ <u><%= producto.price * ((100-producto.discount)/100) %></u>!</div>
                         <% } %>
+                             
                         </div>
+                        <br>
+                        <div><b><%= producto.genre  %></b>  ---   Talle: <%= producto.talle.size %></div>
                         <div>
                             <% if(!locals.usuarioLogueado || locals.usuarioLogueado.id != producto.userId){ %>
                             <form class="unidadesSolicitadas" action="/" method="get">
