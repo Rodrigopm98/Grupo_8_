@@ -58,6 +58,62 @@ header{
 
 }
 
+.menu-compu1 li ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.submenu {
+    display: none;
+    position: relative;
+    background-color: #485769; 
+    font-family: "Roboto";
+
+ /*    float:left; */
+}
+
+.sport:hover .submenu{
+    display: block;
+    text-align: start;
+}
+
+.marcas:hover .submenu{
+    display: block;
+    text-align: start;
+}
+
+.sport ul {
+    position: absolute;
+}
+
+.marcas ul {
+    position: absolute;
+}
+
+.menu-compu1 li ul li {
+
+    margin:0;
+    padding:0;
+    position: relative
+}
+
+.menu-compu1 li ul li:hover {
+    background:#5b78a7;
+}
+
+.menu-compu1 li ul li a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:4px;
+    font-family:"Roboto";
+    letter-spacing:1px;
+    right: -140px;
+    top: 0px;
+
+}
+
 .busqueda button i{
    display: block;
     margin-top:-2px;

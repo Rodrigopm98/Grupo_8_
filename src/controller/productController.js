@@ -66,24 +66,197 @@ const productController = {
     },
 
     ninios: function (req, res) {
-        db.Product.findAll({ raw: true},{
+        db.Product.findAll({ raw: true }, {
             include: [{ association: "categoria" }]
-        } )
+        })
             .then((p) => {
-                
+
                 let products = p.filter((p => p.deleted == 0))
                 return products
-                
+
             })
 
             .then((p) => {
-                
+
                 let niño = p.filter((p => p.genre == "Niña"));
                 let niña = p.filter((p => p.genre == "Niño"));
                 let niños = niño.concat(niña)
-                
+
                 res.render("ninios", { niños })
             })
+    },
+
+    basquet: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "deporte" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                /*console.log(p[0].dataValues.deporte.sport) */
+                let basquet = p.filter((p => p.sportId == 1))
+                console.log(basquet)
+
+                res.render("basquet", { basquet })
+            }
+            )
+    },
+
+    futbol: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "deporte" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                /*console.log(p[0].dataValues.deporte.sport) */
+                let futbol = p.filter((p => p.sportId == 2))
+
+                res.render("futbol", { futbol })
+            }
+            )
+    },
+
+    boxeo: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "deporte" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let boxeo = p.filter((p => p.sportId == 3))
+
+                res.render("boxeo", { boxeo })
+            }
+            )
+    },
+
+    otro: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "deporte" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let otro = p.filter((p => p.sportId == 4))
+
+                res.render("otro", { otro })
+            }
+            )
+    },
+
+    adidas: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "marca" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let adidas = p.filter((p => p.brandId == 1))
+
+                res.render("adidas", { adidas })
+            }
+            )
+    },
+
+    nike: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "marca" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let nike = p.filter((p => p.brandId == 2))
+
+                res.render("nike", { nike })
+            }
+            )
+    },
+
+    everlast: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "marca" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let everlast = p.filter((p => p.brandId == 3))
+
+                res.render("everlast", { everlast })
+            }
+            )
+    },
+
+    umbro: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "marca" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let umbro = p.filter((p => p.brandId == 4))
+
+                res.render("umbro", { umbro })
+            }
+            )
+    },
+
+    puma: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "marca" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let puma = p.filter((p => p.brandId == 5))
+
+                res.render("puma", { puma })
+            }
+            )
+    },
+
+    otras: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "marca" }]
+        })
+
+            .then((p) => {
+                let productos = p.filter((p => p.deleted == 0))
+                return productos
+            })
+            .then((p) => {
+                let otras = p.filter((p => p.brandId == 6))
+
+                res.render("otrasMarcas", { otras })
+            }
+            )
     },
 
     deportes: function (req, res) {
@@ -123,7 +296,7 @@ const productController = {
         let sport = db.Sport.findAll();
         let brand = db.Brand.findAll();
         let category = db.Category.findAll();
-        
+
         Promise.all([size, sport, brand, category])
             .then(([size, sport, brand, category]) => {
                 res.render("productCreate", { fk: [size, sport, brand, category] })

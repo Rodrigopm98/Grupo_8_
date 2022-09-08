@@ -64,7 +64,17 @@ const productController= require("../controller/productController");
 router.get("/", productController.products);
 router.get("/hombres", productController.hombres);
 router.get("/mujeres", productController.mujeres);
+router.get("/basquet", productController.basquet);
 router.get("/ninios", productController.ninios);
+router.get("/futbol", productController.futbol);
+router.get("/boxeo", productController.boxeo);
+router.get("/otro", productController.otro);
+router.get("/adidas", productController.adidas);
+router.get("/nike", productController.nike);
+router.get("/everlast", productController.everlast);
+router.get("/umbro", productController.umbro);
+router.get("/puma", productController.puma);
+router.get("/otrasmarcas", productController.otras);
 router.get("/deportes", productController.deportes);
 router.get("/misProductos", productController.misProductos)
 

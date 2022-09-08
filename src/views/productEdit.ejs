@@ -112,7 +112,7 @@
         </div>
 
         <div class="buscarImagen">
-            <input type="file" name="imagenProducto" class="imagenProducto">
+            <input type="file" name="imagenProducto" class="imagenProducto" value="<%= producto.img %>">
             <div class="errorImage validacionesFront"></div>
             <% if(locals.errors && errors.imagenProducto){ %>
                 <div class="error">
