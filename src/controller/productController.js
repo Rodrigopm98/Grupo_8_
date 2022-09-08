@@ -123,6 +123,7 @@ const productController = {
         let sport = db.Sport.findAll();
         let brand = db.Brand.findAll();
         let category = db.Category.findAll();
+        
         Promise.all([size, sport, brand, category])
             .then(([size, sport, brand, category]) => {
                 res.render("productCreate", { fk: [size, sport, brand, category] })

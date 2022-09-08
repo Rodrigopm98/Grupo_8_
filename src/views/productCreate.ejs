@@ -10,8 +10,7 @@
         <div class="form-container">
             <form action="/products" method="POST"  enctype="multipart/form-data">
             <div class="nombre">
-            
-                <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" class="input-text name">
+                <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" value="<%= locals.oldData ? oldData.address : null %>" class="input-text name">
                 <div class="errorName validacionesFront"></div>
                 <% if(locals.errors && errors.name){ %>
                     <div class="error">
