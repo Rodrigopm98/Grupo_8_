@@ -39,7 +39,7 @@ const usersController = {
         } else {
             db.User.findAll()
                 .then(user => {
-                    let chequeado = user.find(u => (u.email == req.body.email) && (u.userName == req.body.userName));
+                    let chequeado = user.find(u => (u.email == req.body.email));
                     if (!chequeado) {
                         db.User.create({
                             firstName: req.body.firstName,

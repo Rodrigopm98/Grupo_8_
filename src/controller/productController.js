@@ -276,7 +276,8 @@ const productController = {
                 name: { [Op.like]: "%" + req.query.search + "%" }
             }
         })
-            .then((products) => {
+            .then((p) => {
+                let products = p.filter((p => p.deleted == 0))
                 /* res.send(products) */
                 res.render("products", { products })
             })
