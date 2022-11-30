@@ -9,7 +9,8 @@
                 <form action="/users/login" method="POST" class="form-container">
                     <div class="nombre">
                         <label for="">
-                            <input type="text" name="email" placeholder="email" class="input-text" value="<%= locals.oldData ? oldData.email : null %>" />
+                            <input type="text" name="email" placeholder="email" class="input-text email" value="<%= locals.oldData ? oldData.address : null %>">
+                            <div class="errorEmail validacionesFront"></div>
                         </label>
                         <% if(locals.errors && errors.email){ %>
                             <div class="error">
@@ -37,6 +38,8 @@
                     </div>
                     <div class="olvidar">
                         <p><a href='#'>¿Olvidaste tu Contraseña?</a></p>
+                        <p><label for="recordame">Recordame <input type="checkbox" name="recordame"></label></p>
+                        
                         <p><a href="/users/register">Registrarse</a></p>
                     </div>
                     <div class="boton">
@@ -45,6 +48,7 @@
                 </form>
             </main>
             <%- include("partials/footer") %>
+            <script src="/js/login.js"></script>
     </body>
 
 </html>

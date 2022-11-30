@@ -7,7 +7,6 @@
 main{
     padding: 5px;
     background-color:#485769;
-    margin-top: -27px;
     position: relative;
 
 }
@@ -23,6 +22,7 @@ h1{
     position:relative;    
 }
 .detalleProducto{
+    padding-top: 5%;
     text-decoration: none;
     color: black;
 }
@@ -30,34 +30,49 @@ h1{
 .articulos img{
     width: 100%;
     max-height: 245.8px;
-   
     box-sizing: border-box;
     
     
 }
 .descripcion{
-    
-    box-sizing: border-box; 
-    margin-top: -3px; 
-    background-color: #E0E0E0;
-    
-}
-.precio{
-  
-    margin:0px;
-    display: inline;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
     background-color: rgb(211, 211, 211);
-    position:absolute;
-    bottom: 42px;
-
 }
-.precio:hover{
-    font-size:14px ;
+
+.descuento{
+    color: green;
+}
+
+.precio{
+    margin:0px;
+    display: block;
+}
+
+.precioFinal{
+    text-emphasis: 4px;
+}
+
+.precioFinal:hover{
+    font-size: 14px;
     font-weight: bold;
 }
-.nombre{
+
+.precioSinDescuento{
+        font-size: 16px;
+        text-decoration-style: dashed;
+}
     
-    margin: 0px;
+.precioSinDescuento:hover{
+        font-size: 1.8vw;
+        font-weight: bold;
+    }
+
+.nombre{
+    text-align: center;
+    color: #485769;
+    font-weight: bold;
 }
 .categoria{
    
@@ -66,19 +81,13 @@ h1{
 .fa-heart{
     font-size: 20px;
     position: absolute;
-    bottom:60px;
+    top: 2px;
+    right: 2px;
 }
     
 .descripcion i:hover{
     color: #004AAD;
     font-size: 25px;
-}
-
-.boton-detalles{
-    font-size: 20px;
-    position: absolute;
-    right: 2px;
-    top: 0px;
 }
 
 .whatsapp{
@@ -88,6 +97,47 @@ h1{
     color: green;
     right: 10px;
     bottom: 5px;
+}
+
+.volverContainer{
+    width: 100%;
+    text-align: center;
+}
+
+.botonVolver{
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 3%;
+    background: #15d798;
+    background: linear-gradient(#073763, #16996f 50%, #073763);
+    border: 0px solid #556699;
+    border-radius: 1000px;
+    box-shadow: 1px -1px #444444;
+    padding: 10px 22px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal bold 2vw "Roboto", sans-serif;
+    text-shadow: 2px 2px #000000;
+}
+
+.botonVolverInput{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+.sinProductos{
+    text-align: center;
+    color: grey;
+    font-size: 3vw;
+}
+
+.imagenMessi{
+    text-align: center;
+    size: 2vw;
+
+}
+.imagenMessi img{
+    width: 90%;
 }
 
 @media(min-width:400px){
@@ -105,7 +155,7 @@ h1{
 }
 @media(min-width:900px){
     .articulos{
-        width: 23%;
+        width: 24%;
     }
     .articulos:hover{
         box-shadow: 0px 0px 20px rgb(250, 248, 248);

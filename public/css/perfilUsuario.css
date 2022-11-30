@@ -1,0 +1,108 @@
+.form-container {
+    padding: 25px;
+    background-color: #ebebeb;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #232F3E;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.mainPerfilUsuario{
+    margin-top: -5%;
+    background-color: #232F3E;
+    padding-top: 5%;
+}
+
+.nombreUsuario{
+    width: fit-content;
+    text-align: justify;
+    margin: 0px auto;
+    padding: 8px;
+    font-size: 6vw;
+    color: white;
+    box-sizing: inherit;
+    border: 3px dotted white;
+}
+
+.venta{
+    padding-top: 24px;
+    text-align: center;
+    margin: 0px auto;
+    font-size: 24px;
+    color: white;
+    box-sizing: inherit;
+}
+
+.botones{
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.botonVender{
+    background:    #15d798;
+    background:    linear-gradient(#073763, #16996f 50%, #073763);
+    border:        0px solid #556699;
+    border-radius: 1000px;
+    box-shadow:    1px -1px #444444;
+    padding:       10px 22px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 3vw "Roboto", sans-serif;
+    text-align:    center;
+    text-shadow:   2px 2px #000000;
+}
+
+.input-venta{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+.botonSalir{
+    background:    #15d798;
+    background:    linear-gradient(#073763, #16996f 50%, #073763);
+    border:        0px solid #556699;
+    border-radius: 1000px;
+    box-shadow:    1px -1px #444444;
+    padding:       10px 22px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 3vw "Roboto", sans-serif;
+    text-align:    center;
+    text-shadow:   2px 2px #000000;
+}
+
+.input-salir{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+.soloParaUsuarios{
+    border: 4px solid tomato;
+    text-align: center;
+    color: tomato;
+}
+
+.alerta{
+    color: tomato;
+    padding-top: 1%;
+    font-size: 100px;
+}
+
+@media(max-width:400px){
+    .botonVender{
+        padding: 5px 12px;
+    }
+    .botonSalir{
+        padding: 5px 12px;
+    }
+
+}

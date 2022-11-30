@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %> 
+<link rel="stylesheet" href="/css/home.css">
+<body>
+    <%- include("partials/header") %> 
+    <main>
+        <h1> DEPORTES </h1>
+        <div class="futbol">
+            <% basquet.forEach(p => { %>
+                <%if (p.deleted != true){%>
+                <article class="articulos">
+                    <a class="detalleProducto" href="/products/productDetail/<%= p.id %>">
+                    <h3 class="nombre"><%= p.name %> </h3>
+                    <img src="/images/<%= p.image %> " alt="">
+                    <div class="descripcion">
+                       
+                        <div class="precioConOSinDescuento">
+                            <% if (p.discount==0){ %>
+                            <div class="precioSinDescuento">Precio $<%= p.price %>
+                            </div>
+                            <% } else { %>
+                                <div class="precio">Precio publicado: $ <del><%= p.price %></del></div>
+                                <div class="descuento">Con descuento del <%= p.discount %>%</div>
+                                <div class="precioFinal">Precio final: $ <u><%= p.price * ((100-p.discount)/100) %></u>!</div>
+                            <% } %>
+                        <div class="boton-detalles"><a href="/products/productDetail"></a></div>
+                    </div>
+                    </a>
+                </article>
+                    <% } %>
+                <% }) %>
+        </div>
+    </main>
+    <%- include("partials/footer") %>
+</body>
+
+</html>

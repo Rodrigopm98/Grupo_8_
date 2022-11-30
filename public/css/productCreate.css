@@ -1,4 +1,5 @@
 main{
+    width: 100%;
     font-size: 1rem;
     color:white;
     background-color: #485769;
@@ -13,11 +14,52 @@ main{
 
 }
 
+.menu-compu1 li ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.submenu {
+    display: none;
+    position: relative;
+    background-color: #485769; 
+    font-family: "Roboto";
+ /*    float:left; */
+}
+
+.sport:hover .submenu{
+    display: block;
+    text-align: start;
+}
+
+.menu-compu1 li ul li {
+
+    margin:0;
+    padding:0;
+}
+
+.menu-compu1 li ul li:hover {
+    background:#5b78a7;
+}
+
+.menu-compu1 li ul li a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:4px;
+    font-family:"Roboto";
+    letter-spacing:1px;
+}
+
 .descripcion{
     text-align: center;
 
 }
 
+.form-container{
+    position: relative;
+}
 
 .precio{
     width: 25vw;
@@ -32,8 +74,51 @@ main{
     color: white;
   }
     
+  .guardar {
+    background:    #15d798;
+    background:    linear-gradient(#073763, #16996f 50%, #073763);
+    border:        0px solid #556699;
+    border-radius: 1000px;
+    box-shadow:    1px -1px #444444;
+    margin-top: 2%;
+    padding-top: 5%;
+    padding:       5px 11px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 1,5vw "Roboto", sans-serif;
+    text-align:    center;
+    text-shadow:   2px 2px #000000;
+}
 
+.input-guardar {
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
 
+.volver {
+    left: 46%;
+    background:    #15d798;
+    background:    linear-gradient(#073763, #16996f 50%, #073763);
+    border:        0px solid #556699;
+    border-radius: 1000px;
+    box-shadow:    1px -1px #444444;
+    margin-top: 2%;
+    padding-top:    10%;
+    padding:       5px 11px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 1,5vw "Roboto", sans-serif;
+    text-align:    center;
+    text-shadow:   2px 2px #000000;
+}
+
+.input-volver {
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    align-items: center;
+}
 
 .color{
     padding: 10px;
@@ -45,4 +130,9 @@ main{
 
 .buscarImagen{
     padding: 10px;
+}
+/* para las validaciones de js front */
+.validacionesFront p{
+    color:  rgb(252, 83, 83);
+    font-size: 12px
 }

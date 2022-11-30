@@ -7,6 +7,7 @@
     width: 50vw;
     padding: 5px;
     font-size: 18px;
+    border: 1px, solid, black;
     margin: auto;
 }
 
@@ -46,6 +47,62 @@
     background-color: #232F3E;
 }
 
+.menu-compu1 li ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.submenu {
+    display: none;
+    position: relative;
+    background-color: #485769; 
+    font-family: "Roboto";
+
+ /*    float:left; */
+}
+
+.sport:hover .submenu{
+    display: block;
+    text-align: start;
+}
+
+.marcas:hover .submenu{
+    display: block;
+    text-align: start;
+}
+
+.sport ul {
+    position: absolute;
+}
+
+.marcas ul {
+    position: absolute;
+}
+
+.menu-compu1 li ul li {
+
+    margin:0;
+    padding:0;
+    position: relative
+}
+
+.menu-compu1 li ul li:hover {
+    background:#5b78a7;
+}
+
+.menu-compu1 li ul li a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:4px;
+    font-family:"Roboto";
+    letter-spacing:1px;
+    right: -140px;
+    top: 0px;
+
+}
+
 .fechadenacimiento{
     color:rgba(255, 255, 255, 0.521);
 }
@@ -58,5 +115,10 @@
 .error{
     color: rgb(252, 83, 83);
     font-size: 12px;
+}
+/* para las validaciones de js front */
+.validacionesFront p{
+    color:  rgb(252, 83, 83);
+    font-size: 12px
 }
 

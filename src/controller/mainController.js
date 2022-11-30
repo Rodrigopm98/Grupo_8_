@@ -9,6 +9,10 @@ const db = require("../database/models");
 let mainController = {
     index:  function(req,res){
         db.Product.findAll()
+        .then((p) => {
+            let productsNoEliminados = p.filter((p => p.deleted == 0))
+            return productsNoEliminados
+        })
         .then((p)=>{
             let oferta = p.filter(p=> p.discount > 0)
             res.render("index", {oferta}) 
@@ -21,8 +25,15 @@ let mainController = {
     },
     register:  function(req,res){
         res.render("register") 
-    }
+    },
 
+    ayuda: function(req, res){
+        res.render("ayuda")
+    },
+
+    terminosCondiciones: function(req, res){
+        res.render("terminosCondiciones")
+    }
 }
 
 module.exports= mainController;

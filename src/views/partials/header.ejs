@@ -1,35 +1,56 @@
-<header>
+<header class="header">
     <div class="buscador-nav">
         <section class="navbar-top">
             <div class="menu"><i class="fas fa-bars"></i></div>
-            <a href="/" class="inicio"><img src="/images/Gloriosos_Club-removebg-preview.png" alt="home" class="logo"></a>
-            <form class="busqueda" action="/" method="get">
-                <input class="input" type="text" name="busqueda" placeholder="Buscar">
+            <div class="divLogo"><a href="/" class="inicio"><img src="/images/logoGloriososClub.png" alt="home"
+                        class="logo"></a></div>
+            <form class="busqueda" action="/products/search" method="get">
+                <input class="input" type="text" name="search" placeholder="Buscar">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
-
         </section>
         <nav>
             <ul>
-                <% if(locals.isLogged){ %> 
-                <li><a href="/users/perfilUsuario"><%= locals.usuarioLogueado.nombreDeUsuario %></a></li>
-                <li><a href="/imagen"><img class="imagenUsuario" src="/images/profileImages/<%= locals.usuarioLogueado.imagen %> "></i></a></li>
-                <% }else{ %> 
-                <li><a href="/users/register" class="register">Registrarse</a></li>
-                <li><a href="/users/login" class="login">Ingresar</a></li>
-                <% } %> 
-                <li><a href="/products/productCart" class="carrito"><i class="fas fa-shopping-cart"></i></a></li>
+                <% if(locals.isLogged){ %>
+                    <li><a href="/users/perfilUsuario">
+                            <%= locals.usuarioLogueado.userName %>
+                        </a></li>
+                    <li><a href="/imagen"><img class="imagenUsuario"
+                                src="/images/profileImages/<%= locals.usuarioLogueado.profileImage %> "></i></a></li>
+                    <% }else{ %>
+                        <li><a href="/users/register" class="register">Registrarse</a></li>
+                        <li><a href="/users/login" class="login">Ingresar</a></li>
+                        <% } %>
+                            <li><a href="/products/productCart" class="carrito"><i class="fas fa-shopping-cart"></i></a>
+                            </li>
             </ul>
         </nav>
     </div>
     <ul class="menu-compu1">
-        <li><a href="#hombre">Hombre</a></li>
-        <li><a href="#mujer">Mujer</a></li>
-        <li><a href="#niños">Niños</a></li>
-        <li><a href="#deportes">Deportes</a></li>
-        <li><a href="#marcas">Marcas</a></li>
-        <li><a href="#Colecciones">Colecciones</a></li>
+        <li><a href="/products/hombres">Hombre</a></li>
+        <li><a href="/products/mujeres">Mujer</a></li>
+        <li><a href="/products/ninios">Niños</a></li>
+        <li class="sport"><a>Deportes</a>
+            <ul>
+                <li class="submenu"><a href="/products/basquet">Básquet</a></li>
+                <li class="submenu"><a href="/products/futbol">Fútbol</a></li>
+                <li class="submenu"><a href="/products/boxeo">Boxeo</a></li>
+                <li class="submenu"><a href="/products/otro">Otro</a></li>
+            </ul>
+        </li>
+        <li class="marcas"><a>Marcas</a>
+            <ul>
+                <li class="submenu"><a href="/products/adidas">Adidas</a></li>
+                <li class="submenu"><a href="/products/nike">Nike</a></li>
+                <li class="submenu"><a href="/products/everlast">Everlast</a></li>
+                <li class="submenu"><a href="/products/umbro">Umbro</a></li>
+                <li class="submenu"><a href="/products/puma">Puma</a></li>
+                <li class="submenu"><a href="/products/otrasmarcas">Otras</a></li>
+            </ul>
+        </li>
         <li><a href="/products">Todos los productos</a></li>
+        <li><a href="/ayuda">Ayuda</a></li>
     </ul>
     <img src="/images/banner gloriosos 728150.png" alt="" class="banner">
+    <script src="/js/header.js"></script>
 </header>

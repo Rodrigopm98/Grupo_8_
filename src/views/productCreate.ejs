@@ -4,83 +4,126 @@
     <link rel="stylesheet" href="/css/productCreate.css">
     <!-- <link rel="stylesheet" href="/css/productDetail.css"> -->
     <link rel="stylesheet" href="/css/login.css">
+    
+    
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/products" method="POST" class="form-container" enctype="multipart/form-data" >
-        <div class="nombre">
-            
-                <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" class="input-text">
-        </div>
-        <div class="descripcion">
-            <textarea name="descripcion" id="descripcion" rows="5" cols="50" class="input-text" placeholder="Descripcion del producto"></textarea>
-        </div> 
-        <div class="categoria">
+        <div class="form-container">
+            <form action="/products" method="POST"  enctype="multipart/form-data">
+            <div class="nombre">
+                <input type="text" name="name" placeholder=" Nombre del producto: Ej: Zapatillas Reebok" value="<%= locals.oldData ? oldData.address : null %>" class="input-text name">
+                <div class="errorName validacionesFront"></div>
+                <% if(locals.errors && errors.name){ %>
+                    <div class="error">
+                        <%= errors.name.msg %> 
+                    </div>
+                <% } %>  
+            </div>
+            <div class="descripcion">
+            <textarea name="descripcion" id="descripcion" rows="5" cols="50" class="input-text textareaDescripcion" placeholder="Descripcion del producto"></textarea>
+            <div class="errorDescripcion validacionesFront"></div>
+            <% if(locals.errors && errors.descripcion){ %>
+                <div class="error">
+                    <%= errors.descripcion.msg %> 
+                </div>
+            <% } %>
+            </div> 
+            <div class="categoria">
             <label for="categoria" class="form-label">Descuento</label>
             <select name="discount" id="categoria" class="form-text">
-                <option value="0" selected >Sin descuento</option>
                 <% for (let i = 0; i < 17; i++) { %>
                     <% let desc = i * 5 %> 
                     <option value="<%= desc %>"><%= desc %>% </option>
                 <% } %>
             </select>    
-        </div>
-        <div class="categoria">
+            </div>
+            <div class="categoria">
             <label for="categoria" class="form-label">Categoria:</label>
             <select name="category" id="categoria" class="form-text">
-                <option value="" selected disabled>Todas</option>
+                <option value="otras" selected disabled>Selec Categoria</option>
                 <% fk[3].forEach((cat)=>{ %>
                     <option value="<%= cat.id %>"><%= cat.category %> </option>
                 <% }) %> 
             </select>    
-        </div>
+            </div>
         
-        <div class="categoria">
+            <div class="categoria">
             <label for="categoria" class="form-label">Deporte:</label>
             <select name="sport" id="categoria" class="form-text">
-                <option value="" selected disabled>Todas</option>
+                <option value="otro" selected disabled>Selec Deporte</option>
                 <% fk[1].forEach((sport)=>{ %>
                     <option value="<%= sport.id %>"><%= sport.sport %> </option>
 
                 <% }) %> 
+                <option value="otro">Otro</option>
             </select>    
-        </div>
-        <div class="categoria">
+            </div>
+            <div class="categoria">
+            <label for="brand" class="form-label">Marca:</label>
+            <select name="brand" id="brand" class="form-text">
+                <option value="Otra" selected disabled>Selec Marca</option>
+                <% fk[2].forEach((brand)=>{ %>
+                    <option value="<%= brand.id %>"><%= brand.brand %> </option>
+
+                <% }) %> 
+                
+            </select>    
+            </div>
+            <div class="categoria">
             <label for="categoria" class="form-label">Genero:</label>
             <select name="genre" id="categoria" class="form-text">
+                <option value=" " selected disabled>Elegir género</option>
                 <option value="Hombre" >Hombre</option>
                 <option value="Mujer" >Mujer</option>
                 <option value="Niño" >Niño</option>
                 <option value="Niña" >Niña</option>
             </select>    
-        </div>
-        <div class="categoria">
+            </div>
+            <div class="categoria">
             <label for="size" class="form-label">Talle:</label>
-            <select name="size" id="categoria" class="form-text">
+            <select name="size" id="categoria" class="form-text size">
                 <option value="" selected disabled >Talle</option>
                 <% fk[0].forEach((size)=>{ %>
                     <option value="<%= size.id %>"><%= size.size %> </option>
 
                 <% }) %> 
                 
-            </select>    
-        </div>
-        <div>
-            
-            <input type="text" id="precio" name="precio" placeholder="Precio del producto Ej: 5678" class="precio" >
-        </div>
+            </select>
+               
+            </div>
+            <div>
+            <input type="text" id="precio" name="precio" placeholder="Precio del producto Ej: 5678" class="precio price" >
+            <% if(locals.errors && errors.precio){ %>
+                <div class="error">
+                    <%= errors.precio.msg %> 
+                </div>
+            <% } %>
+            </div>
 
-        <div class="buscarImagen">
-            <input type="file" name="imagenProducto">
-        </div>
 
-        <div class="guardarProducto">
-            <button type="submit">Guardar Producto</button>
-        </div>
+            <div class="buscarImagen">
+            <input type="file" name="imagenProducto" class="imagenProducto">
+            <div class="errorImage validacionesFront"></div>
+            <% if(locals.errors && errors.imagenProducto){ %>
+                <div class="error">
+                    <%= errors.imagenProducto.msg %> 
+                </div>
+            <% } %>
 
-    </form>
+            </div>
+
+            <div class="guardar">
+            <button class="input-guardar" type="submit">Guardar Producto</button>
+            </div>
+            </form>
+            <div class="volver">
+                <form action="/users/perfilUsuario" method="get"><button class="input-volver">Volver</button>
+            </div>
+        </div>
 </main>
     <%- include("partials/footer") %> 
+    <script src="/js/productCreate.js"></script>
 </body>
 
 </html>

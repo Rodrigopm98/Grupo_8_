@@ -2,85 +2,123 @@
 <html lang="en">
     <%- include("partials/head", {titulo: "Registrate"}) %> 
     <link rel="stylesheet" href="/css/register.css">
+<!--     <link rel="stylesheet" href="/css/home.css"> -->
 
 <body>
     <%- include("partials/header") %>
     <main>
         <form action="/users/register" method="POST" class="tabla" enctype="multipart/form-data">
             <div class="control-formulario">
-               <input class="input-formularios" type="text" name="nombre"  placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
-               <% if(locals.errors && errors.nombre){ %>
+               <input class="input-formularios name" type="text" name="firstName" placeholder="Nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
+               <div class="errorName validacionesFront">
+               </div>
+                <% if(locals.errors && errors.firstName){ %>
                 <div class="error">
-                    <%= errors.nombre.msg %> 
+                    <%= errors.firstName.msg %> 
                 </div>
-            <% } %> 
+                    <% } %> 
             </div>
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
-                <% if(locals.errors && errors.apellido){ %>
-                    <div class="error">
-                        <%= errors.apellido.msg %> 
-                    </div>
-                <% } %> 
-             </div> 
+                <input class="input-formularios lastName" type="text" name="lastName" placeholder="Apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
+                <div class="errorLastName validacionesFront">
+                </div>
+                <% if(locals.errors && errors.lastName){ %>
+                <div class="error">
+                    <%= errors.lastName.msg %> 
+                </div>
+                    <% } %> 
+            </div> 
             <div class="control-formulario">
                 </label>
-                <input class="input-formularios" type="text" name="usuario" placeholder="Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
-                <% if(locals.errors && errors.usuario){ %>
-                    <div class="error">
-                        <%= errors.usuario.msg %> 
-                    </div>
-                <% } %> 
-            </div>
-            <div class="control-formulario">
-            </label>
-            <input class="input-formularios" type="text" name="email"  placeholder="e-mail" value="<%= locals.oldData ? oldData.email : null %>">
-            <% if(locals.errors && errors.email){ %>
-                <div class="error">
-                    <%= errors.email.msg %> 
+                <input class="input-formularios userName" type="text" name="userName" placeholder="Nombre de Usuario" value="<%= locals.oldData ? oldData.userName : null %>">
+                <div class="errorUserName validacionesFront">
                 </div>
-            <% } %>
-            <% if(locals.msg){  %> 
-            <div class="error">
-                <%= locals.msg %> 
-            </div>
-            <% } %> 
-        </div>  
-            <div class="control-formulario">
-                <label class="fechadenacimiento">Fecha de Nacimiento</label>
-                <input class="input-formularios-date" type="date" name="fechaNacimiento" required placeholder="mm/dd/yy" value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"> 
+                <% if(locals.errors && errors.userName){ %>
+                <div class="error">
+                    <%= errors.userName.msg %> 
+                </div>
+                    <% } %> 
             </div>
             <div class="control-formulario">
-                <select name="province">
-                    <option selected disabled>Provincia</option>
-                        <% p.forEach(p => { %>
-                         <option >
-                            <%= p.nombre %> 
-                         </option>
-                        <% }) %>
-                    
-                </select>
+                </label>
+                <input class="input-formularios email" type="text" name="email"  placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <div class="errorEmail validacionesFront">
+                </div>
+                <% if(locals.errors && errors.email){ %>
+                <div class="error">
+                <%= errors.email.msg %> 
+                </div>
+                <% } %>
+                <% if(locals.msg){  %> 
+                <div class="error">
+                    <%= locals.msg %> 
+                </div>
+                    <% } %> 
             </div>  
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="localidad"  required placeholder ="Localidad" value="<%= locals.oldData ? oldData.localidad : null %>"> 
+                <label class="fechadenacimiento">Fecha de Nacimiento</label>
+                <input class="input-formularios-date" type="date" name="birthdate" placeholder="mm/dd/yy" value= "<% locals.oldData ? "selected" : null %>"> 
+            </div>
+            <div class="control-formulario">
+                <input class="input-formularios province" type="text" name="province" placeholder="Provincia" value="<%= locals.oldData ? oldData.province : null %>">
+                <div class="errorProvince validacionesFront">
+                </div>
+                <% if(locals.errors && errors.province){ %>
+                <div class="error">
+                    <%= errors.province.msg %> 
+                </div>
+                <% } %>
+                
+            </div>  
+            <div class="control-formulario">
+                <input class="input-formularios city" type="text" name="city" placeholder ="Localidad" value="<%= locals.oldData ? oldData.city : null %>">
+                <div class="errorCity validacionesFront">
+                </div>
+                <% if(locals.errors && errors.city){ %>
+                <div class="error">
+                    <%= errors.city.msg %> 
+                </div>
+                <% } %>
+                
             </div> 
             <div class="control-formulario">
-                <input class="input-formularios" type="text" name="domicilio" required placeholder ="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>"> 
+                <input class="input-formularios address" type="text" name="address" placeholder ="Dirección completa domicilio" value="<%= locals.oldData ? oldData.address : null %>"> 
+                <div class="errorAddress validacionesFront">
+                </div>
+                <% if(locals.errors && errors.address){ %>
+                <div class="error">
+                    <%= errors.address.msg %> 
+                </div>
+                <% } %>
+                
             </div> 
             <div class="control-formulario">
-              <input class="input-formularios" type="password" name="password" required placeholder="Contraseña"> 
+              <input class="input-formularios password" type="password" name="password" password placeholder="Contraseña"> 
+              <div class="errorPassword validacionesFront"></div>
+              <% if(locals.errors && errors.password){ %>
+                <div class="error">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>  
             </div>
             <div>
                 <label>Imagen de perfil:</label>
-                <input type="file" name="imagenUsuario">
+                <input type="file" name="imagenUsuario" class="imageUser">
+                <div class="errorImagenUsuario validacionesFront"></div>
+                <% if(locals.errors && errors.imagenUsuario){ %>
+                    <div class="error">
+                        <%= errors.imagenUsuario.msg %> 
+                    </div>
+                <% } %> 
             </div>
             <div class="control-formulario">              
               <button class="envia" type="submit">Enviar</button><a href="/index"></a>
-              <button  class="borra" type="reset">Borrar</button>
+              <button class="borra" type="reset">Borrar</button>
             </div>
-           </form>
+        </form>
     </main>
     <%- include("partials/footer") %> 
+    <script src="/js/register.js"></script>
 </body>
 
 </html>

@@ -25,15 +25,43 @@ const { nextTick } = require("process");
 
 // validaciones para la creacion de usuarios
 const validacionesRegister = [
-    body("nombre").notEmpty().withMessage("Debes completar el campo de nombre"),
-    body("apellido").notEmpty().withMessage("Debes completar el campo de apellido"),
-    body("usuario").notEmpty().withMessage("Debes completar el campo de Nombre de usuario"),
-    body("email").isEmail().withMessage("Debes completar un email válido"),
-    body("password").isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 caracteres")
+    body("firstName").notEmpty().withMessage("Debes completar el campo de nombre").bail()
+    .isLength({ min: 2 }).withMessage("El campo de nombre debe contener al menos 2 caracteres"),
+
+    body("lastName").notEmpty().withMessage("Debes completar el campo de apellido").bail()
+    .isLength({ min: 2 }).withMessage("El campo de nombre debe contener al menos 2 caracteres"),
+
+    body("userName").notEmpty().withMessage("Debes completar el campo de Nombre de usuario"),
+
+    body("email").notEmpty().withMessage("Debes completar un correo electrónico").bail()
+    .isEmail().withMessage("Debes completar un email válido"),
+
+    body("password").notEmpty().withMessage("Debes escribir una contraseña").bail().isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 caracteres").bail()
+    .isUppercase({min: 1}).withMessage("La contraseña debe contar al menos con una mayúscula"),
+
+    body("province").notEmpty().withMessage("Debes completar este campo"),
+
+    body("city").notEmpty().withMessage("Debes completar la localidad"),
+
+    body("address").notEmpty().withMessage("Debes completar la información de tu domicilio"),
+
+    body("imagenUsuario").custom((value, { req })=>{
+        let file = req.file;
+        let extensionesPermitidas= [".jpg",".jpeg",".png",".gif" ];
+        if(file){
+            let extensionArchivo = path.extname(file.originalname)
+            if (!extensionesPermitidas.includes(extensionArchivo)){
+                throw new Error("Sólo se permiten extensiones .jpg, .jpeg, .png, .gif");
+        } 
+    }
+        return true;   
+    })
 ];
 
 const validacionesLogin = [
-    body("email").isEmail().withMessage("Email invalido"),
+    body("email")
+    .notEmpty().withMessage("Debes colocar tu email").bail()
+    .isEmail().withMessage("Email invalido"),
     body("password").isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 caracteres")
 ];
 

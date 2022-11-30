@@ -1,0 +1,213 @@
+:root{
+    --Gris: rgb(211, 211, 211);
+    --Negro: #232F3E;
+    --Azul: #485769;
+}
+
+.ayudaFormulario h1{
+    color:rgb(211, 211, 211);
+}
+
+main{
+    background-color:#485769;
+    text-align: center;
+}
+
+
+
+.ayudaFormulario{
+    text-align: center;
+}
+
+.main{
+    padding: 0px;
+}
+
+.busqueda{
+    margin: auto;
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.menu-compu1 li ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.submenu {
+    display: none;
+    position: relative;
+    background-color: #485769; 
+    font-family: "Roboto";
+ /*    float:left; */
+}
+
+.sport:hover .submenu{
+    display: block;
+    text-align: start;
+}
+
+.menu-compu1 li ul li {
+
+    margin:0;
+    padding:0;
+}
+
+.menu-compu1 li ul li:hover {
+    background:#5b78a7;
+}
+
+.menu-compu1 li ul li a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:4px;
+    font-family:"Roboto";
+    letter-spacing:1px;
+}
+
+.busquedaAyuda{
+    margin: auto;
+    width: 30%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.input{
+    width: 90%;
+}
+
+.busqueda button{
+    display: block;
+    width: 10%;
+    padding: 0px;
+    text-align: center;
+    font-size: 2rem;
+    font-size: 100%;
+    box-sizing: border-box;
+
+}
+
+.busqueda button i{
+   display: block;
+    margin-top:-2px;
+}
+
+.cajaCompras{
+    margin: auto;
+    border-style: inset;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.cajaVentas{
+    margin: auto;
+    border-style: inset;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.cajaCuenta{
+    margin: auto;
+    border-style: inset;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    color:rgb(211, 211, 211);
+}
+
+
+.cajaCompras ul{
+    list-style: none;
+    align-items: center;
+}
+
+.cajaVentas ul{
+    list-style: none;
+    align-items: center;
+}
+
+.cajaCuenta ul{
+    list-style: none;
+    align-items: center;
+}
+
+.cajaCompras a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+.cajaVentas a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+.cajaCuenta a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+.cajaCompras ul{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+}
+
+.cajaVentas ul{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+}
+
+.cajaCuenta ul{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+}
+
+.administrar{
+    color:rgb(211, 211, 211);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ventas{
+    color:rgb(211, 211, 211);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cuenta{
+    color:rgb(211, 211, 211);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.volverContainer{
+    width: 100%;
+    text-align: center;
+}
+
+.botonVolver{
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 3%;
+    background: #15d798;
+    background: linear-gradient(#073763, #16996f 50%, #073763);
+    border: 0px solid #556699;
+    border-radius: 1000px;
+    box-shadow: 1px -1px #444444;
+    padding: 10px 22px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal bold 2vw "Roboto", sans-serif;
+    text-shadow: 2px 2px #000000;
+}
+
+.botonVolverInput{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+

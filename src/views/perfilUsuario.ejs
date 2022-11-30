@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-</head>
+<%- include("partials/head", {titulo: "GloriososClub - Tienda de Indumentaria deportiva"}) %>
+<script src="https://kit.fontawesome.com/37146b37c4.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/perfilUsuario.css">
+<link rel="stylesheet" href="/css/home.css">
 <body>
+    <main class="mainPerfilUsuario">    
+    <%- include("partials/header") %> 
     <% if(locals.usuarioLogueado){  %> 
-    <H1>Cuenta de <%= locals.usuarioLogueado.mail %></H1>
-    <form action="/users/perfilUsuario/cerrarSession" method="get">
-        <button type="submit">Salir de la cuenta </button>
-    </form>
-    <form action="/products/productCreate" method="get">
-        <button type="submit">Crear producto</button>
-    </form>
+    <div class="nombreUsuario"> ¡Bienvenido <%= locals.usuarioLogueado.userName %>!</div>
+    <div class="venta">¿Trajiste algo para vender hoy?</div>
+    <div class="botones">
+        <div class="botonVender">
+            <form action="/products/productCreate" method="get"><button type="submit" class="input-venta">Vender producto</button></form>
+        </div>
+        <div class="botonVender">
+            <form action="/products/misProductos" method="get"><button type="submit" class="input-venta">Mis productos</button></form>
+        </div>
+        <!-- <div class="editarProducto">
+            <form action="/products/productEdit" method="get" type="submit">Editar producto</form>
+        </div> -->
+        <div class="botonSalir">
+            <form action="/users/perfilUsuario/cerrarSession" method="get"><button type="submit" class="input-salir">Salir de la cuenta</button></form>
+        </div>
+    </div>
     <% }else{ %>
-        <h2>Pagina disponible solo para usuarios logueados</h2>
+        <div class="soloParaUsuarios">
+            <div class="alerta">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+        <h2>¡Esta página está disponible solo para usuarios logueados!</h2>
+        <p>Podés registrarte haciendo click <a href="/users/register">acá</a></p>
+
+        </div>
         <%  } %> 
-    
+    </main>
+    <%- include("partials/footer") %>
 </body>
 </html>

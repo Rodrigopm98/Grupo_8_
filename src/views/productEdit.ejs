@@ -7,31 +7,118 @@
 <body>
     <%- include("partials/header") %>
     <main>
-    <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST" class="form-container">
+    <form action="/products/productEdit/<%= producto.id %>" method="POST" enctype="multipart/form-data" class="form-container">
         <div class="nombre">
             <label for="">
-                <input type="text" name="name" placeholder="<%= producto.nombre %>" value="<%= producto.nombre %>" class="input-text">
+                <input type="text" name="name" placeholder="<%= producto.name%>" value="<%= producto.name %>" class="input-text name">
+                <div class="errorName validacionesFront"></div>
+                <% if(locals.errors && errors.name){ %>
+                    <div class="error">
+                        <%= errors.name.msg %> 
+                    </div>
+                <% } %>
             </label>
         </div>
         <div class="nombre">
-            <textarea class="input-text" rows="5" placeholder="<%=producto.descripcion%>" name="descripcion"><%=producto.descripcion%></textarea>
+            <textarea class="input-text textareaDescripcion" rows="5" placeholder="<%=producto.description%>" name="description"><%=producto.description%></textarea>
+            <div class="errorDescripcion validacionesFront"></div>
+            <% if(locals.errors && errors.description){ %>
+                <div class="error">
+                    <%= errors.description.msg %> 
+                </div>
+            <% } %>
+            <div class="categoria">
+                <label for="discount" class="form-label">Descuento</label>
+                <select name="discount" id="discount" class="form-text">
+                    <option value="0" selected >Sin descuento</option>
+                    <% for (let i = 0; i < 17; i++) { %>
+                        <% let desc = i * 5 %> 
+                        <option value="<%= desc %>"><%= desc %>% </option>
+                    <% } %>
+                </select>    
+            </div>
             <div class="categoria">
                 <label for="categoria" class="form-label">Categoria:</label>
-                <select name="categoria" id="categoria" class="form-text" >
-                    <option value="" selected >Todas</option>
-                    <option value="futbol">Fútbol</option>
-                    <option value="basquet">Básquet</option>
-                    <option value="boxeo">Boxeo</option>
+                <select name="category" id="categoria" class="form-text" >
+                    <option value="" disabled>Selec Categoria</option>
+                    <% for(let i=0; i < category.length; i++){%>
+                       <% if(category[i].id == producto.categoryId){ %> 
+                     <option value="<%= category[i].id %>" selected><%= category[i].category %></option>
+                       <% } else { %>
+                         <option value="<%= category[i].id %> "><%= category[i].category %> </option>
+                         
+                       <%  } %>
+                    <% }  %>
                     <option value="otro">Otro</option>
                 </select>    
             </div>
+            <div class="categoria">
+                <label for="sport" class="form-label">Deporte:</label>
+                <select name="sport" id="sport" class="form-text" >
+                   <% for(let i=0; i < sport.length; i++){%>
+                      <% if(sport[i].id == producto.sportId){ %> 
+                    <option value="<%= sport[i].id %>" selected><%= sport[i].sport %></option>
+                      <% } else { %>
+                        <option value="<%= sport[i].id %> "><%= sport[i].sport %> </option>
+                        
+                      <%  } %>
+                   <% }  %>    
+                    <option value="otro">Otro</option>
+                </select>    
+            </div>
+            <div class="categoria">
+                <label for="brand" class="form-label">Marca:</label>
+                <select name="brand" id="brand" class="form-text" >
+                   <% for(let i=0; i < brand.length; i++){%>
+                      <% if(brand[i].id == producto.brandId){ %> 
+                    <option value="<%= brand[i].id %>" selected><%= brand[i].brand %></option>
+                      <% } else { %>
+                        <option value="<%= brand[i].id %> "><%= brand[i].brand %> </option>
+                        
+                      <%  } %>
+                   <% }  %>    
+                    <option value="otro">Otro</option>
+                </select>    
+            </div>
+            <div class="categoria">
+                <label for="genre" class="form-label">Genero:</label>
+                <select name="genre" id="genre" class="form-text">
+                    <option value="Hombre" >Hombre</option>
+                    <option value="Mujer" >Mujer</option>
+                    <option value="Niño" >Niño</option>
+                    <option value="Niña" >Niña</option>
+                </select>    
+            </div>
+            <div class="categoria">
+                <label for="size" class="form-label">Talle:</label>
+                <select name="size" id="size" class="form-text">
+                    <option value="" disabled >Talle</option>
+                    <% for(let i=0; i < size.length; i++){%>
+                        <% if(size[i].id == producto.sizeId){ %> 
+                      <option value="<%= size[i].id %>" selected><%= size[i].size %></option>
+                        <% } else { %>
+                          <option value="<%= size[i].id %> "><%= size[i].size %> </option>
+                          
+                        <%  } %>
+                     <% }  %> 
+                    
+                </select>    
+            </div> 
+
+
         <div>
-            
-            <input type="text" id="precio" name="precio" value=" $<%=producto.precio%>" class="precio" >
+            <label for="precio" class="form-label">Precio:$</label>
+            <input type="text" id="precio" name="price"   value="<%= producto.price %>"class="precio" >
         </div>
 
         <div class="buscarImagen">
-            <input type="file" name="imagenNuevoArchivo">
+            <input type="file" name="imagenProducto" class="imagenProducto" value="<%= producto.img %>">
+            <div class="errorImage validacionesFront"></div>
+            <% if(locals.errors && errors.imagenProducto){ %>
+                <div class="error">
+                    <%= errors.imagenProducto.msg %> 
+                </div>
+            <% } %>
         </div>
         <div>
             <button type="submit">Confirmar cambio</button>
@@ -47,6 +134,7 @@
     </form>
 </main>
     <%- include("partials/footer") %> 
+    <script src="/js/productEdit.js"></script>
 </body>
 
 </html>
